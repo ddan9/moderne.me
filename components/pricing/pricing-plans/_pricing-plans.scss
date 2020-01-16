@@ -1,0 +1,218 @@
+.pricing-plans {
+  // Vars
+
+  // Support
+
+  // Module
+  & {
+    &__controls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 125px 0 26px;
+
+      &-title {
+        font-size: 21px;
+        line-height: 32px;
+        color: #080809;
+        letter-spacing: 0;
+        transform: translateY(-3px);
+
+        span {
+          color: #A0A1A5;
+          margin: 0 0 0 7px;
+        }
+      }
+
+      &-switch {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 60px;
+        height: 32px;
+        background: #FFFFFF;
+        border-radius: 16px;
+        margin: 0 15px;
+        padding: 3px;
+        cursor: pointer;
+
+        &-indicator {
+          width: 26px;
+          height: 26px;
+          background: #DE9CD7;
+          border-radius: 50%;
+          transition: all 150ms ease;
+        }
+
+        &--active {
+          .pricing-plans__controls-switch-indicator {
+            transform: translateX(28px);
+          }
+        }
+      }
+    }
+
+    &__items {
+      display: flex;
+      flex-direction: column;
+      padding: 0 92px;
+      margin: 0 0 96px;
+    }
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      padding: 18px 22px 22px 30px;
+      background: #ffffff;
+      border-radius: 4px;
+      overflow: hidden;
+
+      &::after {
+        content: '';
+        width: 100%;
+        height: 5px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background: currentColor;
+      }
+
+      &:not(:last-child) {
+        margin: 0 0 45px;
+      }
+
+      &-title {
+        font-family: $mabry;
+        font-size: 50px;
+        color: currentColor;
+        letter-spacing: 0;
+        margin: 0 0 11px;
+      }
+
+      &-content {
+        display: grid;
+        grid-template-columns: 461px 1fr;
+        grid-template-rows: auto;
+        grid-column-gap: 54px;
+        grid-row-gap: 0;
+        margin: 0 0 9px;
+      }
+
+      &-meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+      }
+
+      &-lead {
+        font-size: 18px;
+        line-height: 25px;
+        color: #44464C;
+        letter-spacing: 0;
+      }
+
+      &-features {
+        font-size: 18px;
+        line-height: 25px;
+        letter-spacing: 0;
+      }
+
+      &-feature {
+        position: relative;
+        padding: 0 0 0 18px;
+
+        &::before {
+          content: '';
+          display: block;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background: currentColor;
+          position: absolute;
+          top: 9px;
+          left: 0;
+        }
+
+        span {
+          color: #44464C;
+        }
+
+        &:not(:last-child) {
+          margin: 0 0 15px;
+        }
+      }
+
+      &-price {
+        display: flex;
+        align-items: baseline;
+
+        &-value {
+          font-family: $mabry;
+          font-size: 50px;
+          color: #3E3C43;
+          letter-spacing: 0;
+          margin: 0 9px 0 0;
+
+          &::before {
+            content: '$';
+          }
+        }
+
+        &-period {
+          font-family: $mabry;
+          font-size: 29px;
+          color: #C9C6CF;
+          letter-spacing: 0;
+        }
+      }
+
+      &-button {
+        display: flex;
+        align-items: center;
+        font-family: $mabry;
+        font-weight: 500;
+        font-size: 30px;
+        color: currentColor;
+        letter-spacing: 0;
+        text-decoration: none;
+
+        svg {
+          width: 38px;
+          height: 21px;
+          margin: 0 0 0 14.5px;
+        }
+      }
+    }
+
+    &__faq {
+      padding: 0 122px;
+      margin: 0 0 -40px;
+
+      &-item {
+        &:not(:last-child) {
+          margin: 0 0 60px;
+        }
+
+        &-title {
+          font-family: $mabry;
+          font-size: 40px;
+          color: #3E3C43;
+          letter-spacing: 0;
+          margin: 0 0 8px;
+        }
+
+        &-text {
+          font-size: 18px;
+          line-height: 27px;
+          color: #44464C;
+          letter-spacing: 0;
+        }
+      }
+    }
+  }
+
+  // Facets
+
+  // States
+}

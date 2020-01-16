@@ -1,0 +1,145 @@
+.footer {
+  // Vars
+
+  // Support
+
+  // Module
+  & {
+    background: #000647;
+    padding: 210px 0 133px;
+
+    @include mobile {
+      padding: vmin(78) 0 vmin(48);
+    }
+
+    &__wrapper {
+      display: grid;
+      grid-template-columns: 344px 1fr;
+      grid-template-rows: 1fr;
+      grid-column-gap: 20px;
+      grid-row-gap: 0px;
+
+      @include mobile {
+        grid-template-columns: 1fr;
+        grid-row-gap: vmin(84);
+      }
+    }
+
+    &__col {
+      &--big {
+        display: flex;
+        flex-direction: column;
+        font-size: 15px;
+        line-height: 16px;
+        color: #7C80AD;
+
+        @include mobile {
+          align-items: center;
+          font-size: vmin(15);
+          line-height: vmin(16);
+        }
+      }
+    }
+
+    &__logo {
+      width: 43px;
+      height: 43px;
+      margin: 0 0 57px;
+
+      @include mobile {
+        width: vmin(43);
+        height: vmin(43);
+        margin: 0 0 vmin(12);
+      }
+    }
+
+    &__nav {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 1fr;
+      grid-column-gap: 20px;
+      grid-row-gap: 0px;
+
+      @include mobile {
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: vmin(53);
+        padding: 0 vmin(20);
+      }
+
+      &-col {
+        display: flex;
+        flex-direction: column;
+      }
+
+      &-link {
+        font-family: $mabry;
+        font-size: 16px;
+        line-height: 16px;
+        color: #7C80AD;
+        text-decoration: none;
+        transition: color 150ms ease;
+
+        @include mobile {
+          font-style: vmin(16);
+          line-height: vmin(16);
+        }
+
+        span {
+          content: attr(data-label);
+          font-weight: 500;
+          font-size: 11px;
+          color: #FFFFFF;
+          padding: 1px 3px 2px 4px;
+          background: #B65EAC;
+          border-radius: 2px;
+          margin: 0 0 0 10px;
+
+          @include mobile {
+            font-size: vmin(11);
+            line-height: vmin(13);
+            border-radius: vmin(2);
+            margin: 0 0 0 vmin(8);
+            padding: vmin(1) vmin(3) vmin(2) vmin(4);
+          }
+        }
+
+        &:not(:last-child) {
+          margin: 0 0 17px;
+
+          @include mobile {
+            margin: 0 0 vmin(17);
+          }
+        }
+
+        &:hover {
+          color: #D4D7F7;
+        }
+      }
+    }
+
+    &--light {
+      background: #F3EAE5;
+
+      .footer__col--big {
+        color: #3E3C43;
+      }
+
+      .footer__nav-link {
+        color: #5A5760;
+
+        &:hover {
+          color: #8E8A97;
+        }
+
+        span {
+          background: #DE9CD7;
+        }
+      }
+    }
+  }
+
+  // Facets
+
+  // States
+}

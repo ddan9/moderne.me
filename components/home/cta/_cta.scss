@@ -1,0 +1,142 @@
+.cta {
+  // Vars
+
+  // Support
+
+  // Module
+  & {
+    margin: -31px 0 -60px;
+
+    &__wrapper {
+      position: relative;
+      background: #FFD02D;
+      border-radius: 4px;
+      padding: 49px 246px 46px 46px;
+
+      @include mobile {
+        border-radius: vmin(8);
+        padding: vmin(241) vmin(10) vmin(14);
+      }
+    }
+
+    &__title {
+      position: relative;
+      font-family: $mabry;
+      font-weight: 500;
+      font-size: 62px;
+      line-height: 64px;
+      color: #FF7399;
+      letter-spacing: 0;
+      margin: 0 0 61px;
+      z-index: 1;
+
+      @include mobile {
+        font-size: vmin(26);
+        line-height: vmin(31);
+        margin: 0 0 vmin(25);
+        text-align: center;
+      }
+    }
+
+    &__form {
+      &-label {
+        display: block;
+        font-weight: 500;
+        font-size: 24px;
+        color: #FFFFFF;
+        letter-spacing: 0;
+        margin: 0 0 17px;
+
+        @include mobile {
+          display: none;
+        }
+      }
+
+      &-input {
+        background: #3e3c4333;
+        border-radius: 4px;
+        border: none;
+        padding: 20px 21px 19px;
+        font-size: 22px;
+
+        @include mobile {
+          border-radius: vmin(4);
+          padding: vmin(17);
+          font-size: vmin(18);
+          line-height: vmin(21);
+          text-align: center;
+        }
+
+        &::placeholder {
+          opacity: 0.2;
+          color: #000647;
+          letter-spacing: 0;
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      &-button {
+        font-weight: 500;
+        font-size: 24px;
+        color: #FF7399;
+        letter-spacing: 0;
+        background: #FFFFFF;
+        border-radius: 4px;
+        padding: 19px 46px 18px;
+        border: none;
+        cursor: pointer;
+
+        @include mobile {
+          font-size: vmin(20);
+          line-height: vmin(24);
+          border-radius: vmin(4);
+          padding: vmin(16) vmin(16) vmin(15);
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      &-group {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-template-rows: 1fr;
+        grid-column-gap: 20px;
+        grid-row-gap: 0px;
+        max-width: 705px;
+
+        @include mobile {
+          max-width: initial;
+          grid-template-columns: 1fr;
+          grid-row-gap: vmin(8);
+        }
+      }
+    }
+
+    &__illustration {
+      opacity: 0.3;
+      background: #FFFFFF;
+      width: 287px;
+      height: 287px;
+      border-radius: 50%;
+      position: absolute;
+      top: 46px;
+      right: 47px;
+
+      @include mobile {
+        width: vmin(248);
+        height: vmin(248);
+        top: vmin(21);
+        left: vmin(22.5);
+      }
+    }
+  }
+
+  // Facets
+
+  // States
+}

@@ -1,0 +1,33 @@
+.button {
+    // Vars
+
+    // Support
+
+    // Module
+    & {
+        //
+      font-family: $mabry;
+      font-size: 27px;
+      color: #FFFFFF;
+      letter-spacing: 0;
+      text-align: center;
+      text-decoration: none;
+      background: #FF7E85;
+      border-radius: 3px;
+      padding: 18px 63px 17px;
+      font-weight: 500;
+
+      @include mobile {
+        display: block;
+        font-size: vmin(24);
+        padding: vmin(13) vmin(15) vmin(15);
+        width: 100%;
+        box-sizing: border-box;
+        border-radius: vmin(3);
+      }
+    }
+
+    // Facets
+
+    // States
+}

@@ -1,0 +1,138 @@
+.cases {
+  // Vars
+
+  // Support
+
+  // Module
+  & {
+    padding: 110px 0 0;
+
+    &__item {
+      position: relative;
+      border-radius: 4px;
+      padding: 96px 166px;
+      min-height: 644px;
+      text-align: center;
+      overflow: hidden;
+
+      &:not(:last-child) {
+        margin: 0 0 55px;
+      }
+
+      &:hover {
+        .cases__item-category,
+        .cases__item-title,
+        .cases__item-lead {
+          transform: translateY(-20px);
+        }
+      }
+
+      &-link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+      }
+
+      &-category {
+        position: relative;
+        opacity: 0.6;
+        font-size: 19px;
+        color: #FFFFFF;
+        letter-spacing: 4.96px;
+        text-transform: uppercase;
+        margin: 0 0 18px;
+        z-index: 1;
+        transition: all 600ms ease;
+      }
+
+      &-title {
+        position: relative;
+        font-family: $mabry;
+        font-weight: 500;
+        font-size: 85px;
+        line-height: 91px;
+        color: currentColor;
+        letter-spacing: 0;
+        margin: 0 0 18px;
+        z-index: 1;
+        transition: all 600ms ease;
+      }
+
+      &-lead {
+        position: relative;
+        font-size: 20px;
+        line-height: 28px;
+        color: #262528;
+        letter-spacing: 0;
+        z-index: 1;
+        transition: all 600ms ease;
+      }
+
+      &-illustration {
+        position: absolute;
+        width: 933px;
+        height: 302px;
+        opacity: 0.3;
+        bottom: -58px;
+        left: 50%;
+        margin: 0 0 0 calc(-933px / 2);
+        z-index: 1;
+
+        &-item {
+          width: 302px;
+          height: 302px;
+          border-radius: 50%;
+          background: #FFFFFF;
+          position: absolute;
+
+          &:nth-child(1) {
+            left: 0;
+            top: 0;
+          }
+
+          &:nth-child(2) {
+            left: 215px;
+            top: 0;
+          }
+
+          &:nth-child(3) {
+            right: 215px;
+            top: 0;
+          }
+
+          &:nth-child(4) {
+            right: 0;
+            top: 0;
+          }
+        }
+      }
+
+      &--agency {
+        color: #FFCF77;
+        background: #269D9B;
+      }
+
+      &--startup {
+        color: #56B6D1;
+        background: #8C6B69;
+      }
+
+      &--marketing {
+        color: #F26A94;
+        background: #ECC379;
+      }
+
+      &--freelance {
+        color: #FC7E6C;
+        background: #97C3DF;
+      }
+    }
+  }
+
+  // Facets
+
+  // States
+}

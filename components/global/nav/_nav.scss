@@ -1,0 +1,162 @@
+.nav {
+  // Vars
+
+  // Support
+
+  // Module
+  & {
+    position: absolute;
+    top: 32px;
+    left: 0;
+    width: 100vw;
+    z-index: 999;
+
+    .container {
+      @include mobile {
+        padding: 0 vmin(23) 0 vmin(16);
+      }
+    }
+
+    * {
+      transition: all 150ms ease;
+    }
+
+    &__wrapper {
+      display: grid;
+      grid-template-columns: auto 1fr repeat(2, auto);
+      grid-template-rows: 1fr;
+      grid-column-gap: 35px;
+      grid-row-gap: 0px;
+      align-items: center;
+
+      @include mobile {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    &__logo {
+      &-img {
+        width: 129px;
+        height: 43px;
+
+        @include mobile {
+          width: vmin(123);
+          height: vmin(36);
+        }
+      }
+
+      svg {
+        color: #FFFFFF;
+      }
+    }
+
+    &__menu {
+      width: 510px;
+      display: flex;
+      justify-content: flex-end;
+      color: #FFFFFF;
+
+      @include mobile {
+        display: none;
+      }
+
+      &-item {
+        font-family: $mabry;
+        font-size: 19px;
+        color: currentColor;
+        letter-spacing: 0;
+        text-decoration: none;
+
+        &:hover {
+          color: #C3C6E2;
+        }
+
+        &:not(:last-child) {
+          margin: 0 35px 0 0;
+        }
+      }
+    }
+
+    &__signup {
+      font-family: $mabry;
+      font-size: 19px;
+      color: #060E60;
+      letter-spacing: 0;
+      text-align: center;
+      padding: 9px 24px 8px;
+      background: #F6C8F1;
+      border-radius: 3px;
+      text-decoration: none;
+      box-sizing: border-box;
+      border: 2px solid transparent;
+
+      &:hover {
+        background: #EEA7E6;
+      }
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    &__blank {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    &__burger {
+      display: none;
+
+      @include mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: vmin(20);
+        height: vmin(15);
+        color: #FFFFFF;
+      }
+
+      &-line {
+        width: vmin(20);
+        height: vmin(2);
+        border-radius: vmin(1);
+        background: currentColor;
+        position: relative;
+      }
+    }
+
+    &--light {
+      .nav__logo {
+        svg {
+          color: #3E3C43;
+        }
+      }
+
+      .nav__menu {
+        color: #3E3C43;
+      }
+
+      .nav__menu-item {
+        &:hover {
+          color: #7F63BD;
+        }
+      }
+
+      .nav__signup {
+        border: 2px solid #3E3C43;
+        background: transparent;
+        color: #3E3C43;
+
+        &:hover {
+          border-color: #7F63BD;
+          color: #7F63BD;
+        }
+      }
+    }
+  }
+
+  // Facets
+
+  // States
+}

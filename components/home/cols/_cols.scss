@@ -1,0 +1,124 @@
+.cols {
+  // Vars
+
+  // Support
+
+  // Module
+  & {
+    padding: 0 0 140px;
+
+    @include mobile {
+      padding: 0 0 vmin(65);
+    }
+
+    &__main {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 0 42px;
+
+      @include mobile {
+        flex-direction: column-reverse;
+        margin: 0 0 vmin(34);
+      }
+
+      &-title {
+        font-size: 43px;
+        letter-spacing: 0;
+        line-height: 44px;
+        font-weight: 500;
+        color: #0E1889;
+        max-width: 755px;
+
+        @include mobile {
+          font-size: vmin(22);
+          line-height: vmin(27);
+          text-align: center;
+        }
+
+        span {
+          color: #DD59CF;
+        }
+      }
+
+      &-image {
+        width: 273px;
+        height: 273px;
+        background: #FFFFFF;
+        border-radius: 50%;
+        margin: 0 39px 0 93px;
+        opacity: .7;
+
+        @include mobile {
+          width: vmin(213);
+          height: vmin(213);
+          margin: 0 auto vmin(25);
+        }
+      }
+    }
+
+    &__3cols {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 1fr;
+      grid-column-gap: 55px;
+      grid-row-gap: 0px;
+
+      @include mobile {
+        grid-template-columns: 1fr;
+        grid-row-gap: vmin(26);
+      }
+
+      &-item {
+        @include mobile {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+
+      &-image {
+        width: 66px;
+        height: 66px;
+        opacity: 0.7;
+        background: #FFFFFF;
+        border-radius: 50%;
+        margin: 0 0 20px;
+
+        @include mobile {
+          width: vmin(53);
+          height: vmin(53);
+          margin: 0 auto vmin(11);
+        }
+      }
+
+      &-title,
+      &-text{
+        font-size: 18px;
+        line-height: 24px;
+        color: #3E3C43;
+        letter-spacing: 0;
+        margin: 0 0 5px;
+
+        @include mobile {
+          font-size: vmin(16);
+          line-height: vmin(21);
+          margin: 0;
+          text-align: center;
+        }
+      }
+
+      &-title {
+        font-weight: bold;
+
+        @include mobile {
+          margin: 0 0 vmin(5);
+        }
+      }
+    }
+  }
+
+  // Facets
+
+  // States
+}

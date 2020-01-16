@@ -1,0 +1,32 @@
+.policy-content {
+  // Vars
+
+  // Support
+
+  // Module
+  & {
+    padding: 0 0 145px;
+    &__text {
+      padding: 0 130px;
+      &--1 {
+        margin: 0 0 60px;
+      }
+
+      &--2 {
+        margin: 0 0 24px;
+      }
+
+      &--3 {
+        margin: 0 0 27px;
+      }
+
+      &--4 {
+        margin: 0 0 60px;
+      }
+    }
+  }
+
+  // Facets
+
+  // States
+}

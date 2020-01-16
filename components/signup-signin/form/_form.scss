@@ -1,0 +1,147 @@
+.form {
+  // Vars
+
+  // Support
+
+  // Module
+  & {
+
+    &__wrapper {
+      display: grid;
+      grid-template-columns: 511px 1fr;
+      grid-template-rows: 1fr;
+      grid-column-gap: 81px;
+      grid-row-gap: 0px;
+    padding: 115px 0 58px 27px;
+    }
+
+    &__group {
+      padding: 18px 0 0;
+    }
+
+    &__title {
+      font-family: $mabry;
+      font-size: 91px;
+      line-height: 83px;
+      color: #3E3C43;
+      letter-spacing: 0;
+      margin: 0 0 6px -5px;
+    }
+
+    &__text {
+      font-size: 21px;
+      line-height: 29px;
+      color: #44464C;
+      letter-spacing: 0;
+      margin: 0 -20px 51px 0;
+
+      &--signin {
+        margin: 0 0 80px;
+      }
+    }
+
+    &__inputs {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__input {
+      background: #FFFFFF;
+      border-radius: 4px;
+      padding: 16px 24px 17px;
+      font-family: $mabry;
+      font-size: 21px;
+      color: #3E3C43;
+      letter-spacing: 0;
+      border: none;
+      margin: 0 0 20px;
+
+      &::placeholder {
+        color: #B5B0BE;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    &__image {
+      background: #FFFFFF;
+      border-radius: 4px;
+      height: 673px;
+    }
+
+    &__button {
+      font-family: $mabry;
+      font-size: 21px;
+      color: #FFFFFF;
+      letter-spacing: 0;
+      text-align: center;
+      padding: 16px 24px 17px;
+      background: #6D63D4;
+      border-radius: 4px;
+      cursor: pointer;
+      appearance: none;
+      border: none;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    &__checkboxes {
+      padding: 5px 13px 0;
+      margin: 0 0 50px;
+    }
+
+    &__checkbox {
+      label {
+        position: relative;
+        display: flex;
+        align-items: center;
+        font-size: 21px;
+        color: #3E3C43;
+        letter-spacing: 0;
+
+        a {
+          color: #3E3C43;
+        }
+
+        &::before {
+          content: '';
+          width: 24px;
+          height: 24px;
+          background: #FFFFFF;
+          border-radius: 3px;
+          display: block;
+          margin: 0 17px 0 0;
+        }
+
+        &::after {
+          content: '';
+          width: 12px;
+          height: 12px;
+          border-radius: 3px;
+          position: absolute;
+          left: 6px;
+        }
+      }
+
+      input {
+        display: none;
+      }
+
+      input[type=checkbox]:checked + label:after {
+        background: #DE9CD7;
+      }
+
+      &:not(:last-child) {
+        margin: 0 0 21px;
+      }
+    }
+  }
+
+  // Facets
+
+  // States
+}

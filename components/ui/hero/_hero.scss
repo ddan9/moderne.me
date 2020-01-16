@@ -1,0 +1,53 @@
+.hero-title {
+  // Vars
+
+  // Support
+
+  // Module
+  & {
+    margin: 0 0 56px;
+    box-sizing: border-box;
+
+    &__wrapper {
+      margin: 0 92px;
+      padding: 0 83px;
+      border-bottom: 2px solid #FFFFFF;
+
+      &--noborder {
+        border-width: 0;
+      }
+    }
+
+    &__title {
+      font-size: 91px;
+      line-height: 83px;
+      color: #3E3C43;
+      letter-spacing: 0;
+      text-align: center;
+      margin: 0 0 22px;
+      font-weight: 500;
+    }
+
+    &__lead {
+      font-style: italic;
+      font-size: 23px;
+      line-height: 32px;
+      color: #3E3C43;
+      letter-spacing: 0;
+      text-align: center;
+      padding: 0 0 57px;
+      max-width: 808px;
+      margin: 0 auto;
+    }
+
+    &--light {
+      .hero-title__title {
+        font-weight: normal;
+      }
+    }
+  }
+
+  // Facets
+
+  // States
+}

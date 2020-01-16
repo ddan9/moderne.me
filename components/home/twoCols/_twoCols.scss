@@ -1,0 +1,141 @@
+.twoCols {
+  // Vars
+
+  // Support
+
+  // Module
+  & {
+    margin: 0 0 209px;
+
+    @include mobile {
+      margin: 0 0 vmin(57);
+    }
+
+    &__wrapper {
+      display: grid;
+      grid-template-columns: 1fr 444px;
+      grid-template-rows: 1fr;
+      grid-column-gap: 40px;
+      grid-row-gap: 0px;
+
+      @include mobile {
+        grid-template-columns: 1fr;
+        grid-row-gap: vmin(20);
+      }
+    }
+
+    &__item {
+      border-radius: 15px;
+
+      @include mobile {
+        border-radius: vmin(8);
+      }
+
+      &--1 {
+        background: #FFB283;
+        padding: 35px 35px 50px;
+
+        @include mobile {
+          padding: vmin(21) vmin(14) vmin(36) vmin(13);
+        }
+      }
+
+      &--2 {
+        background: #206871;
+        padding: 33px 32px 41px 38px;
+
+        @include mobile {
+          padding: vmin(28) vmin(11) vmin(24) vmin(15);
+        }
+      }
+
+      &-title {
+        font-family: $mabry;
+        font-weight: 500;
+        font-size: 52px;
+        line-height: 55px;
+        color: #206871;
+        letter-spacing: 0;
+        margin: 0 0 54px;
+
+        @include mobile {
+          font-size: vmin(29);
+          line-height: vmin(34);
+          text-align: center;
+          margin: 0 0 vmin(62);
+        }
+      }
+
+      &-text {
+        font-size: 26px;
+        line-height: 33px;
+        color: #FFFFFF;
+        letter-spacing: 0;
+
+        @include mobile {
+          font-size: vmin(18);
+          line-height: vmin(24);
+        }
+
+        &:not(:last-child) {
+          margin: 0 0 8px;
+
+          @include mobile {
+            margin: 0 0 vmin(8);
+          }
+        }
+      }
+
+      &-img {
+        &--small {
+          opacity: 0.6;
+          background: #FFFFFF;
+          width: 211px;
+          height: 211px;
+          border-radius: 50%;
+          margin: 0 0 30px;
+
+          @include mobile {
+            width: vmin(169);
+            height: vmin(169);
+            margin: 0 auto vmin(21);
+            transform: translateX(vmin(-4));
+          }
+        }
+
+        &--big {
+          width: 302px;
+          height: 302px;
+          border-radius: 50%;
+          background: #FFE0CD;
+
+          @include mobile {
+            width: vmin(155);
+            height: vmin(155);
+          }
+
+          &::after {
+            content: '';
+            width: 302px;
+            height: 302px;
+            display: block;
+            position: relative;
+            border-radius: 50%;
+            background: #FFE0CD;
+            margin: 0 0 0 215px;
+
+            @include mobile {
+              width: vmin(155);
+              height: vmin(155);
+              margin: 0 0 0 vmin(111);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Facets
+
+  // States
+}
