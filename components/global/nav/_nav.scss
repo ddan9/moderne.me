@@ -55,6 +55,7 @@
       display: flex;
       justify-content: flex-end;
       color: #FFFFFF;
+      transition: all 150ms ease;
 
       @include mobile {
         display: none;
@@ -152,6 +153,12 @@
           border-color: #7F63BD;
           color: #7F63BD;
         }
+      }
+    }
+
+    &--compact {
+      .nav__menu {
+        opacity: 0;
       }
     }
   }
