@@ -1,41 +1,40 @@
 <template lang="pug">
 .pricing-plans
-  .container
-    .pricing-plans__controls
-      .pricing-plans__controls-title
-        | monthly
-      .pricing-plans__controls-switch(:class="{'pricing-plans__controls-switch--active': !priceType}" @click="changePriceType()")
-        .pricing-plans__controls-switch-indicator
-      .pricing-plans__controls-title
-        | yearly
-        span (25% off)
-    .pricing-plans__items
-      .pricing-plans__item(v-for="(item, index) in plans" :key="index" :style="`color: ${item.color}`")
-        .pricing-plans__item-title {{item.title}}
-        .pricing-plans__item-content
-          .pricing-plans__item-lead {{item.lead}}
-          .pricing-plans__item-features
-            .pricing-plans__item-feature(v-for="(item, index) in item.features" :key="index")
-              span {{item.title}}
-        .pricing-plans__item-meta
-          .pricing-plans__item-price
-            .pricing-plans__item-price-value(v-if="priceType") {{ formatPrice(item.priceMouth) }}
-            .pricing-plans__item-price-value(v-else) {{ formatPrice(item.priceYear) }}
-            .pricing-plans__item-price-period per month
-          .pricing-plans__item-buttons
-            nuxt-link.pricing-plans__item-button(to="#")
-              | Sign up
-              svg(viewbox='0 0 38 21' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink')
-                g#Page-1(stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' stroke-linecap='round')
-                  g#Moderne-Pricing(transform='translate(-1132.000000, -769.000000)' stroke='currentColor' stroke-width='3')
-                    g#plan(transform='translate(236.000000, 472.000000)')
-                      g#pricing-arrow(transform='translate(897.500000, 299.000000)')
-                        path(d='M0,9.5 L33.5,9 M25.5,0 L34,8.5 M34.5,9 L26,17.5')
-    .pricing-plans__faq
-      .pricing-plans__faq-items
-        .pricing-plans__faq-item(v-for="(item, index) in faq" :key="index")
-          .pricing-plans__faq-item-title {{item.title}}
-          .pricing-plans__faq-item-text {{item.text}}
+  .pricing-plans__controls
+    .pricing-plans__controls-title
+      | monthly
+    .pricing-plans__controls-switch(:class="{'pricing-plans__controls-switch--active': !priceType}" @click="changePriceType()")
+      .pricing-plans__controls-switch-indicator
+    .pricing-plans__controls-title
+      | yearly
+      span (25%&nbsp;off)
+  .pricing-plans__items
+    .pricing-plans__item(v-for="(item, index) in plans" :key="index" :style="`color: ${item.color}`")
+      .pricing-plans__item-title {{item.title}}
+      .pricing-plans__item-content
+        .pricing-plans__item-lead {{item.lead}}
+        .pricing-plans__item-features
+          .pricing-plans__item-feature(v-for="(item, index) in item.features" :key="index")
+            span {{item.title}}
+      .pricing-plans__item-meta
+        .pricing-plans__item-price
+          .pricing-plans__item-price-value(v-if="priceType") {{ formatPrice(item.priceMouth) }}
+          .pricing-plans__item-price-value(v-else) {{ formatPrice(item.priceYear) }}
+          .pricing-plans__item-price-period per month
+        .pricing-plans__item-buttons
+          nuxt-link.pricing-plans__item-button(to="#")
+            | Sign up
+            svg(viewbox='0 0 38 21' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink')
+              g#Page-1(stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' stroke-linecap='round')
+                g#Moderne-Pricing(transform='translate(-1132.000000, -769.000000)' stroke='currentColor' stroke-width='3')
+                  g#plan(transform='translate(236.000000, 472.000000)')
+                    g#pricing-arrow(transform='translate(897.500000, 299.000000)')
+                      path(d='M0,9.5 L33.5,9 M25.5,0 L34,8.5 M34.5,9 L26,17.5')
+  .pricing-plans__faq
+    .pricing-plans__faq-items
+      .pricing-plans__faq-item(v-for="(item, index) in faq" :key="index")
+        .pricing-plans__faq-item-title {{item.title}}
+        .pricing-plans__faq-item-text {{item.text}}
 </template>
 
 <script>

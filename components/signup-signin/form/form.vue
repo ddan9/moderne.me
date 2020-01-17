@@ -17,14 +17,16 @@
             .form__checkbox
               input(type="checkbox" id="rules")
               label(for="rules")
-                | I agree to Moderne&nbsp;
-                nuxt-link(to="#") Terms
-                | &nbsp;and&nbsp;
-                nuxt-link(to="#") Privacy Policy
+                span
+                  | I agree to Moderne&nbsp;
+                  nuxt-link(to="#") Terms
+                  | &nbsp;and&nbsp;
+                  nuxt-link(to="/policy") Privacy&nbsp;Policy
             .form__checkbox
               input(type="checkbox" id="news")
               label(for="news")
-                | I agree to receive Moderne news and updates.
+                span
+                  | I agree to receive Moderne news and updates.
           button.form__button Get Started Now
         .form__inputs(v-else)
           input.form__input(
@@ -34,7 +36,8 @@
             :id="item.id"
             :placeholder="item.placeholder"
           )
-          button.form__button Get Started Now
+          button.form__button Sign In
+          nuxt-link.form__reset(to="#") Forgot Password?
       .form__image
 </template>
 

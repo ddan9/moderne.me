@@ -1,3 +1,5 @@
+@import 'responsive.scss';
+
 @font-face {
   font-family: 'Helvetica Neue';
   src: url('/fonts/HelveticaNeue-BoldItalic.woff') format('woff');
@@ -178,6 +180,12 @@ h2 {
   color: #3E3C43;
   letter-spacing: 0;
   margin: 0 0 15px;
+
+  @include mobile {
+    font-size: vmin(25);
+    line-height: vmin(29);
+    margin: 0 0 vmin(15);
+  }
 }
 
 h3 {
@@ -188,4 +196,10 @@ h3 {
   color: #3E3C43;
   letter-spacing: 0;
   margin: 0;
+
+  @include mobile {
+    font-size: vmin(22);
+    line-height: vmin(26);
+    margin: 0 0 vmin(12);
+  }
 }

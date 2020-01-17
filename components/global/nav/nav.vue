@@ -20,10 +20,15 @@
                     path#Path(d='M5.98500005,5.93250005 C5.98500005,6.65737379 5.39737378,7.24500006 4.67250004,7.24500006 C3.9476263,7.24500006 3.36000003,6.65737379 3.36000003,5.93250005 C3.36000003,5.20762631 3.9476263,4.62000004 4.67250004,4.62000004 C5.39737378,4.62000004 5.98500005,5.20762631 5.98500005,5.93250005' fill='#212126')
                     path#Path(d='M10.1845032,22.9005997 C10.1502596,23.3259721 9.78298749,23.6467025 9.35629939,23.6238514 C8.92961129,23.6010004 8.59878933,23.2428839 8.61029109,22.8162937 C8.62179285,22.3897034 8.97143256,22.0498859 9.39873369,22.0500002 C9.84970798,22.0707739 10.2000311,22.4500005 10.1845032,22.9005997' fill='#212126')
       .nav__blank
-        .nav__burger
+        .nav__burger(:class="{'nav__burger--cross': menuMobileActive}" @click="menuMobileActive = !menuMobileActive")
           .nav__burger-line
           .nav__burger-line
           .nav__burger-line
+        .nav__mobile(v-show="menuMobileActive")
+          .nav__mobile-items(@click="menuMobileActive = !menuMobileActive")
+            nuxt-link.nav__mobile-item(v-for='(item, index) in menu' :key="index" :to="item.link") {{item.title}}
+            nuxt-link.nav__mobile-item(to="/signin" v-if='path === "signup"') Sign In
+            nuxt-link.nav__mobile-item(to="/signup" v-else) Sign Up
       .nav__menu
         nuxt-link.nav__menu-item(v-for='(item, index) in menu' :key="index" :to="item.link") {{item.title}}
       nuxt-link.nav__signup(to="/signin" v-if='path === "signup"') Sign In
@@ -40,6 +45,7 @@ export default {
   },
   data () {
     return {
+      menuMobileActive: false,
       menu: [
         {
           title: 'Use cases',

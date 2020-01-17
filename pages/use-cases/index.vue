@@ -17,5 +17,9 @@ export default {
   .usecases {
     background-color: #F3EAE5;
     margin: 0 0 -85px;
+
+    @include mobile {
+      margin: 0 0 vmin(22);
+    }
   }
 </style>

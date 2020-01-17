@@ -1,5 +1,5 @@
 <template lang="pug">
-.footer(:class='{"footer--light": path === "use-cases" || path === "pricing"}' v-show='path !== "signin" || path !== "signup"')
+.footer(:class='{"footer--light": path === "use-cases" || path === "pricing", "footer--hide": path === "signin" || path === "signup"}')
   .container
     .footer__wrapper
       .footer__col.footer__col--big

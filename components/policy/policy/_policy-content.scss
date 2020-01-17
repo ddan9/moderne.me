@@ -6,22 +6,48 @@
   // Module
   & {
     padding: 0 0 145px;
+
+    @include mobile {
+      padding: 0 0 vmin(81);
+    }
+
     &__text {
       padding: 0 130px;
+
+      @include mobile {
+        padding: 0 0 0 vmin(2);
+      }
+
       &--1 {
         margin: 0 0 60px;
+
+        @include mobile {
+          margin: 0 0 vmin(40);
+        }
       }
 
       &--2 {
         margin: 0 0 24px;
+
+        @include mobile {
+          margin: 0 0 vmin(20);
+        }
       }
 
       &--3 {
         margin: 0 0 27px;
+
+        @include mobile {
+          margin: 0 0 vmin(20);
+        }
       }
 
       &--4 {
         margin: 0 0 60px;
+
+        @include mobile {
+          margin: 0 0 vmin(40);
+        }
       }
     }
   }

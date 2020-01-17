@@ -63,8 +63,16 @@ export default {
   .case {
     margin: 0 0 -60px;
 
+    @include mobile {
+      margin: 0;
+    }
+
     &__content {
       margin-bottom: 139px;
+
+      @include mobile {
+        margin-bottom: vmin(80);
+      }
     }
   }
 </style>

@@ -11,6 +11,10 @@
       align-items: center;
       margin: 125px 0 26px;
 
+      @include mobile {
+        margin: vmin(60) 0 vmin(21);
+      }
+
       &-title {
         font-size: 21px;
         line-height: 32px;
@@ -18,9 +22,21 @@
         letter-spacing: 0;
         transform: translateY(-3px);
 
+        @include mobile {
+          font-size: vmin(16);
+          line-height: vmin(32);
+          transform: translateY(vmin(-3));
+        }
+
         span {
           color: #A0A1A5;
           margin: 0 0 0 7px;
+
+          @include mobile {
+            margin: 0 0 0 vmin(3);
+            position: absolute;
+            left: 100%;
+          }
         }
       }
 
@@ -36,17 +52,34 @@
         padding: 3px;
         cursor: pointer;
 
+        @include mobile {
+          width: vmin(60);
+          height: vmin(32);
+          border-radius: vmin(16);
+          margin: 0 vmin(5);
+          padding: vmin(3);
+        }
+
         &-indicator {
           width: 26px;
           height: 26px;
           background: #DE9CD7;
           border-radius: 50%;
           transition: all 150ms ease;
+
+          @include mobile {
+            width: vmin(26);
+            height: vmin(26);
+          }
         }
 
         &--active {
           .pricing-plans__controls-switch-indicator {
             transform: translateX(28px);
+
+            @include mobile {
+              transform: translateX(vmin(28));
+            }
           }
         }
       }
@@ -57,6 +90,11 @@
       flex-direction: column;
       padding: 0 92px;
       margin: 0 0 96px;
+
+      @include mobile {
+        padding: 0 vmin(2);
+        margin: 0 0 vmin(53);
+      }
     }
 
     &__item {
@@ -68,6 +106,11 @@
       border-radius: 4px;
       overflow: hidden;
 
+      @include mobile {
+        padding: vmin(14) vmin(14) vmin(32) vmin(16);
+        border-radius: vmin(8);
+      }
+
       &::after {
         content: '';
         width: 100%;
@@ -76,10 +119,18 @@
         left: 0;
         bottom: 0;
         background: currentColor;
+
+        @include mobile {
+          height: vmin(5);
+        }
       }
 
       &:not(:last-child) {
         margin: 0 0 45px;
+
+        @include mobile {
+          margin: 0 0 vmin(40);
+        }
       }
 
       &-title {
@@ -88,6 +139,12 @@
         color: currentColor;
         letter-spacing: 0;
         margin: 0 0 11px;
+
+        @include mobile {
+          font-size: vmin(36);
+          line-height: vmin(39);
+          margin: 0 0 vmin(10);
+        }
       }
 
       &-content {
@@ -97,12 +154,22 @@
         grid-column-gap: 54px;
         grid-row-gap: 0;
         margin: 0 0 9px;
+
+        @include mobile {
+          grid-template-columns: 1fr;
+        }
       }
 
       &-meta {
         display: flex;
         justify-content: space-between;
         align-items: baseline;
+
+        @include mobile {
+          flex-direction: column;
+          align-items: center;
+          justify-content: initial;
+        }
       }
 
       &-lead {
@@ -110,17 +177,33 @@
         line-height: 25px;
         color: #44464C;
         letter-spacing: 0;
+
+        @include mobile {
+          font-size: vmin(16);
+          line-height: vmin(22);
+          margin: 0 0 vmin(20);
+        }
       }
 
       &-features {
         font-size: 18px;
         line-height: 25px;
         letter-spacing: 0;
+
+        @include mobile {
+          font-size: vmin(16);
+          line-height: vmin(22);
+          margin: 0 0 vmin(31);
+        }
       }
 
       &-feature {
         position: relative;
         padding: 0 0 0 18px;
+
+        @include mobile {
+          padding: 0 0 0 vmin(28);
+        }
 
         &::before {
           content: '';
@@ -132,6 +215,13 @@
           position: absolute;
           top: 9px;
           left: 0;
+
+          @include mobile {
+            width: vmin(8);
+            height: vmin(8);
+            top: vmin(7);
+            left: vmin(8);
+          }
         }
 
         span {
@@ -140,6 +230,10 @@
 
         &:not(:last-child) {
           margin: 0 0 15px;
+
+          @include mobile {
+            margin: 0 0 vmin(15);
+          }
         }
       }
 
@@ -147,12 +241,23 @@
         display: flex;
         align-items: baseline;
 
+        @include mobile {
+          flex-direction: column;
+          align-items: center;
+          margin: 0 0 vmin(26);
+        }
+
         &-value {
           font-family: $mabry;
           font-size: 50px;
           color: #3E3C43;
           letter-spacing: 0;
           margin: 0 9px 0 0;
+
+          @include mobile {
+            font-size: vmin(36);
+            margin: 0;
+          }
 
           &::before {
             content: '$';
@@ -164,10 +269,16 @@
           font-size: 29px;
           color: #C9C6CF;
           letter-spacing: 0;
+
+          @include mobile {
+            font-size: vmin(21);
+            margin: vmin(-4) 0 0;
+          }
         }
       }
 
       &-button {
+        position: relative;
         display: flex;
         align-items: center;
         font-family: $mabry;
@@ -177,10 +288,22 @@
         letter-spacing: 0;
         text-decoration: none;
 
+        @include mobile {
+          font-size: vmin(33);
+        }
+
         svg {
           width: 38px;
           height: 21px;
           margin: 0 0 0 14.5px;
+
+          @include mobile {
+            width: vmin(38);
+            height: vmin(21);
+            margin: 0 0 0 vmin(11.5);
+            position: absolute;
+            left: 100%;
+          }
         }
       }
     }
@@ -189,9 +312,18 @@
       padding: 0 122px;
       margin: 0 0 -40px;
 
+      @include mobile {
+        padding: 0 vmin(1) 0 vmin(10);
+        margin: 0 0 vmin(89);
+      }
+
       &-item {
         &:not(:last-child) {
           margin: 0 0 60px;
+
+          @include mobile {
+            margin: 0 0 vmin(40);
+          }
         }
 
         &-title {
@@ -200,6 +332,11 @@
           color: #3E3C43;
           letter-spacing: 0;
           margin: 0 0 8px;
+
+          @include mobile {
+            font-size: vmin(24);
+            margin: 0 0 vmin(10);
+          }
         }
 
         &-text {
@@ -207,6 +344,11 @@
           line-height: 27px;
           color: #44464C;
           letter-spacing: 0;
+
+          @include mobile {
+            font-size: vmin(16);
+            line-height: vmin(22);
+          }
         }
       }
     }

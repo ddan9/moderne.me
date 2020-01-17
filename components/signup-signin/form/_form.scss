@@ -12,11 +12,20 @@
       grid-template-rows: 1fr;
       grid-column-gap: 81px;
       grid-row-gap: 0px;
-    padding: 115px 0 58px 27px;
+      padding: 115px 0 58px 27px;
+
+      @include mobile {
+        grid-template-columns: 1fr;
+        padding: vmin(100) vmin(2) vmin(22);
+      }
     }
 
     &__group {
       padding: 18px 0 0;
+
+      @include mobile {
+        padding: 0;
+      }
     }
 
     &__title {
@@ -26,6 +35,13 @@
       color: #3E3C43;
       letter-spacing: 0;
       margin: 0 0 6px -5px;
+
+      @include mobile {
+        font-size: vmin(42);
+        line-height: vmin(40);
+        text-align: center;
+        margin: 0 0 vmin(6);
+      }
     }
 
     &__text {
@@ -35,8 +51,19 @@
       letter-spacing: 0;
       margin: 0 -20px 51px 0;
 
+      @include mobile {
+        font-size: vmin(16);
+        line-height: vmin(22);
+        text-align: center;
+        margin: 0 0 vmin(56);
+      }
+
       &--signin {
         margin: 0 0 80px;
+
+        @include mobile {
+          margin: 0 0 vmin(78);
+        }
       }
     }
 
@@ -56,8 +83,22 @@
       border: none;
       margin: 0 0 20px;
 
+      @include mobile {
+        border-radius: vmin(4);
+        padding: vmin(14) vmin(24) vmin(17);
+        font-size: vmin(20);
+        letter-spacing: 0;
+        text-align: center;
+        margin: 0 0 vmin(10);
+      }
+
       &::placeholder {
         color: #B5B0BE;
+
+        @include mobile {
+          opacity: 0.2;
+          color: #000647;
+        }
       }
 
       &:focus {
@@ -69,6 +110,10 @@
       background: #FFFFFF;
       border-radius: 4px;
       height: 673px;
+
+      @include mobile {
+        display: none;
+      }
     }
 
     &__button {
@@ -84,6 +129,12 @@
       appearance: none;
       border: none;
 
+      @include mobile {
+        font-size: vmin(20);
+        padding: vmin(15) vmin(30) vmin(16);
+        border-radius: vmin(4);
+      }
+
       &:focus {
         outline: none;
       }
@@ -92,6 +143,11 @@
     &__checkboxes {
       padding: 5px 13px 0;
       margin: 0 0 50px;
+
+      @include mobile {
+        padding: vmin(13) 0 0 vmin(6);
+        margin: 0 0 vmin(20);
+      }
     }
 
     &__checkbox {
@@ -102,6 +158,16 @@
         font-size: 21px;
         color: #3E3C43;
         letter-spacing: 0;
+
+        @include mobile {
+          font-size: vmin(16);
+          line-height: vmin(20);
+          display: grid;
+          grid-template-columns: vmin(24) 1fr;
+          grid-template-rows: auto;
+          grid-column-gap: vmin(14);
+          grid-row-gap: 16px;
+        }
 
         a {
           color: #3E3C43;
@@ -115,6 +181,13 @@
           border-radius: 3px;
           display: block;
           margin: 0 17px 0 0;
+
+          @include mobile {
+            width: vmin(24);
+            height: vmin(24);
+            border-radius: vmin(3);
+            margin: 0;
+          }
         }
 
         &::after {
@@ -124,6 +197,13 @@
           border-radius: 3px;
           position: absolute;
           left: 6px;
+
+          @include mobile {
+            width: vmin(12);
+            height: vmin(12);
+            border-radius: vmin(3);
+            left: vmin(6);
+          }
         }
       }
 
@@ -137,6 +217,20 @@
 
       &:not(:last-child) {
         margin: 0 0 21px;
+      }
+    }
+
+    &__reset {
+      font-family: $mabry;
+      font-size: 19px;
+      color: #959299;
+      letter-spacing: 0;
+      text-align: center;
+      margin: 24px 0 0;
+
+      @include mobile {
+        font-size: vmin(16);
+        margin: vmin(19) 0 0;
       }
     }
   }

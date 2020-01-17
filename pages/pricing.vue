@@ -24,5 +24,9 @@ export default {
 <style lang="scss" scoped>
   .pricing {
     padding: 203px 0 0;
+
+    @include mobile {
+      padding: vmin(100) 0 0;
+    }
   }
 </style>

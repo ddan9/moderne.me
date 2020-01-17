@@ -61,8 +61,17 @@ export default {
     color: #080809;
     letter-spacing: 0;
 
+    @include mobile {
+      font-size: vmin(17);
+      line-height: vmin(23);
+    }
+
     &:not(:Last-child) {
       margin: 0 0 16px;
+
+      @include mobile {
+        margin: 0 0 vmin(12);
+      }
     }
   }
   .page-enter-active, .page-leave-active {

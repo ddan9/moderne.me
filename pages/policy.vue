@@ -27,5 +27,9 @@ export default {
   background-color: #F3EAE5;
   padding: 246px 0 0;
   box-sizing: border-box;
+
+  @include mobile {
+    padding: vmin(100) 0 0;
+  }
 }
 </style>
