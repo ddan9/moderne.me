@@ -16,6 +16,7 @@
       padding: 113px 0 0 27px;
 
       @include mobile {
+        display: flex;
         grid-template-columns: 1fr;
         padding: vmin(100) vmin(2) vmin(22);
       }
@@ -26,6 +27,7 @@
 
       @include mobile {
         padding: 0;
+        width: 100%;
       }
     }
 
@@ -85,8 +87,9 @@
       margin: 0 0 20px;
 
       @include mobile {
+        width: 100%;
         border-radius: vmin(4);
-        padding: vmin(14) vmin(24) vmin(17);
+        padding: vmin(14) vmin(10) vmin(17);
         font-size: vmin(20);
         letter-spacing: 0;
         text-align: center;
@@ -198,6 +201,7 @@
           border-radius: 3px;
           position: absolute;
           left: 6px;
+          top: 7px;
 
           @include mobile {
             width: vmin(12);
