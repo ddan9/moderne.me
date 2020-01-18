@@ -45,6 +45,7 @@
     &__form {
       position: relative;
       z-index: 1;
+
       &-label {
         display: block;
         font-weight: 500;
@@ -71,6 +72,7 @@
           font-size: vmin(18);
           line-height: vmin(21);
           text-align: center;
+          margin: 0 0 vmin(8);
         }
 
         &::placeholder {
@@ -117,8 +119,10 @@
 
         @include mobile {
           max-width: initial;
-          grid-template-columns: 1fr;
-          grid-row-gap: vmin(8);
+          //grid-template-columns: 1fr;
+          //grid-row-gap: vmin(8);
+          display: flex;
+          flex-direction: column;
         }
       }
     }

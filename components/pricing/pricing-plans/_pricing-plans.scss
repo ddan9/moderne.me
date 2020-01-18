@@ -86,6 +86,7 @@
     }
 
     &__items {
+      position: relative;
       display: flex;
       flex-direction: column;
       padding: 0 92px;
@@ -94,6 +95,17 @@
       @include mobile {
         padding: 0 vmin(2);
         margin: 0 0 vmin(53);
+      }
+    }
+
+    &__illustration {
+      width: 288px;
+      position: absolute;
+      top: -356px;
+      right: 115px;
+
+      @include mobile {
+        display: none;
       }
     }
 
@@ -290,6 +302,7 @@
 
         @include mobile {
           font-size: vmin(33);
+          line-height: vmin(39);
         }
 
         svg {
@@ -303,6 +316,7 @@
             margin: 0 0 0 vmin(11.5);
             position: absolute;
             left: 100%;
+            top: vmin(10);
           }
         }
       }

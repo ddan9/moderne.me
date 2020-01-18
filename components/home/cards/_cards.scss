@@ -35,6 +35,10 @@
       @include mobile {
         border-radius: vmin(8);
         padding: vmin(13) vmin(12) vmin(24) vmin(13);
+
+        &:not(:last-child) {
+          margin: 0 0 vmin(20);
+        }
       }
 
       &-label {
@@ -69,16 +73,31 @@
         &--1 {
           height: 238px;
           margin: 29px auto 44px;
+
+          @include mobile {
+            height: vmin(191);
+            margin: vmin(14) auto vmin(31);
+          }
         }
 
         &--2 {
           height: 246px;
           margin: 33px auto 32px;
+
+          @include mobile {
+            height: vmin(197);
+            margin: vmin(15) auto vmin(24);
+          }
         }
 
         &--3 {
           height: 241px;
           margin: 37px auto 33px;
+
+          @include mobile {
+            height: vmin(194);
+            margin: vmin(19) auto vmin(23);
+          }
         }
       }
 

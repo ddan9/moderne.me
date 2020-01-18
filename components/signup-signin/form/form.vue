@@ -38,7 +38,7 @@
           )
           button.form__button Sign In
           nuxt-link.form__reset(to="#") Forgot Password?
-      .form__image
+      img.form__image(src="@/assets/images/illustrations/login-head.png" srcset="@/assets/images/illustrations/login-head@2x.png 2x")
 </template>
 
 <script>

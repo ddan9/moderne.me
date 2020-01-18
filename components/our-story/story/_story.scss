@@ -19,13 +19,17 @@
 
     &__img {
       text-align: center;
-      margin: 0 0 28px;
+      margin: 0 0 32px;
+
+      img {
+        height: 424px;
+      }
 
       @include mobile {
-        margin: 0 0 vmin(41);
+        margin: 0 0 vmin(23);
 
         img {
-          height: vmin(250);
+          height: vmin(253);
         }
       }
     }

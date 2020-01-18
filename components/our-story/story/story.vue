@@ -3,7 +3,7 @@
   .container
     .story__wrapper
       .story__img
-        img(src="@/assets/images/illustrations/story-monkey.png" srcset="@/assets/images/illustrations/story-monkey@2x.png 2x")
+        img(src="@/assets/images/illustrations/ourstory-monkey.png" srcset="@/assets/images/illustrations/ourstory-monkey@2x.png 2x")
       h1.story__title Enabling to focus on&nbsp;what&nbsp;you do best
       .story__lead The digitalization of the workplace promised to make work better for humans. But instead of removing distractions it multiplied them. We set out to fix that.
       .story__text.story__text--1

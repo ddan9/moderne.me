@@ -35,7 +35,9 @@
       align-items: center;
 
       @include mobile {
-        grid-template-columns: repeat(2, 1fr);
+        display: flex;
+        justify-content: space-between;
+        //grid-template-columns: repeat(2, 1fr);
       }
     }
 
@@ -135,12 +137,16 @@
       }
 
       &--cross {
+        color: #FFFFFF !important;
+
         .nav__burger-line:nth-child(1) {
           transform: rotate(45deg);
         }
+
         .nav__burger-line:nth-child(2) {
           opacity: 0;
         }
+
         .nav__burger-line:nth-child(3) {
           transform: rotate(-45deg);
         }
@@ -173,6 +179,10 @@
           border-color: #7F63BD;
           color: #7F63BD;
         }
+      }
+
+      .nav__burger {
+        color: #3E3C43;
       }
     }
 

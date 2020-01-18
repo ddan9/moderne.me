@@ -1,5 +1,6 @@
 .form {
   // Vars
+  $buttonColor: #FF8389;
 
   // Support
 
@@ -10,9 +11,9 @@
       display: grid;
       grid-template-columns: 511px 1fr;
       grid-template-rows: 1fr;
-      grid-column-gap: 81px;
+      grid-column-gap: 76px;
       grid-row-gap: 0px;
-      padding: 115px 0 58px 27px;
+      padding: 113px 0 0 27px;
 
       @include mobile {
         grid-template-columns: 1fr;
@@ -21,7 +22,7 @@
     }
 
     &__group {
-      padding: 18px 0 0;
+      padding: 20px 0 0;
 
       @include mobile {
         padding: 0;
@@ -107,9 +108,9 @@
     }
 
     &__image {
-      background: #FFFFFF;
-      border-radius: 4px;
-      height: 673px;
+      //background: #FFFFFF;
+      //border-radius: 4px;
+      width: 546px;
 
       @include mobile {
         display: none;
@@ -123,7 +124,7 @@
       letter-spacing: 0;
       text-align: center;
       padding: 16px 24px 17px;
-      background: #6D63D4;
+      background: $buttonColor;
       border-radius: 4px;
       cursor: pointer;
       appearance: none;

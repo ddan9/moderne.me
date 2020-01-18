@@ -101,6 +101,8 @@
       right: 35px;
 
       @include mobile {
+        display: flex;
+        justify-content: center;
         position: relative;
         height: vmin(242);
         top: initial;
