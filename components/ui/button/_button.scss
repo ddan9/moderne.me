@@ -6,6 +6,7 @@
     // Module
     & {
         //
+      display: inline-block;
       font-family: $mabry;
       font-size: 27px;
       color: #FFFFFF;
@@ -14,7 +15,7 @@
       text-decoration: none;
       background: #FF7E85;
       border-radius: 3px;
-      padding: 18px 63px 17px;
+      padding: 18px 48px 14px;
       font-weight: 500;
 
       @include mobile {

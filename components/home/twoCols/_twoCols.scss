@@ -25,10 +25,13 @@
     }
 
     &__item {
+      position: relative;
+      height: 552px;
       border-radius: 15px;
 
       @include mobile {
         border-radius: vmin(8);
+        height: initial;
       }
 
       &--1 {
@@ -37,15 +40,20 @@
 
         @include mobile {
           padding: vmin(21) vmin(14) vmin(36) vmin(13);
+          height: vmin(276);
         }
       }
 
       &--2 {
         background: #206871;
         padding: 33px 32px 41px 38px;
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
 
         @include mobile {
           padding: vmin(28) vmin(11) vmin(24) vmin(15);
+          height: vmin(368);
         }
       }
 
@@ -88,34 +96,39 @@
 
       &-img {
         &--small {
-          opacity: 0.6;
-          background: #FFFFFF;
-          width: 211px;
-          height: 211px;
-          border-radius: 50%;
-          margin: 0 0 30px;
+          position: absolute;
+          top: 6px;
+          left: 6px;
+          //opacity: 0.6;
+          //background: #FFFFFF;
+          width: 433px;
+          //border-radius: 50%;
+          //margin: 0 0 30px;
 
           @include mobile {
-            width: vmin(169);
-            height: vmin(169);
-            margin: 0 auto vmin(21);
-            transform: translateX(vmin(-4));
+            width: vmin(281);
+            left: vmin(6);
+            top: vmin(6);
           }
         }
 
         &--big {
-          width: 302px;
-          height: 302px;
-          border-radius: 50%;
-          background: #FFE0CD;
+          position: absolute;
+          width: 645px;
+          height: initial;
+          bottom: 0;
+          left: 15px;
+          //border-radius: 50%;
+          //background: #FFE0CD;
 
           @include mobile {
-            width: vmin(155);
-            height: vmin(155);
+            width: vmin(276);
+            height: initial;
+            left: vmin(9);
           }
 
           &::after {
-            content: '';
+            //content: '';
             width: 302px;
             height: 302px;
             display: block;

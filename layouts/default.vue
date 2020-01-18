@@ -81,4 +81,8 @@ export default {
     opacity: 0;
     transform: translateY(20px);
   }
+
+  img {
+    pointer-events: none;
+  }
 </style>

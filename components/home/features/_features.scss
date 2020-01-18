@@ -5,7 +5,7 @@
 
   // Module
   & {
-    padding: 0 0 183px;
+    padding: 0 0 139px;
 
     @include mobile {
       padding: 0 0 vmin(43);
@@ -62,13 +62,31 @@
           height: vmin(241);
           margin: 0 0 vmin(28);
         }
+
+        &--1 {
+          height: 488px;
+
+          @include mobile {
+            height: vmin(294);
+            margin: 0 auto vmin(3);
+          }
+        }
+
+        &--2 {
+          height: 471px;
+
+          @include mobile {
+            height: vmin(272);
+            margin: 0 auto vmin(11);
+          }
+        }
       }
 
       &:not(:last-child) {
-        margin: 0 0 112px;
+        margin: 0 0 48px;
 
         @include mobile {
-          margin: 0 0 vmin(54);
+          margin: 0 0 vmin(40);
         }
       }
 

@@ -14,7 +14,7 @@
     &__wrapper {
       display: flex;
       justify-content: space-between;
-      align-items: flex-start;
+      align-items: center;
 
       @include mobile {
         flex-direction: column;
@@ -23,17 +23,19 @@
 
     &__mini {
       &-items {
-        margin: 15px 0 0;
+        //margin: 15px 0 0;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
 
         @include mobile {
+          width: 100%;
           margin: 0 0 vmin(76);
         }
       }
 
       &-item {
+        position: relative;
         font-size: 22px;
         font-weight: 500;
         color: #7A7780;
@@ -49,6 +51,17 @@
           border-width: vmin(2);
         }
 
+        &::after {
+          content: '';
+          position: absolute;
+          background-size: contain;
+          background-repeat: no-repeat;
+
+          @include mobile {
+            display: none;
+          }
+        }
+
         &:not(:last-child) {
           margin: 0 0 25px;
 
@@ -61,12 +74,36 @@
           @include mobile {
             margin-left: vmin(34.5);
           }
+
+          &::after {
+            width: 85px;
+            height: 24px;
+            background-image: url("~assets/images/illustrations/tags-arrow-01.png");
+            left: calc(100% + 14px);
+            top: 17px;
+
+            @include retina {
+              background-image: url("~assets/images/illustrations/tags-arrow-01@2x.png");
+            }
+          }
         }
 
         &:nth-child(2) {
           margin-left: 90px;
           @include mobile {
             margin-left: vmin(34.5);
+          }
+
+          &::after {
+            width: 33px;
+            height: 19px;
+            background-image: url("~assets/images/illustrations/tags-arrow-02.png");
+            left: calc(100% + 15px);
+            top: 13px;
+
+            @include retina {
+              background-image: url("~assets/images/illustrations/tags-arrow-02@2x.png");
+            }
           }
         }
 
@@ -75,12 +112,36 @@
           @include mobile {
             margin-left: vmin(80);
           }
+
+          &::after {
+            width: 90px;
+            height: 22px;
+            background-image: url("~assets/images/illustrations/tags-arrow-03.png");
+            left: calc(100% + 13px);
+            top: 15px;
+
+            @include retina {
+              background-image: url("~assets/images/illustrations/tags-arrow-03@2x.png");
+            }
+          }
         }
 
         &:nth-child(4) {
           margin-left: 127px;
           @include mobile {
             margin-left: vmin(34);
+          }
+
+          &::after {
+            width: 69px;
+            height: 22px;
+            background-image: url("~assets/images/illustrations/tags-arrow-04.png");
+            left: calc(100% + 14px);
+            top: 9px;
+
+            @include retina {
+              background-image: url("~assets/images/illustrations/tags-arrow-04@2x.png");
+            }
           }
         }
       }
@@ -94,6 +155,7 @@
         width: 100%;
         margin: 0 0 vmin(72);
       }
+
       &-monkey {
         width: 326px;
         height: 337px;
@@ -102,6 +164,17 @@
         @include mobile {
           width: vmin(252);
           height: vmin(252);
+          margin: 0 auto vmin(17);
+        }
+      }
+
+      &-face {
+        height: 403px;
+        margin: 0 0 20px;
+
+        @include mobile {
+          width: vmin(252);
+          height: initial;
           margin: 0 auto vmin(17);
         }
       }
@@ -130,6 +203,7 @@
       }
 
       &-item {
+        position: relative;
         border: 2px solid currentColor;
         border-radius: 4px;
         padding: 20px 20px 20px 25px;
@@ -140,6 +214,13 @@
           border-radius: vmin(4);
           padding: vmin(17) vmin(17) vmin(21) vmin(16);
           max-width: initial;
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          background-size: contain;
+          background-repeat: no-repeat;
         }
 
         &:not(:last-child) {
@@ -177,6 +258,18 @@
 
         &:nth-child(1) {
           color: #40AC76;
+
+          &::after {
+            width: 69px;
+            height: 22px;
+            background-image: url("~assets/images/illustrations/tags-arrow-05.png");
+            right: calc(100% + 16px);
+            top: 31px;
+
+            @include retina {
+              background-image: url("~assets/images/illustrations/tags-arrow-05@2x.png");
+            }
+          }
         }
 
         &:nth-child(2) {
@@ -185,6 +278,18 @@
 
           @include mobile {
             margin-left: initial;
+          }
+
+          &::after {
+            width: 85px;
+            height: 24px;
+            background-image: url("~assets/images/illustrations/tags-arrow-06.png");
+            right: calc(100% + 20px);
+            top: 43px;
+
+            @include retina {
+              background-image: url("~assets/images/illustrations/tags-arrow-06@2x.png");
+            }
           }
         }
       }

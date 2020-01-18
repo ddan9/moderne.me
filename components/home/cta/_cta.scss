@@ -43,6 +43,8 @@
     }
 
     &__form {
+      position: relative;
+      z-index: 1;
       &-label {
         display: block;
         font-weight: 500;
@@ -122,20 +124,20 @@
     }
 
     &__illustration {
-      opacity: 0.3;
-      background: #FFFFFF;
-      width: 287px;
-      height: 287px;
-      border-radius: 50%;
+      height: 362px;
       position: absolute;
       top: 46px;
-      right: 47px;
+      right: 29px;
+
+      img {
+        height: 100%;
+      }
 
       @include mobile {
-        width: vmin(248);
-        height: vmin(248);
-        top: vmin(21);
-        left: vmin(22.5);
+        width: vmin(263);
+        height: initial;
+        top: vmin(13);
+        left: vmin(17);
       }
     }
   }
