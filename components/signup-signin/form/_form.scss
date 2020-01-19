@@ -68,6 +68,14 @@
           margin: 0 0 vmin(78);
         }
       }
+
+      &--getaccess {
+        margin: 0 0 51px;
+
+        @include mobile {
+          margin: 0 0 vmin(56);
+        }
+      }
     }
 
     &__inputs {

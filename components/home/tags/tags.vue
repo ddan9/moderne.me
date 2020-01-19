@@ -38,11 +38,11 @@ export default {
       tagsBig: [
         {
           title: 'Creative ideas.',
-          text: 'Quisque volutpat augue enim Pulvinar lobortis nibh lacinia at lobortis id bibendum.'
+          text: 'Get the best in class examples of advertising ideas in minutes to boost your creativity.'
         },
         {
           title: 'Creative insights.',
-          text: 'As a base that helps to make you next creative advertising campaign shine.'
+          text: 'Use hundreds of highly tailored creative insights to produce mind-blowing marketing ideas.'
         }
       ]
     }

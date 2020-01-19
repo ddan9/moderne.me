@@ -20,21 +20,21 @@ export default {
       cards: [
         {
           color: 'orange',
-          label: 'Brainstorms',
-          title: 'Team focus.',
-          text: 'Kick-off ideas fast with reusable block injection and the smart asset library.'
+          label: 'Collaboration',
+          title: 'Improve Collaboration.',
+          text: 'Great ideas could come from anyone. Make sure  everyone is heard.'
         },
         {
           color: 'green',
-          label: 'Collaboration',
-          title: 'Collaboration.',
-          text: 'Kick-off ideas fast with reusable block injection and the smart asset library.'
+          label: 'Brainstorms',
+          title: 'Present better.',
+          text: 'Turn your great ideas into clean and beautiful presentation decks.'
         },
         {
           color: 'pink',
-          label: 'Creative ads',
-          title: 'Creative ads.',
-          text: 'Kick-off ideas fast with reusable block injection and the smart asset library.'
+          label: 'Creativity',
+          title: 'Encourage creativity.',
+          text: 'Spice up your team’s potential with best ideas and insights.'
         }
       ]
     }

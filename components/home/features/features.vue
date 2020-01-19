@@ -18,12 +18,12 @@ export default {
       features: {
         items: [
           {
-            title: 'Mauris non tempor quam, lacinia sapien.',
-            text: 'In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit. Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar loborti.'
+            title: 'Thousands of creative insights and ideas',
+            text: 'Moderne gathered thousands of advertising campaigns from all over the world, so the platform provides the best ideas and insights based on your goals&objectives, target audience and data from previous campaigns.'
           },
           {
-            title: 'Donec facilisis tortor ut augue lacini.',
-            text: 'Nam porttitor blandit accumsan. Ut vel dictum sem, a pretium dui. In malesuada enim in dolor euismod, id commodo mi consectetur. Curabitur at vestibulum nisi. Nullam vehicula nisi velit. Mauris turpis nisl, molestie ut ipsum.'
+            title: 'Run brainstorms like never before',
+            text: 'Moderne helps creative teams to make their brainstorming sessions effective by providing tons of useful ideas and insights, helping to keep all the assets together, and presenting ideas to others quickly.'
           }
         ]
       }

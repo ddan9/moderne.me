@@ -1,5 +1,5 @@
 <template lang="pug">
-.footer(:class='{"footer--light": path === "use-cases" || path === "pricing", "footer--hide": path === "signin" || path === "signup"}')
+.footer(:class='{"footer--light": path === "use-cases" || path === "pricing", "footer--hide": path === "signin" || path === "signup" || path === "get-access" || path === "thank-you"}')
   .container
     .footer__wrapper
       .footer__col.footer__col--big
@@ -28,8 +28,11 @@
           nuxt-link.footer__nav-link(v-for='(item, index) in menu_2' :key="index" :to="item.link")
             | {{item.title}}
             span(v-if="item.label") {{item.label}}
+          a.footer__nav-link(v-for='(item, index) in menu_2_2' :key="index" :href="item.link")
+            | {{item.title}}
+            span(v-if="item.label") {{item.label}}
         .footer__nav-col
-          nuxt-link.footer__nav-link(v-for='(item, index) in menu_3' :key="index" :to="item.link")
+          a.footer__nav-link(v-for='(item, index) in menu_3' :key="index" :href="item.link")
             | {{item.title}}
             span(v-if="item.label") {{item.label}}
         .footer__nav-col
@@ -51,7 +54,7 @@ export default {
       menu_1: [
         {
           title: 'Home',
-          link: '#'
+          link: '/'
         },
         {
           title: 'Use Cases',
@@ -59,7 +62,7 @@ export default {
         },
         {
           title: 'Pricing',
-          link: '#'
+          link: '/pricing'
         },
         {
           title: 'Status',
@@ -69,19 +72,21 @@ export default {
       menu_2: [
         {
           title: 'Getting Started',
-          link: '#'
+          link: '/get-access'
         },
         {
           title: 'Blog',
           link: '#'
-        },
+        }
+        // {
+        //   title: 'Help Center',
+        //   link: '#'
+        // },
+      ],
+      menu_2_2: [
         {
-          title: 'Help Center',
-          link: '#'
-        },
-        {
-          title: 'Contact Support',
-          link: '#'
+          title: 'Contact by email',
+          link: 'mailto:mila@moderne.st'
         }
       ],
       menu_3: [
@@ -91,11 +96,11 @@ export default {
         },
         {
           title: 'LinkedIn',
-          link: '#'
+          link: 'https://www.linkedin.com/company/moderne'
         },
         {
           title: 'Facebook',
-          link: '#'
+          link: 'https://www.facebook.com/mdrnst/'
         },
         {
           title: 'Instagram',
@@ -105,7 +110,7 @@ export default {
       menu_4: [
         {
           title: 'About Us',
-          link: '#'
+          link: '/our-story'
         },
         {
           title: 'Careers',

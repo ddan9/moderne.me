@@ -3,7 +3,7 @@
     .container
       h1.hero__title {{hero.title}}
       .hero__lead {{hero.lead}}
-      button-ui.hero__button(text="Get Started" link="#" bgColor="#FF7E85" textColor="#FFFFFF")
+      button-ui.hero__button(text="Get Started" link="/get-access" bgColor="#FF7E85" textColor="#FFFFFF")
       .hero__illustration
         img(src="@/assets/images/illustrations/hero-monkey.png" srcset="@/assets/images/illustrations/hero-monkey@2x.png 2x")
 </template>
@@ -19,8 +19,8 @@ export default {
   data () {
     return {
       hero: {
-        title: 'Make your next ad campaign memorable',
-        lead: 'Moderne helps creative teams to work and collaborate faster as well as run brainstorms easier.'
+        title: 'Unleash the full potential of your creative team',
+        lead: 'Moderne provides tons of highly-tailored creative ideas and insights and helps to make creative brainstorms more effective.'
       }
     }
   }

@@ -1,12 +1,12 @@
 <template lang="pug">
   .home
     section-hero
-    section-cols
+    section-cols(type="top")
     section-features
     section-twoCols
     section-tags
     section-cards
-    section-cols
+    section-cols(type="bottom")
     section-cta
 </template>
 

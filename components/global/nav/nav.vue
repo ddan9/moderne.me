@@ -1,5 +1,5 @@
 <template lang="pug">
-.nav(:class='{"nav--light": path !== "index", "nav--compact": path === "signin" || path === "signup"}')
+.nav(:class='{"nav--light": path !== "index", "nav--compact": path === "signin" || path === "signup" || path === "get-access" || path === "thank-you"}')
   .container
     .nav__wrapper
       nuxt-link.nav__logo(to="/")
@@ -28,11 +28,11 @@
           .nav__mobile-items(@click="menuMobileActive = !menuMobileActive")
             nuxt-link.nav__mobile-item(v-for='(item, index) in menu' :key="index" :to="item.link") {{item.title}}
             nuxt-link.nav__mobile-item(to="/signin" v-if='path === "signup"') Sign In
-            nuxt-link.nav__mobile-item(to="/signup" v-else) Sign Up
+            nuxt-link.nav__mobile-item(to="/get-access" v-else) Get Access
       .nav__menu
         nuxt-link.nav__menu-item(v-for='(item, index) in menu' :key="index" :to="item.link") {{item.title}}
-      nuxt-link.nav__signup(to="/signin" v-if='path === "signup"') Sign In
-      nuxt-link.nav__signup(to="/signup" v-else) Sign Up
+      nuxt-link.nav__signup(to="/signin" v-if='path === "get-access"') Sign In
+      nuxt-link.nav__signup(to="/get-access" v-else) Get Access
 </template>
 
 <script>
@@ -47,10 +47,10 @@ export default {
     return {
       menuMobileActive: false,
       menu: [
-        {
-          title: 'Use cases',
-          link: '/use-cases'
-        },
+        // {
+        //   title: 'Use cases',
+        //   link: '/use-cases'
+        // },
         {
           title: 'Pricing',
           link: '/pricing'

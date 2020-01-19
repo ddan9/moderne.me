@@ -23,8 +23,8 @@
           .pricing-plans__item-price-value(v-else) {{ formatPrice(item.priceYear) }}
           .pricing-plans__item-price-period per month
         .pricing-plans__item-buttons
-          nuxt-link.pricing-plans__item-button(to="/signup")
-            | Sign up
+          nuxt-link.pricing-plans__item-button(to="/get-access")
+            | Get Access
             svg(viewbox='0 0 38 21' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink')
               g#Page-1(stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' stroke-linecap='round')
                 g#Moderne-Pricing(transform='translate(-1132.000000, -769.000000)' stroke='currentColor' stroke-width='3')

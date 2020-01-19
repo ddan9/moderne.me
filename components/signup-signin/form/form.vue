@@ -4,7 +4,7 @@
     .form__wrapper
       .form__group
         .form__title {{title}}
-        .form__text(:class="{'form__text--signin': type === 'signin'}") {{text}}
+        .form__text(:class="{'form__text--signin': type === 'signin', 'form__text--getaccess': type === 'getaccess'}") {{text}}
         .form__inputs(v-if='type === "signup"')
           input.form__input(
             v-for="(item, index) in signUpInputs"
@@ -28,7 +28,7 @@
                 span
                   | I agree to receive Moderne news and updates.
           button.form__button Get Started Now
-        .form__inputs(v-else)
+        .form__inputs(v-if='type === "signin"')
           input.form__input(
             v-for="(item, index) in signInInputs"
             :key="index"
@@ -38,6 +38,15 @@
           )
           button.form__button Sign In
           nuxt-link.form__reset(to="#") Forgot Password?
+        .form__inputs(v-if='type === "getaccess"')
+          input.form__input(
+            v-for="(item, index) in getAccessInputs"
+            :key="index"
+            :type="item.type"
+            :id="item.id"
+            :placeholder="item.placeholder"
+          )
+          button.form__button Get Early Access
       img.form__image(src="@/assets/images/illustrations/login-head.png" srcset="@/assets/images/illustrations/login-head@2x.png 2x")
 </template>
 
@@ -46,7 +55,7 @@ export default {
   props: {
     type: {
       type: String,
-      default: 'signup'
+      default: null
     },
     title: {
       type: String,
@@ -86,6 +95,18 @@ export default {
           type: 'password',
           placeholder: 'Password',
           id: 'pass'
+        }
+      ],
+      getAccessInputs: [
+        {
+          type: 'text',
+          placeholder: 'Name',
+          id: 'name'
+        },
+        {
+          type: 'email',
+          placeholder: 'Work Email',
+          id: 'email'
         }
       ]
     }
