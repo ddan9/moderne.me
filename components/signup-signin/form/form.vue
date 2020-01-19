@@ -38,15 +38,19 @@
           )
           button.form__button Sign In
           nuxt-link.form__reset(to="#") Forgot Password?
-        .form__inputs(v-if='type === "getaccess"')
+        form#mc-embedded-subscribe-form.validate.form__inputs(v-if='type === "getaccess"' action='https://moderne.us3.list-manage.com/subscribe/post?u=82e7a91b930da0b541f0ae17d&id=5efba2eadb' method='post' name='mc-embedded-subscribe-form' target='_blank' novalidate='')
           input.form__input(
             v-for="(item, index) in getAccessInputs"
             :key="index"
             :type="item.type"
             :id="item.id"
             :placeholder="item.placeholder"
+            :name="item.name"
+            :class="{'email': item.type === 'email', 'required': item.required}"
           )
-          button.form__button Get Early Access
+          div(style='position: absolute; left: -5000px;' aria-hidden='true')
+            input(type='text' name='b_82e7a91b930da0b541f0ae17d_5efba2eadb' tabindex='-1' value='')
+          button.form__button(type='submit') Get Early Access
       img.form__image(src="@/assets/images/illustrations/login-head.png" srcset="@/assets/images/illustrations/login-head@2x.png 2x")
 </template>
 
@@ -101,12 +105,15 @@ export default {
         {
           type: 'text',
           placeholder: 'Name',
-          id: 'name'
+          id: 'mce-NAME',
+          name: 'NAME'
         },
         {
           type: 'email',
           placeholder: 'Work Email',
-          id: 'email'
+          id: 'mce-EMAIL',
+          name: 'EMAIL',
+          required: true
         }
       ]
     }
