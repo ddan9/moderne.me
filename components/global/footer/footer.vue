@@ -32,7 +32,7 @@
             | {{item.title}}
             span(v-if="item.label") {{item.label}}
         .footer__nav-col
-          a.footer__nav-link(v-for='(item, index) in menu_3' :key="index" :href="item.link")
+          a.footer__nav-link(v-for='(item, index) in menu_3' :key="index" :href="item.link" target="_blank")
             | {{item.title}}
             span(v-if="item.label") {{item.label}}
         .footer__nav-col
