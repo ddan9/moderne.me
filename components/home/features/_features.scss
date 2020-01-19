@@ -65,6 +65,7 @@
 
         &--1 {
           height: 488px;
+          transform: translateX(-20px);
 
           @include mobile {
             height: vmin(294);
