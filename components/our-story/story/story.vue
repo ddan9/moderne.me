@@ -4,37 +4,36 @@
     .story__wrapper
       .story__img
         img(src="@/assets/images/illustrations/ourstory-monkey.png" srcset="@/assets/images/illustrations/ourstory-monkey@2x.png 2x")
-      h1.story__title Enabling to focus on&nbsp;what&nbsp;you do best
-      .story__lead The digitalization of the workplace promised to make work better for humans. But instead of removing distractions it multiplied them. We set out to fix that.
+      h1.story__title The story behind the&nbsp;project
+      .story__lead “Curiosity about life in all of its aspects, I think, is still the secret of great creative people.” — Leo Burnett said once.
       .story__text.story__text--1
-        p A great career shouldn’t come at the expense of your identity, but this is a tradeoff many of us have to make. This Latinx Heritage Month, we examine the role that remote work plays in preserving Latinx culture across the U.S.
+        p Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare. Phasellus at semper turpis. Nunc eu tellus tortor. Etiam at condimentum nisl, vitae sagittis orci. Donec id dignissim nunc. Donec elit ante, eleifend a dolor et, venenatis facilisis dolor. In feugiat orci odio, sed lacinia sem elementum quis. Aliquam consectetur, eros et vulputate euismod, nunc leo tempor lacus,.
       .story__images.story__images--1
         .story__images-item.story__images-item--1
+          img(src="@/assets/images/photos/story/story-1.jpg" srcset="@/assets/images/photos/story/story-1@2x.jpg 2x")
       .story__text.story__text--2
-        p In life and in business, we talk a lot about trade-offs. We learn that we can’t have it all, that there are certain things we need to sacrifice to get ahead in life. And as a Latinx person, that often means trading off between two of the most important values we have: our careers and our Latinx identity.
-        p Some people access that identity through their role in their family and community. Some, through the culture of the city or region they call home. And others, in the way they dress, the words they choose, or the person they are when they don’t have to wear a mask.
-      section-quote
+        h2.story__title--h2 Vestibulum ru.
+        p Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metus. Sed sollicitudin ipsum quis nunc sollicitudin ultrices. Donec euismod scelerisque ligula. Maecenas eu varius risus, eu aliquet arcu. Curabitur fermentum suscipit est, tincidunt mattis lorem luctus id. Donec eget massa a diam condimentum pretium. Aliquam erat.
       .story__text.story__text--3
-        p We have employees living in cities across the United States, so I explored this idea with the Latinx community at Abstract. We were talking about what it means to work remotely for a company that cares about inclusion, when Lesley Alegría said, “My family left their country for better economic opportunities. I don’t even have to leave my house.” It was a mic-drop moment to which we all could relate.
-        p Looking at remote work as inclusion work opens up tech careers to people without asking them to make trade-offs between who they are and who they want to become. Employers with this mindset don’t ask you to decide what’s more important: your promotion or your accent, your department meeting or your sobrina’s confirmation, your onboarding or your abuelo’s hospice bedside, your career path or owning a home in your family neighborhood.
-        p Remote work is a huge gift in the preservation of underrepresented cultural identities, families, and communities — one that we realize is also a privilege for those of us who have access to it. So this Latinx Heritage Month, we want to share some of the stories our team shared about the trade-offs they aren’t making and how that is impacting their lives.
+        h2.story__title--h2 Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec.
+        p Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere vulputate. Etiam elit elit, elementum sed varius at, adipiscing vitae est. Sed nec felis pellentesque, lacinia dui sed, ultricies sapien. Pellentesque orci lectus, consectetur vel posuere posuere, rutrum eu ipsum.
+        p Aliquam eget odio sed ligula iaculis consequat at eget orci. Mauris molestie sit amet metus mattis varius. Donec sit amet ligula eget nisi sodales egestas. Aliquam interdum dolor aliquet dolor sollicitudin fermentum. Donec congue lorem a molestie bibendum. Etiam nisi ante, consectetur eget placerat a, tempus a neque. Donec ut elit urna. Etiam venenatis eleifend urna eget scelerisque. Aliquam in nunc quis dui sollicitudin ornare ac vitae lectus.Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere vulputate. Etiam elit elit, elementum sed varius at, adipiscing vitae est.
+        p Sed nec felis pellentesque, lacinia dui sed, ultricies sapien. Pellentesque orci lectus, consectetur vel posuere posuere, rutrum eu ipsum. Aliquam eget odio sed ligula iaculis consequat at eget orci. Mauris molestie sit amet.
       .story__text.story__text--4
-        h2.story__title--h2 Why salespeople need to embrace authenticity
-        p Remote work is a huge gift in the preservation of underrepresented cultural identities, families,&nbsp;and communities — one that we realize is also a privilege for those of us who have access to it. So this Latinx Heritage Month, we want to share some of the stories our team shared about the trade-offs they aren’t making and how that is impacting their lives.
+        h2.story__title--h2 Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec.
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium pretium tempor. Ut eget imperdiet neque. In volutpat ante semper diam molestie, et aliquam erat laoreet. Sed sit amet arcu aliquet, molestie justo at, auctor nunc. Phasellus ligula ipsum, volutpat eget semper id, viverra eget nibh. Suspendisse luctus mattis cursus. Nam consectetur ante at nisl hendrerit gravida. Donec vehicula rhoncus mattis.
       .story__images.story__images--2
         .story__images-item.story__images-item--2
         .story__images-item.story__images-item--2
       .story__text.story__text--5
-        p Looking at remote work as inclusion work opens up tech careers to people without asking them to make trade-offs between who they are and who they want to become. Employers with this mindset don’t ask you to decide what’s more important: your promotion or your accent, your department meeting or your sobrina’s confirmation, your onboarding or your abuelo’s hospice bedside, your career path or owning a home in your family neighborhood.
-      .story__images.story__images--3
-        .story__images-item.story__images-item--3
-      .story__text.story__text--6
-        p Employers with this mindset don’t ask you to decide what’s more important: your promotion or your accent, your department meeting or your sobrina’s confirmation, your onboarding or your abuelo’s hospice bedside, your career path or owning a home in your family neighborhood.
-        p Remote work is a huge gift in the preservation of underrepresented cultural identities, families, and communities — one that we realize is also a privilege for those of us who have access to it. So this Latinx Heritage Month.
-        p
-          | We have employees living in cities across the United States, so I explored this idea with the Latinx community at Abstract. We were talking about what it means to work remotely for a company that cares about inclusion, when Lesley Alegría said, “My family left their country for better economic opportunities. I don’t even have to leave my house.” It was a mic-drop moment to which we all could relate.
-          br
-          br
+        p Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare. Phasellus at semper turpis. Nunc eu tellus tortor. Etiam at condimentum nisl, vitae sagittis orci. Donec id dignissim nunc. Donec elit ante, eleifend a dolor et, venenatis facilisis dolor. In feugiat orci odio, sed lacinia sem elementum quis. Aliquam consectetur, eros et vulputate euismod, nunc leo tempor lacus, ac rhoncus neque eros nec lacus.
+        p Cras lobortis molestie faucibus.Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, scelerisque nec pharetra id, tempor a tortor. Pellentesque non dignissim neque. Ut porta viverra est, ut dignissim elit elementum ut. Nunc vel rhoncus nibh, ut tincidunt turpis. Integer ac enim pellentesque, adipiscing metus id, pharetra odio. Donec bibendum nunc sit amet tortor scelerisque luctus et sit amet mauris. Suspendisse felis sem, condimentum ullamcorper est sit amet, molestie mollis nulla. Etiam lorem orci, consequat ac magna quis, facilisis vehicula neque.Curabitur lobortis id.
+      section-quote(
+        type="mini"
+        userName="Mila Dayan"
+        userPosition="a founder of Moderne"
+        userPhoto="mila-dayan"
+      )
 </template>
 
 <script>

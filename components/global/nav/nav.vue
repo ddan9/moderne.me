@@ -26,6 +26,7 @@
           .nav__burger-line
         .nav__mobile(v-show="menuMobileActive")
           .nav__mobile-items(@click="menuMobileActive = !menuMobileActive")
+            nuxt-link.nav__mobile-item(to="/") Home
             nuxt-link.nav__mobile-item(v-for='(item, index) in menu' :key="index" :to="item.link") {{item.title}}
             nuxt-link.nav__mobile-item(to="/signin" v-if='path === "signup"') Sign In
             nuxt-link.nav__mobile-item(to="/get-access" v-else) Get Access

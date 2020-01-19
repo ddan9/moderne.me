@@ -28,6 +28,9 @@ export default {
     'section-tags': tags,
     'section-cards': cards,
     'section-cta': cta
+  },
+  head: {
+    title: 'Home'
   }
 }
 </script>

@@ -12,6 +12,9 @@ export default {
   components: {
     'section-story': story,
     'section-cta': cta
+  },
+  head: {
+    title: 'Our Story'
   }
 }
 </script>

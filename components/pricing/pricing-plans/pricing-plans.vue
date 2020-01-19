@@ -48,16 +48,16 @@ export default {
       plans: [
         {
           title: 'Advertising Agency',
-          lead: 'Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna. Ut laoreet sodales nisi, quis iaculis nulla iaculis vitae. Donec sagittis faucibus la.',
+          lead: 'The full power of our platform combines both AI-algorithms and our art-directors to find the best-in-class ideas and insights for your ads.',
           features: [
             {
-              title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut.'
+              title: 'Access to thousands of creative insights and ideas tailored to your marketing needs as well as the help of our human art-directors.'
             },
             {
-              title: 'Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse.'
+              title: 'Unlimited active marketing campaigns.'
             },
             {
-              title: 'Donec facilisis tortor ut augue lacinia, at viver.'
+              title: 'Unlimited users'
             }
           ],
           priceMouth: 1289,
@@ -66,46 +66,42 @@ export default {
         },
         {
           title: 'In-House Creative Team',
-          lead: 'Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta. Nam condimentum vitae ligula.',
+          lead: 'Fit for in-house marketing teams in larger companies.',
           features: [
             {
-              title: 'Curabitur lobortis id lorem id bibendum. Ut id consectetur.'
+              title: 'Access to thousands of creative insights and ideas tailored to your marketing needs.'
             },
             {
-              title: 'In hac habitasse platea dictumst. Vivamus adipiscing fermentu.'
+              title: '5 active marketing campaigns at once.'
             },
             {
-              title: 'Mauris non tempor quam, et lacinia sapien.'
+              title: 'Up to 20 users'
             }
           ],
           priceMouth: 789,
-          priceYear: 591,
+          priceYear: 590,
           color: '#6D63D4'
         },
         {
           title: 'Startup',
-          lead: 'Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metus. Sed sollicitudin ipsum quis nunc sollicitudin.',
+          lead: 'Best for small and medium companies who run their marketing campaigns occasionally.',
           features: [
             {
-              title: 'Nam porttitor blandit accumsan. Ut vel dictum sem, a preti.'
+              title: 'Access to hundreds of creative insights and ideas tailored to your marketing needs.'
             },
             {
-              title: 'Fusce vehicula dolor arcu, sit amet blandit dolor mollis ne.'
+              title: 'One active marketing campaign at once.'
             },
             {
-              title: 'Nam porttitor blandit accumsan. Ut vel.'
+              title: 'Up to 5 users'
             }
           ],
           priceMouth: 389,
-          priceYear: 291,
+          priceYear: 290,
           color: '#269D9B'
         }
       ],
       faq: [
-        {
-          title: 'Are plans commitment-free?',
-          text: 'You decide: you can pay monthly, and commit on a month-by-month basis or you can pay yearly, and commit for 12 months following your subscription.'
-        },
         {
           title: 'How can I pay?',
           text: 'You’ll be able to set up credit card payments. Get in touch with our team if you’d prefer to be billed using a different payment method.'
@@ -113,6 +109,14 @@ export default {
         {
           title: 'How will I be billed?',
           text: 'If you’ve picked monthly billing, you will be billed each month. If you’ve selected annual billing, you will pay your yearly amount upfront.'
+        },
+        {
+          title: 'What if I want to cancel?',
+          text: 'If you have your reasons for cancellation, you may cancel at any time by going to your account page and subscriptions section.'
+        },
+        {
+          title: 'Who is behind Moderne?',
+          text: 'Moderne is built by a team of independent art directors and copywriters who worked in the world\'s largest advertising agencies and have been recognized with many international advertising awards, including Cannes Lions.'
         },
         {
           title: 'Have any other questions?',

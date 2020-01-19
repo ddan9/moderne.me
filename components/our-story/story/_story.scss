@@ -39,7 +39,7 @@
       font-weight: 500;
       font-size: 91px;
       line-height: 83px;
-      color: #5A50BD;
+      color: #118596;
       letter-spacing: 0;
       text-align: center;
       margin: 0 0 16px;
@@ -96,7 +96,7 @@
       }
 
       &--1 {
-        margin: 0 0 49px;
+        margin: 0 0 20px;
 
         @include mobile {
           margin: 0 0 vmin(30);
@@ -196,11 +196,16 @@
           border-radius: vmin(8);
         }
 
+        img {
+          display: block;
+          width: 100%;
+        }
+
         &--1 {
-          height: 358px;
+          //height: 358px;
 
           @include mobile {
-            height: vmin(314);
+            //height: vmin(314);
           }
         }
 
@@ -301,6 +306,16 @@
           @include mobile {
             grid-area: 2 / 2 / 3 / 3;
           }
+        }
+      }
+
+      &--mini {
+        padding: 0 130px;
+        width: 100%;
+        margin: 0;
+
+        @include mobile {
+          padding: 0 vmin(10);
         }
       }
     }

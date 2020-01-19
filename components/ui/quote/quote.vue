@@ -1,8 +1,11 @@
 <template lang="pug">
-.story__quote
-  .story__quote-text(v-html="text" :style="`color: ${color}`")
+.story__quote(:class="{'story__quote--mini': type === 'mini'}")
+  .story__quote-text(v-if="type !== 'mini'" v-html="text" :style="`color: ${color}`")
   .story__quote-user
-    img.story__quote-user-photo(src="@/assets/images/users/quote-user.png" srcset="@/assets/images/users/quote-user@2x.png 2x")
+    img.story__quote-user-photo(
+      :src="require(`@/assets/images/users/${userPhoto}.jpg`)"
+      :srcset="require(`@/assets/images/users/${userPhoto}@2x.jpg`)+' 2x'"
+    )
     .story__quote-user-name(v-html="userName")
     .story__quote-user-position(v-html="userPosition")
 </template>
@@ -29,6 +32,10 @@ export default {
     color: {
       type: String,
       default: '#E48144'
+    },
+    type: {
+      type: String,
+      default: null
     }
   }
 }

@@ -12,6 +12,9 @@ import thankYou from '~/components/signup-signin/form/form'
 export default {
   components: {
     'section-thankYou': thankYou
+  },
+  head: {
+    title: 'Thank you!'
   }
 }
 </script>

@@ -13,6 +13,9 @@ import signUpForm from '~/components/signup-signin/form/form'
 export default {
   components: {
     'section-signup': signUpForm
+  },
+  head: {
+    title: 'Sign Up'
   }
 }
 </script>

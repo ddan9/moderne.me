@@ -13,6 +13,9 @@ import getAccess from '~/components/signup-signin/form/form'
 export default {
   components: {
     'section-getAccess': getAccess
+  },
+  head: {
+    title: 'Get Early Access'
   }
 }
 </script>

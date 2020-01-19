@@ -18,6 +18,9 @@ export default {
     'section-hero': hero,
     'section-policy': policyContent,
     'section-cta': cta
+  },
+  head: {
+    title: 'Privacy Policy'
   }
 }
 </script>

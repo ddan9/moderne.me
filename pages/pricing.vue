@@ -17,6 +17,9 @@ export default {
   components: {
     'section-hero': hero,
     'section-plans': plans
+  },
+  head: {
+    title: 'Pricing'
   }
 }
 </script>
