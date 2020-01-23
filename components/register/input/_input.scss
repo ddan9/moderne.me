@@ -1,0 +1,67 @@
+.register-input {
+  // Vars
+
+  // Support
+
+  // Module
+  & {
+    &__label {
+      font-family: $mabry;
+      font-size: 18px;
+      line-height: 32.2px;
+      color: #2B2D33;
+      letter-spacing: 0;
+    }
+
+    &__tags {
+      display: flex;
+      flex-direction: column;
+
+      &-items {
+        padding: 10px 0 0;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      &-item {
+
+        input {
+          display: none;
+        }
+
+        label {
+          font-family: $mabry;
+          font-size: 18px;
+          line-height: 32.2px;
+          color: #A29691;
+          letter-spacing: 0;
+          text-align: center;
+          display: inline-block;
+          border: 2px solid #C9BEB9;
+          border-radius: 3px;
+          padding: 5px 15px 2px;
+          margin: 0 10px 10px 0;
+          cursor: pointer;
+          transition: color 150ms ease, border-color 150ms ease;
+          user-select: none;
+        }
+
+        input:checked + label {
+          color: #7969DA;
+          border-color: #7969DA;
+        }
+
+        &--small {
+          label {
+            padding-left: 10px;
+            padding-right: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  // Facets
+
+  // States
+}

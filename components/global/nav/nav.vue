@@ -1,5 +1,5 @@
 <template lang="pug">
-.nav(:class='{"nav--light": path !== "index", "nav--compact": path === "signin" || path === "signup" || path === "get-access" || path === "thank-you"}')
+.nav(:class='{"nav--light": path !== "index", "nav--hide": path === "register", "nav--compact": path === "signin" || path === "signup" || path === "get-access" || path === "thank-you"}')
   .container
     .nav__wrapper
       nuxt-link.nav__logo(to="/")

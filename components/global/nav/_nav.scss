@@ -10,10 +10,15 @@
     left: 0;
     width: 100vw;
     z-index: 999;
+    transition: opacity 150ms ease;
 
     @include mobile {
       position: fixed;
       top: vmin(16);
+    }
+
+    &--hide {
+      opacity: 0;
     }
 
     .container {
