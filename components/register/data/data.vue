@@ -22,8 +22,11 @@
         .register-data__button--link Go back
         .register-data__button--normal Next step
     .register-data__illustrations
+      img.register-data__illustration--details(v-if="activePoint === 0" src="@/assets/images/register/details.png" srcset="@/assets/images/register/details@2x.png 2x")
       img.register-data__illustration--goals(v-if="activePoint === 1" src="@/assets/images/register/goals.png" srcset="@/assets/images/register/goals@2x.png 2x")
+      img.register-data__illustration--target(v-if="activePoint === 2" src="@/assets/images/register/target.png" srcset="@/assets/images/register/target@2x.png 2x")
       img.register-data__illustration--tone(v-if="activePoint === 3" src="@/assets/images/register/tone.png" srcset="@/assets/images/register/tone@2x.png 2x")
+      img.register-data__illustration--target(v-if="activePoint === 4" src="@/assets/images/register/budget.png" srcset="@/assets/images/register/budget@2x.png 2x")
 </template>
 
 <script>

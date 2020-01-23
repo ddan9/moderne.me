@@ -19,6 +19,7 @@
       &--goals {
         padding: 57px 0 72px;
       }
+
       &--tone {
         padding: 57px 0 73px;
         //margin-right: -40px;
@@ -59,14 +60,35 @@
       }
     }
 
+    &__illustrations {
+      user-select: none;
+    }
+
     &__illustration {
       &--goals {
         width: 608px;
         margin: 92px 0 0 8.5px;
       }
+
       &--tone {
         width: 565px;
         margin: 31px 0 0 42.5px;
+      }
+
+      &--details {
+        display: block;
+        width: 546px;
+        margin: 37px 0 0 62.5px;
+      }
+
+      &--target {
+        width: 511px;
+        margin: 39px 0 0 84.5px;
+      }
+
+      &--budget {
+        width: 532px;
+        margin: 59px 0 0 106.5px;
       }
     }
   }
