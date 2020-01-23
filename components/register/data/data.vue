@@ -6,6 +6,7 @@
       .register-data__form--goals(v-else-if="activePoint === 1")
         register-input(
           v-for="(item, index) in forms[activePoint].inputs"
+          :key="index"
           :type="item.type"
           :label="item.label"
           :items="item.tags"
@@ -13,6 +14,7 @@
       .register-data__form--tone(v-else-if="activePoint === 3")
         register-input(
           v-for="(item, index) in forms[activePoint].inputs"
+          :key="index"
           :type="item.type"
           :label="item.label"
           :items="item.tags"

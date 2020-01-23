@@ -53,6 +53,10 @@ export default {
         //   link: '/use-cases'
         // },
         {
+          title: 'Overview',
+          link: '/overview'
+        },
+        {
           title: 'Pricing',
           link: '/pricing'
         },

@@ -1,0 +1,29 @@
+.screenshot {
+  // Vars
+
+  // Support
+
+  // Module
+  & {
+    width: 894px;
+    margin: 72px auto 125px;
+    border-radius: 4px;
+    background: #FFFFFF;
+    box-shadow: 4px 4px 17px 0px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+
+    @include mobile {
+      width: vmin(290);
+      margin: vmin(20) auto vmin(60);
+    }
+
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+
+  // Facets
+
+  // States
+}
