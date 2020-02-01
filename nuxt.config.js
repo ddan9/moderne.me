@@ -15,7 +15,7 @@ export default {
       {name: 'og:type', content: 'website'},
       {name: 'og:title', content: 'Moderne: Unleash the full potential of your creative team'},
       {name: 'og:description', content: 'Moderne provides tons of highly tailored creative ad ideas and insights and offers a digital workspace to make brainstorms more effective for creative minds'},
-      {name: 'og:image', content: '/og-image-moderne.png'}
+      {name: 'og:image', content: 'https://moderne.st/og-image-moderne.png'}
     ],
     link: [
       {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'},
