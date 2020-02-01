@@ -11,11 +11,11 @@ export default {
       {name: "msapplication-TileColor", content: "#f3eae5"},
       {name: "theme-color", content: "#ffffff"},
       {hid: 'description', name: 'description', content: process.env.npm_package_description || ''},
-      {name: 'og:url', property: 'https://moderne.st'},
-      {name: 'og:type', property: 'website'},
-      {name: 'og:title', property: 'Moderne: Unleash the full potential of your creative team'},
-      {name: 'og:description', property: 'Moderne provides tons of highly tailored creative ad ideas and insights and offers a digital workspace to make brainstorms more effective for creative minds'},
-      {name: 'og:image', property: 'https://moderne.st/og-image-moderne.png'}
+      {property: 'og:url', content: 'https://moderne.st'},
+      {property: 'og:type', content: 'website'},
+      {property: 'og:title', content: 'Moderne: Unleash the full potential of your creative team'},
+      {property: 'og:description', content: 'Moderne provides tons of highly tailored creative ad ideas and insights and offers a digital workspace to make brainstorms more effective for creative minds'},
+      {property: 'og:image', content: 'https://moderne.st/og-image-moderne.png'}
     ],
     link: [
       {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'},
