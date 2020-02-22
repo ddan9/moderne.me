@@ -24,11 +24,9 @@
           nuxt-link.footer__nav-link(v-for='(item, index) in menu_1' :key="index" :to="item.link")
             | {{item.title}}
             span(v-if="item.label") {{item.label}}
+          a.footer__nav-link(:href="`mailto:${emailFooter}`") Contact us
         .footer__nav-col
           nuxt-link.footer__nav-link(v-for='(item, index) in menu_2' :key="index" :to="item.link")
-            | {{item.title}}
-            span(v-if="item.label") {{item.label}}
-          a.footer__nav-link(v-for='(item, index) in menu_2_2' :key="index" :href="item.link")
             | {{item.title}}
             span(v-if="item.label") {{item.label}}
         .footer__nav-col
@@ -51,37 +49,38 @@ export default {
   },
   data () {
     return {
+      emailFooter: 'mila@moderne.st',
       menu_1: [
         {
           title: 'Home',
           link: '/'
         },
         {
-          title: 'Use Cases',
-          link: '#'
+          title: 'Overview',
+          link: '/overview'
         },
         {
           title: 'Pricing',
           link: '/pricing'
-        },
-        {
-          title: 'Status',
-          link: '#'
         }
+        // {
+        //   title: 'Status',
+        //   link: '#'
+        // }
       ],
       menu_2: [
         {
-          title: 'Getting Started',
-          link: '/get-access'
+          title: 'For Agencies',
+          link: '/solutions/for-agencies'
         },
         {
-          title: 'Blog',
-          link: '#'
+          title: 'For Brands',
+          link: '/solutions/for-brands'
+        },
+        {
+          title: 'For Startups',
+          link: '/solutions/for-startups'
         }
-        // {
-        //   title: 'Help Center',
-        //   link: '#'
-        // },
       ],
       menu_2_2: [
         {
@@ -92,7 +91,7 @@ export default {
       menu_3: [
         {
           title: 'Twitter',
-          link: '#'
+          link: 'https://twitter.com/moderne_st'
         },
         {
           title: 'LinkedIn',
