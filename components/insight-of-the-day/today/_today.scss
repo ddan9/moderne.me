@@ -1,0 +1,90 @@
+.insight-today {
+  // Vars
+
+  // Support
+
+  // Module
+  & {
+    margin: 0 0 72px;
+    &__wrapper {
+      padding: 0 87px;
+      display: grid;
+      grid-template-columns: 465px 1fr;
+      grid-template-rows: 260px;
+      grid-column-gap: 22px;
+      grid-row-gap: 0px;
+    }
+
+    &__image {
+      padding: 10px;
+      background-color: #FFFFFF;
+      border-radius: 4px;
+      box-sizing: border-box;
+
+      &-inner {
+        height: 100%;
+        background-color: #EFEDEC;
+        background-size: cover;
+        background-position: center;
+      }
+    }
+
+    &__meta {
+      display: flex;
+      flex-direction: column;
+      padding: 0 0 15px;
+    }
+
+    &__label {
+      font-weight: 500;
+      font-size: 17px;
+      line-height: 27px;
+      color: #FF9252;
+      letter-spacing: 0;
+      margin: -3px 0 6px;
+    }
+
+    &__title {
+      font-weight: 500;
+      font-size: 30px;
+      line-height: 37px;
+      color: #464241;
+      letter-spacing: 0;
+      margin: 0 0 15px;
+    }
+
+    &__lead {
+      font-size: 18px;
+      color: #726B67;
+      letter-spacing: 0;
+      line-height: 26px;
+    }
+
+    &__button {
+      display: flex;
+      align-items: baseline;
+      justify-content: flex-end;
+      font-size: 23px;
+      color: #269D9B;
+      letter-spacing: 0;
+      text-decoration: none;
+      margin: auto 0 0;
+      transition: all 150ms ease;
+
+      &-icon {
+        width: 30px;
+        height: 17px;
+        margin: 0 0 0 12px;
+        transition: all 150ms ease;
+      }
+
+      &:hover {
+        color: #15B3B1;
+      }
+    }
+  }
+
+  // Facets
+
+  // States
+}

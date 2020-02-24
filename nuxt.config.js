@@ -45,7 +45,8 @@ export default {
   */
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
-    '@nuxtjs/eslint-module'
+    '@nuxtjs/eslint-module',
+    '@nuxtjs/moment'
   ],
   /*
   ** Nuxt.js modules
@@ -56,8 +57,15 @@ export default {
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
     '@nuxtjs/style-resources',
-    '@nuxtjs/svg'
+    '@nuxtjs/svg',
+    // Doc: https://prismic-nuxt.js.org/docs/getting-started
+    '@nuxtjs/prismic'
   ],
+  prismic: {
+    endpoint: 'https://modernefeed.cdn.prismic.io/api/v2',
+    linkResolver: '@/plugins/link-resolver',
+    htmlSerializer: '@/plugins/html-serializer',
+  },
   styleResources: {
     scss: [
       './assets/scss/*.scss',

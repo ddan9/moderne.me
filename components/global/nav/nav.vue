@@ -48,17 +48,21 @@ export default {
     return {
       menuMobileActive: false,
       menu: [
-        // {
-        //   title: 'Use cases',
-        //   link: '/use-cases'
-        // },
         {
           title: 'Overview',
           link: '/overview'
         },
         {
+          title: 'Solutions',
+          link: '/solutions'
+        },
+        {
           title: 'Pricing',
           link: '/pricing'
+        },
+        {
+          title: 'Insight of the Day',
+          link: '/day'
         },
         {
           title: 'Our story',

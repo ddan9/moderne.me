@@ -1,0 +1,115 @@
+.insight-cards {
+  // Vars
+
+  // Support
+
+  // Module
+  & {
+    margin: 0 0 194px;
+
+    &__wrapper {
+      padding: 0 97px;
+    }
+
+    &__items {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto;
+      grid-column-gap: 24px;
+      grid-row-gap: 24px;
+    }
+
+    &__item {
+      background: #FFFFFF;
+      border-radius: 4px;
+      padding: 12px;
+      text-decoration: none;
+      color: initial;
+      height: 260px;
+      transition: all 300ms ease;
+
+      &:hover {
+        box-shadow: 2px 2px 15px 0 rgba(0,0,0,0.12);
+      }
+
+      &-image {
+        height: 158px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        border-radius: 4px;
+        padding: 10px;
+        box-sizing: border-box;
+        margin: 0 0 9px;
+        background-color: #EFEDEC;
+        background-size: cover;
+        background-position: center;
+      }
+
+      &-date {
+        background: #3AB1A4;
+        border-radius: 3px;
+        font-size: 14px;
+        color: #FFFFFF;
+        letter-spacing: 0;
+        padding: 6px 8px;
+      }
+
+      &-label {
+        font-size: 17px;
+        color: #464241;
+        letter-spacing: 5px;
+        text-align: right;
+        line-height: 28px;
+        margin: 0 -5px 0 0;
+      }
+
+      &-title {
+        font-size: 17px;
+        line-height: 23px;
+        color: #464241;
+        letter-spacing: 0;
+        padding: 0 4px 0 3px;
+      }
+    }
+
+    &__pagination {
+      display: flex;
+      justify-content: space-between;
+      padding: 34px 10px 0;
+
+      &-item {
+        font-family: $mabry;
+        font-weight: 500;
+        font-size: 23px;
+        color: #B09687;
+        letter-spacing: 0;
+        cursor: pointer;
+        transition: all 150ms ease;
+
+        &:hover {
+          color: #DDB198;
+        }
+      }
+
+      &-arrow {
+        width: 30px;
+        height: 17px;
+        transition: all 150ms ease;
+
+        &--prev {
+          margin: 0 12px 0 0;
+          transform: rotate(180deg);
+        }
+
+        &--next {
+          margin: 0 0 0 12px;
+        }
+      }
+    }
+  }
+
+  // Facets
+
+  // States
+}
