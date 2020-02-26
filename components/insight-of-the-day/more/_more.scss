@@ -1,0 +1,77 @@
+.insight-more {
+  // Vars
+
+  // Support
+
+  // Module
+  & {
+    margin: 146px 0 0;
+
+    @include mobile {
+      margin: vmin(45) 0 vmin(-22);
+    }
+
+    &__title {
+      font-family: $mabry;
+      font-weight: 500;
+      font-size: 43px;
+      line-height: 53px;
+      color: #3E3C43;
+      letter-spacing: 0;
+      text-align: center;
+      margin: 0 0 60px;
+
+      @include mobile {
+        font-size: vmin(32);
+        line-height: vmin(40);
+        margin: 0 0 vmin(40);
+      }
+    }
+
+    &__cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 120px);
+      grid-column-gap: 28px;
+      grid-row-gap: 30px;
+      padding: 0 100px;
+
+      @include mobile {
+        grid-template-columns: 1fr;
+        padding: 0 vmin(10);
+        grid-row-gap: vmin(22);
+      }
+    }
+
+    &__card {
+      background: #FFFFFF;
+      border-radius: 4px;
+
+      @include mobile {
+        border-radius: vmin(8);
+      }
+
+      &:nth-child(3),
+      &:nth-child(4) {
+        opacity: .7;
+      }
+
+      &:nth-child(5),
+      &:nth-child(6) {
+        opacity: .4;
+      }
+
+      &:nth-child(2),
+      &:nth-child(4),
+      &:nth-child(6) {
+        @include mobile {
+          display: none;
+        }
+      }
+    }
+  }
+
+  // Facets
+
+  // States
+}

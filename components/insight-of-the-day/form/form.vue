@@ -13,18 +13,22 @@
           img(src="@/assets/images/illustrations/insight-form.png" srcset="@/assets/images/illustrations/insight-form@2x.png 2x")
       .insight-form__wrapper-bottom
         .insight-form__socials
-          | or follow on&nbsp;
-          iconTwitter.insight-form__socials-icon
-          a(href="#") Twitter
-          |,&nbsp;
-          iconLinkedin.insight-form__socials-icon
-          a(href="#") Linkedin
-          |,&nbsp;
-          iconInstagram.insight-form__socials-icon
-          a(href="#") Instagram
-          |,&nbsp;
-          iconFacebook.insight-form__socials-icon
-          a(href="#") Facebook
+          span.insight-form__socials-item--top or follow on&nbsp;
+          span.insight-form__socials-item
+            iconTwitter.insight-form__socials-icon
+            a(href="#") Twitter
+            span.insight-form__socials-dot ,&nbsp;
+          span.insight-form__socials-item
+            iconLinkedin.insight-form__socials-icon
+            a(href="#") Linkedin
+            span.insight-form__socials-dot ,&nbsp;
+          span.insight-form__socials-item
+            iconInstagram.insight-form__socials-icon
+            a(href="#") Instagram
+            span.insight-form__socials-dot ,&nbsp;
+          span.insight-form__socials-item
+            iconFacebook.insight-form__socials-icon
+            a(href="#") Facebook
 </template>
 
 <script>

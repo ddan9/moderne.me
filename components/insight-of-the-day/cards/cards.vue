@@ -13,10 +13,10 @@
             .insight-cards__item-label {{ card.data.label }}
           .insight-cards__item-title {{ card.data.title }}
       .insight-cards__pagination
-        .insight-cards__pagination-item.insight-cards__pagination-item--prev(@click="togglePage()")
+        .insight-cards__pagination-item.insight-cards__pagination-item--prev(v-show="prevPage !== null" @click="togglePage(prevPage)")
           paginationArrow.insight-cards__pagination-arrow.insight-cards__pagination-arrow--prev
           | Prev
-        .insight-cards__pagination-item.insight-cards__pagination-item--next(@click="togglePage()")
+        .insight-cards__pagination-item.insight-cards__pagination-item--next(v-show="nextPage !== null" @click="togglePage(nextPage)")
           | Next
           paginationArrow.insight-cards__pagination-arrow.insight-cards__pagination-arrow--next
 </template>
@@ -31,12 +31,20 @@ export default {
   props: {
     insights: {
       type: Array
+    },
+    nextPage: {
+      type: String
+    },
+    prevPage: {
+      type: String
     }
   },
   methods: {
-    togglePage () {
-      this.parent.selectedPage += 1
-      this.$parent.asyncData(this.$parent.selectedPage)
+    togglePage (el) {
+      this.$parent.getCards(el)
+      // this.$parent.selectedPage += 1
+      // console.log(this.$parent.selectedPage)
+      // this.$parent.asyncData(this.$parent.selectedPage)
     }
   }
 }

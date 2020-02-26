@@ -6,11 +6,24 @@
   // Module
   & {
     margin: 0 0 60px;
+
+    @include mobile {
+      margin: 0 0 vmin(45);
+    }
+
     &__wrapper {
       padding: 0 97px;
 
+      @include mobile {
+        padding: 0;
+      }
+
       &-top {
         padding: 0 15px 74px;
+
+        @include mobile {
+          padding: 0 0 vmin(40);
+        }
       }
 
       &-middle {
@@ -19,10 +32,20 @@
         background-image: linear-gradient(270deg, #38B598 0%, #37B0C0 100%);
         border-radius: 4px;
         padding: 15px;
+
+        @include mobile {
+          flex-direction: column;
+          padding: vmin(24) vmin(10) vmin(10);
+          border-radius: vmin(8);
+        }
       }
 
       &-bottom {
         padding: 10px 30px 0;
+
+        @include mobile {
+          padding: vmin(10) vmin(19) 0 vmin(12);
+        }
       }
     }
 
@@ -34,6 +57,13 @@
       color: #23A6B6;
       letter-spacing: 0;
       margin: 0 0 14px;
+
+      @include mobile {
+        font-size: vmin(32);
+        line-height: vmin(40);
+        margin: 0 0 vmin(10);
+        text-align: center;
+      }
     }
 
     &__lead {
@@ -42,6 +72,13 @@
       color: #3E3C43;
       letter-spacing: 0;
       max-width: 720px;
+
+      @include mobile {
+        font-size: vmin(17);
+        line-height: vmin(23);
+        max-width: initial;
+        text-align: center;
+      }
     }
 
     &__input {
@@ -55,6 +92,15 @@
       width: 558px;
       box-sizing: border-box;
       margin: 0 14px 0 0;
+
+      @include mobile {
+        margin: 0 0 vmin(8);
+        width: initial;
+        font-size: vmin(18);
+        padding: 0 vmin(10);
+        height: vmin(55);
+        text-align: center;
+      }
 
       &::placeholder {
         color: #41848D;
@@ -79,6 +125,14 @@
       cursor: pointer;
       transition: all 150ms ease;
 
+      @include mobile {
+        font-size: vmin(20);
+        text-align: center;
+        padding: initial;
+        height: vmin(55);
+        font-weight: 500;
+      }
+
       &:focus {
         outline: none;
       }
@@ -96,6 +150,16 @@
       letter-spacing: 0;
       line-height: 33px;
 
+      @include mobile {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-template-rows: repeat(3, auto);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        font-size: vmin(18);
+        line-height: vmin(33);
+      }
+
       a {
         color: currentColor;
       }
@@ -105,8 +169,51 @@
         height: 20px;
         margin: 0 4px 0 0;
 
+        @include mobile {
+          width: vmin(20);
+          height: vmin(20);
+          margin: 0 vmin(8) 0 0;
+        }
+
         &:nth-child(1) {
           height: 18px;
+
+          @include mobile {
+            height: vmin(18);
+          }
+        }
+      }
+
+      &-dot {
+        @include mobile {
+          display: none;
+        }
+      }
+
+      &-item {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        &:hover {
+          color: #FEAF81;
+
+          .insight-form__socials-dot {
+            color: #8F847E;
+          }
+
+          svg {
+            * {
+              fill: #FEAF81;
+            }
+          }
+        }
+
+        &--top {
+          @include mobile {
+            text-align: center;
+            grid-area: 1 / 1 / 2 / 3;
+          }
         }
       }
     }
@@ -116,6 +223,10 @@
       height: 394px;
       right: 30px;
       bottom: -53px;
+
+      @include mobile {
+        display: none;
+      }
 
       img {
         height: 100%;

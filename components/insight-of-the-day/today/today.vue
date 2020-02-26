@@ -4,6 +4,7 @@
     .insight-today__wrapper
       .insight-today__image
         .insight-today__image-inner(:style="{ backgroundImage: 'url(' + insight.data.image.url + ')' }")
+          .insight-today__image-label {{ insight.data.label }}
       .insight-today__meta
         .insight-today__label 🤘 Today’s Insight
         .insight-today__title {{ insight.data.title }}

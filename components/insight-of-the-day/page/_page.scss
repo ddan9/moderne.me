@@ -1,0 +1,116 @@
+.insight-page {
+  // Vars
+
+  // Support
+
+  // Module
+  & {
+    padding: 0 0 116px;
+
+    @include mobile {
+      padding: 0 0 vmin(45);
+    }
+
+    &__header {
+      &-label {
+        font-size: 32px;
+        letter-spacing: 9.41px;
+        line-height: 23px;
+        text-align: center;
+        margin: 0 0 27px;
+
+        @include mobile {
+          font-size: vmin(17);
+          line-height: vmin(23);
+          margin: 0 0 vmin(10);
+        }
+      }
+
+      &-title {
+        font-family: $mabry;
+        font-weight: 500;
+        font-size: 48px;
+        color: #23A6B6;
+        letter-spacing: 0;
+        text-align: center;
+        line-height: 56px;
+        margin: 0 0 20px;
+
+        @include mobile {
+          font-size: vmin(32);
+          line-height: vmin(40);
+          margin: 0 0 vmin(10);
+        }
+      }
+
+      &-lead {
+        font-style: italic;
+        font-size: 23px;
+        line-height: 32px;
+        color: #3E3C43;
+        letter-spacing: 0;
+        text-align: center;
+        margin: 0 0 42px;
+        padding: 0 180px;
+
+        @include mobile {
+          padding: 0;
+          font-size: vmin(17);
+          line-height: vmin(23);
+          margin: 0 0 vmin(40);
+        }
+      }
+    }
+
+    &__content {
+      padding: 0 144px;
+
+      @include mobile {
+        padding: initial;
+      }
+
+      h2 {
+        font-family: $mabry;
+        font-size: 48px;
+        line-height: 58px;
+        color: #3E3C43;
+        letter-spacing: 0;
+        margin: 50px 0 20px;
+
+        @include mobile {
+          font-size: vmin(32);
+          line-height: vmin(40);
+          margin: vmin(30) 0 vmin(10);
+        }
+      }
+
+      p {
+        font-size: 21px;
+        color: #080809;
+        letter-spacing: 0;
+        line-height: 32px;
+        margin: 0 0 16px;
+
+        @include mobile {
+          font-size: vmin(17);
+          line-height: vmin(23);
+          margin: 0 0 vmin(15);
+        }
+      }
+
+      .video {
+        margin: 35px 0;
+        display: flex;
+        justify-content: center;
+
+        @include mobile {
+          margin: vmin(15) 0;
+        }
+      }
+    }
+  }
+
+  // Facets
+
+  // States
+}
