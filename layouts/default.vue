@@ -29,6 +29,7 @@ export default {
     -webkit-font-smoothing: antialiased;
     box-sizing: border-box;
     background: #F3EAE5;
+    overflow-x: hidden;
   }
 
   *,

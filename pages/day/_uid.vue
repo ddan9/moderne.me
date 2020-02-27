@@ -2,6 +2,7 @@
   .insight-of-the-day__page
     section-page(
       :page="document"
+      :items="all.results"
     )
     section-form
     section-more
@@ -36,10 +37,15 @@ export default {
   },
   async asyncData({ $prismic, params, error }) {
     try{
+      const insights = await $prismic.api.query(
+        $prismic.predicates.at("document.type", "insight"),
+        { orderings : '[my.insight.date desc]' }
+      )
       // Query to get post content
       const insight = (await $prismic.api.getByUID('insight', params.uid))
       // Returns data to be used in template
       return {
+        all: insights,
         document: insight,
       }
     } catch (e) {

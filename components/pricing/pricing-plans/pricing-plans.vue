@@ -23,7 +23,7 @@
           .pricing-plans__item-price-value(v-else) {{ formatPrice(item.priceYear) }}
           .pricing-plans__item-price-period per month
         .pricing-plans__item-buttons
-          nuxt-link.pricing-plans__item-button(to="/get-access")
+          nuxt-link.pricing-plans__item-button(:to="item.link")
             | Get Access
             svg(viewbox='0 0 38 21' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink')
               g#Page-1(stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' stroke-linecap='round')
@@ -62,7 +62,8 @@ export default {
           ],
           priceMouth: 1289,
           priceYear: 966,
-          color: '#FF9C5F'
+          color: '#FF9C5F',
+          link: '/solutions/for-agencies'
         },
         {
           title: 'In-House Creative Team',
@@ -80,7 +81,8 @@ export default {
           ],
           priceMouth: 789,
           priceYear: 590,
-          color: '#6D63D4'
+          color: '#6D63D4',
+          link: '/solutions/for-brands'
         },
         {
           title: 'Startup',
@@ -98,7 +100,8 @@ export default {
           ],
           priceMouth: 389,
           priceYear: 290,
-          color: '#269D9B'
+          color: '#269D9B',
+          link: '/solutions/for-startups'
         }
       ],
       faq: [

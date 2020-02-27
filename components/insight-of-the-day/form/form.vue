@@ -6,9 +6,9 @@
         .insight-form__title {{ title }}
         .insight-form__lead
           | Discover breakthrough trends, innovations and ideas before they become mainstream! A new insight every single day! 🐵
-      .insight-form__wrapper-middle
+      form.insight-form__wrapper-middle
         input.insight-form__input(type="text" placeholder="Enter your email to subscribe!")
-        button.insight-form__button Subscribe
+        button.insight-form__button(type='submit') Subscribe
         .insight-form__illustration
           img(src="@/assets/images/illustrations/insight-form.png" srcset="@/assets/images/illustrations/insight-form@2x.png 2x")
       .insight-form__wrapper-bottom
@@ -16,11 +16,11 @@
           span.insight-form__socials-item--top or follow on&nbsp;
           span.insight-form__socials-item
             iconTwitter.insight-form__socials-icon
-            a(href="#") Twitter
+            a(href="https://twitter.com/moderne_st" target="_blank") Twitter
             span.insight-form__socials-dot ,&nbsp;
           span.insight-form__socials-item
             iconLinkedin.insight-form__socials-icon
-            a(href="#") Linkedin
+            a(href="https://www.linkedin.com/company/moderne" target="_blank") Linkedin
             span.insight-form__socials-dot ,&nbsp;
           span.insight-form__socials-item
             iconInstagram.insight-form__socials-icon
@@ -28,7 +28,7 @@
             span.insight-form__socials-dot ,&nbsp;
           span.insight-form__socials-item
             iconFacebook.insight-form__socials-icon
-            a(href="#") Facebook
+            a(href="https://www.facebook.com/mdrnst/" target="_blank") Facebook
 </template>
 
 <script>

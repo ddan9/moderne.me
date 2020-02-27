@@ -8,7 +8,10 @@ section
       div(v-for="(item, index) in slice.items[0].text_content" :key="index")
         p(v-if="item.type === 'paragraph'" v-html="item.text")
         h2(v-else-if="item.type === 'heading2'" v-html="item.text")
-        div.video(v-else-if="item.type === 'embed'" v-html="item.oembed.html")
+        //div.video(v-else-if="item.type === 'embed'" v-html="item.oembed.html")
+        div.video(v-else-if="item.type === 'embed'")
+          vue-plyr
+            div(data-plyr-provider="youtube" :data-plyr-embed-id="item.oembed.embed_url.slice(32)")
           //| {{ item.oembed.embed_url }}
           //| {{ this._.capitalize('FRED') }}
           //| {{ _.trimStart('https://www.youtube.com/watch?v=1111', 'https://www.youtube.com/watch?v=') }}
@@ -26,3 +29,20 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+  .video {
+    display: flex;
+    justify-content: center;
+
+    > div {
+      width: 754px;
+      height: 425px;
+
+      @include mobile {
+        width: vmin(296);
+        height: vmin(167);
+      }
+    }
+  }
+</style>

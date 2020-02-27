@@ -33,13 +33,16 @@ export default {
   /*
   ** Global CSS
   */
-  css: [],
+  css: [
+    'plyr/dist/plyr.css'
+  ],
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
     {src: '~plugins/ga.js', mode: 'client'},
-    {src: '~/plugins/lodash.js', ssr: false}
+    // {src: '~plugins/lodash.js', ssr: false},
+    {src: '~plugins/plyr'}
   ],
   /*
   ** Nuxt.js dev-modules

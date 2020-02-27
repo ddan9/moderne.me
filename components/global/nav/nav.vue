@@ -64,10 +64,10 @@ export default {
           title: 'Insight of the Day',
           link: '/day'
         },
-        {
-          title: 'Our story',
-          link: '/our-story'
-        },
+        // {
+        //   title: 'Our story',
+        //   link: '/our-story'
+        // },
         // {
         //   title: 'Contact',
         //   link: '#'
