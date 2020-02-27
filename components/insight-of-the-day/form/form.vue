@@ -1,14 +1,14 @@
 <template lang="pug">
 .insight-form
   .container
-    .insight-form__wrapper
+    .insight-form__wrapper#mc_embed_signup
       .insight-form__wrapper-top
         .insight-form__title {{ title }}
         .insight-form__lead
           | Discover breakthrough trends, innovations and ideas before they become mainstream! A new insight every single day! 🐵
-      form.insight-form__wrapper-middle
-        input.insight-form__input(type="text" placeholder="Enter your email to subscribe!")
-        button.insight-form__button(type='submit') Subscribe
+      form.insight-form__wrapper-middle(action="https://moderne.us19.list-manage.com/subscribe/post?u=de0a821092605fb47015cd760&amp;id=020e67aea3" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate)
+        input.insight-form__input.required.email#mce-EMAIL(type="email" value="" name="EMAIL"  placeholder="Enter your email to subscribe!")
+        button.insight-form__button(type='submit' value="Subscribe" name="subscribe" id="mc-embedded-subscribe") Subscribe
         .insight-form__illustration
           img(src="@/assets/images/illustrations/insight-form.png" srcset="@/assets/images/illustrations/insight-form@2x.png 2x")
       .insight-form__wrapper-bottom
