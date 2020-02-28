@@ -6,7 +6,7 @@
         nuxt-link.insight-cards__item(
           v-for="card in insights"
           :key="card.id"
-          :to="'/day/'+card.uid"
+          :to="'/insight-of-the-day/'+card.uid"
         )
           .insight-cards__item-image(:style="{ backgroundImage: 'url(' + card.data.image.url + ')' }")
             .insight-cards__item-date {{ $moment(card.data.date).format("MMM D") }}

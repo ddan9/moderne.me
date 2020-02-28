@@ -140,11 +140,16 @@
       cursor: pointer;
       appearance: none;
       border: none;
+      transition: all 150ms ease;
 
       @include mobile {
         font-size: vmin(20);
         padding: vmin(15) vmin(30) vmin(16);
         border-radius: vmin(4);
+      }
+
+      &:hover {
+        background: #FF959B;
       }
 
       &:focus {

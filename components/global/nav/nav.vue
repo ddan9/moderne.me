@@ -52,18 +52,23 @@ export default {
           title: 'Overview',
           link: '/overview'
         },
-        {
-          title: 'Solutions',
-          link: '/solutions'
-        },
+        // {
+        //   title: 'Solutions',
+        //   link: '/solutions',
+        //   items: [
+        //     {
+        //       title: ''
+        //     }
+        //   ]
+        // },
         {
           title: 'Pricing',
           link: '/pricing'
         },
-        {
-          title: 'Insight of the Day',
-          link: '/day'
-        },
+        // {
+        //   title: 'Insight of the Day',
+        //   link: '/insight-of-the-day'
+        // },
         // {
         //   title: 'Our story',
         //   link: '/our-story'

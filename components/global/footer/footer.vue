@@ -34,6 +34,7 @@
             | {{item.title}}
             span(v-if="item.label") {{item.label}}
         .footer__nav-col
+          a.footer__nav-link(href="https://www.notion.so/norde/Moderne-Open-Positions-fd7af9d42ad5473bac1564b7597764a3" target="_blank") Careers
           nuxt-link.footer__nav-link(v-for='(item, index) in menu_4' :key="index" :to="item.link")
             | {{item.title}}
             span(v-if="item.label") {{item.label}}
@@ -111,11 +112,12 @@ export default {
           title: 'About Us',
           link: '/our-story'
         },
-        {
-          title: 'Careers',
-          link: '#',
-          label: 3
-        },
+        // {
+        //   title: 'Careers',
+        //   link: '#',
+        //   out: true
+        //   // label: 3
+        // },
         {
           title: 'Legal',
           link: '#'

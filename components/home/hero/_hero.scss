@@ -79,6 +79,12 @@
     }
 
     &__button {
+      transition: all 150ms ease;
+
+      &:hover {
+        background: #FF959B !important;
+      }
+
       @include mobile {
         order: 4;
       }

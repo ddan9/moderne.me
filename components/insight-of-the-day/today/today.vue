@@ -9,7 +9,7 @@
         .insight-today__label 🤘 Today’s Insight
         .insight-today__title {{ insight.data.title }}
         .insight-today__lead {{ insight.data.lead }}
-        nuxt-link.insight-today__button(:to="'/day/'+insight.uid")
+        nuxt-link.insight-today__button(:to="'/insight-of-the-day/'+insight.uid")
           | Read more
           readMore.insight-today__button-icon
 </template>
