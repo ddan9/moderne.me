@@ -32,12 +32,12 @@ export default {
       features: {
         items: [
           {
-            title: 'Thousands of creative insights and ideas',
-            text: 'Moderne gathered thousands of advertising campaigns from all over the world, so the platform provides the best ideas and insights based on your goals&objectives, target audience and data from previous campaigns.'
+            title: 'Thousands of insights, trends and ideas',
+            text: 'Moderne collects thousands of trends, innovative ideas, and advertising campaigns from all over the world and extracts consumer, market, and inspiration insights and then provides them based on your goals&objectives, target audience, and data.'
           },
           {
             title: 'Run brainstorms like never before',
-            text: 'Moderne helps creative teams to make their brainstorming sessions effective by providing tons of useful ideas and insights, helping to keep all the assets together, and presenting ideas to others quickly.'
+            text: 'Keep all your team’s progress in one place: import creative briefs, discuss ideas, make notes, collect mood boards, praise the best ideas. Moderne helps every member of the team so everyone would be heard.'
           }
         ],
         overviewItems: [

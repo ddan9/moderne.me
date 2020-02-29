@@ -19,11 +19,11 @@
       &-title {
         font-size: 56px;
         line-height: 52px;
-        font-weight: 500;
+        font-weight: normal;
         color: #0E1889;
         letter-spacing: 0;
         margin: 0;
-        max-width: 580px;
+        max-width: 590px;
         margin: 0 0 17px;
 
         @include mobile {
@@ -40,7 +40,7 @@
         line-height: 28px;
         color: #3E3C43;
         letter-spacing: 0;
-        max-width: 580px;
+        max-width: 590px;
 
         @include mobile {
           font-size: vmin(16);

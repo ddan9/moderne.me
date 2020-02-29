@@ -3,6 +3,7 @@
     section-hero
     section-cols(type="top")
     section-features
+    section-cols(type="params")
     section-twoCols
     section-tags
     section-cards

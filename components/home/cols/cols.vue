@@ -2,8 +2,26 @@
 .cols
   .container
     .cols__main
-      h2.cols__main-title(v-html="cols.title")
+      h2.cols__main-title.cols__main-title--top(v-html="cols.title" v-if='type === "top"')
+      h2.cols__main-title.cols__main-title--bottom(v-html="cols.titleBottom" v-if='type === "bottom"')
+      h2.cols__main-title.cols__main-title--params(v-html="cols.titleParams" v-if='type === "params"')
       .cols__main-image
+    .cols__params(v-if='type === "params"')
+      .cols__params-title.cols__params-title--before Before
+      .cols__params-title.cols__params-title--after After
+      .cols__params-items
+        .cols__params-item
+          .cols__params-item-title Research time, looking for inspiration
+          .cols__params-item-value
+            .cols__params-item-current
+        .cols__params-item
+          .cols__params-item-title Brainstorming, collaborating with teammates
+          .cols__params-item-value
+            .cols__params-item-current
+        .cols__params-item
+          .cols__params-item-title Preparing assets
+          .cols__params-item-value
+            .cols__params-item-current
     .cols__3cols
       .cols__3cols-item(v-for="(item, index) in cols.items" :key="index" v-if='type === "top"')
         img.cols__3cols-image.cols__3cols-image--0(v-if="index === 0" src="@/assets/images/illustrations/icon-cols-0.png" srcset="@/assets/images/illustrations/icon-cols-0@2x.png 2x")
@@ -20,6 +38,8 @@
 </template>
 
 <script>
+/* eslint-disable */
+
 export default {
   props: {
     type: {
@@ -30,15 +50,17 @@ export default {
   data () {
     return {
       cols: {
-        title: '<span>For creative teams</span> The all-in-one toolkit for creative troops and solo forces. Create and collaborate with ideas in a new and powerful way.',
+        title: 'Moderne helps creative teams  to&nbsp;<span>save&nbsp;hours or even days</span> on research  and collaborate <span>up to 3x faster</span>',
+        titleBottom: '<span>For creative teams</span> The all-in-one toolkit for creative troops and solo forces. Create and collaborate with ideas in a new and powerful way.',
+        titleParams: 'Moderne helps creative teams  to&nbsp;<span>save&nbsp;hours or even days</span> on researching and collaborate <span>up to 3x faster</span>',
         items: [
           {
             title: 'Deliver better creative ideas.',
-            text: 'Use hundreds of ready-to-use creative insights and ideas highly tailored to your needs.'
+            text: 'Use tons of ready-to-use consumer and market insights, creative ideas and trends highly tailored to your needs.'
           },
           {
             title: 'Run creative brainstorms smoother.',
-            text: 'Get a space for your creative team and clients to share ideas and insights, organize mood boards and discussions.'
+            text: 'Get a space for your creative team to share ideas and insights, organize mood boards and discussions.'
           },
           {
             title: 'Present your ideas beautifully.',
