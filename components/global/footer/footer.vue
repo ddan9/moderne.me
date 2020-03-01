@@ -24,17 +24,17 @@
           nuxt-link.footer__nav-link(v-for='(item, index) in menu_1' :key="index" :to="item.link")
             | {{item.title}}
             span(v-if="item.label") {{item.label}}
-          a.footer__nav-link(:href="`mailto:${emailFooter}`") Contact us
+          a.footer__nav-link(rel="noreferrer" :href="`mailto:${emailFooter}`") Contact us
         .footer__nav-col
           nuxt-link.footer__nav-link(v-for='(item, index) in menu_2' :key="index" :to="item.link")
             | {{item.title}}
             span(v-if="item.label") {{item.label}}
         .footer__nav-col
-          a.footer__nav-link(v-for='(item, index) in menu_3' :key="index" :href="item.link" target="_blank")
+          a.footer__nav-link(rel="noreferrer" v-for='(item, index) in menu_3' :key="index" :href="item.link" target="_blank")
             | {{item.title}}
             span(v-if="item.label") {{item.label}}
         .footer__nav-col
-          a.footer__nav-link(href="https://www.notion.so/norde/Moderne-Open-Positions-fd7af9d42ad5473bac1564b7597764a3" target="_blank") Careers
+          a.footer__nav-link(rel="noreferrer" href="https://www.notion.so/norde/Moderne-Open-Positions-fd7af9d42ad5473bac1564b7597764a3" target="_blank") Careers
           nuxt-link.footer__nav-link(v-for='(item, index) in menu_4' :key="index" :to="item.link")
             | {{item.title}}
             span(v-if="item.label") {{item.label}}

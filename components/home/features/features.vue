@@ -6,8 +6,8 @@
         img.features__item-image--1(v-if='index === 0' src="@/assets/images/illustrations/features-01.png" srcset="@/assets/images/illustrations/features-01@2x.png 2x")
         img.features__item-image--2(v-if='index === 1' src="@/assets/images/illustrations/features-02.png" srcset="@/assets/images/illustrations/features-02@2x.png 2x")
         .features__item-content
-          h2.features__item-title {{item.title}}
-          .features__item-text {{item.text}}
+          h2.features__item-title(v-html="item.title")
+            .features__item-text(v-html="item.text")
     .container(v-else-if="type === 'overview'")
       .features__item.features__item--overview(v-for="(item, index) in features.overviewItems" :key="index")
         //.features__item-image
@@ -15,8 +15,8 @@
         img.features__item-image--feature-2(v-if='index === 1' src="@/assets/images/illustrations/overview-feature-2.png" srcset="@/assets/images/illustrations/overview-feature-2@2x.png 2x")
         img.features__item-image--feature-3(v-if='index === 2' src="@/assets/images/illustrations/overview-feature-3.png" srcset="@/assets/images/illustrations/overview-feature-3@2x.png 2x")
         .features__item-content
-          h2.features__item-title {{item.title}}
-          .features__item-text {{item.text}}
+          h2.features__item-title(v-html="item.title")
+          .features__item-text(v-html="item.text")
 </template>
 
 <script>
@@ -42,15 +42,15 @@ export default {
         ],
         overviewItems: [
           {
-            title: 'Get tons of insights, ideas and references',
-            text: 'Moderne collects thousands of advertising ideas and useful insights from all over the world and tailors this data to your needs. Just fill your creative brief details, and we will feed your creative mind.'
+            title: 'Get tons of insights, ideas&nbsp;and references',
+            text: 'Moderne collects thousands of trends, innovative ideas, and advertising campaigns from all over the world and extracts consumer, market, and inspiration insights and then provides them based on your goals&objectives, target audience, and data.'
           },
           {
             title: 'Run creative brainstorm sessions smoother',
             text: 'Keep all your team’s progress in one place: import creative briefs, discuss ideas, make notes, collect mood boards, praise the best ideas. Moderne helps every member of the team so everyone would be heard.'
           },
           {
-            title: 'Export your ideas in a beautiful way',
+            title: 'Export your ideas beautifully',
             text: 'You can convert all the work you have done with Moderne (or just some part of it) into a beautiful deck to present slides to your client or boss.'
           }
         ]
