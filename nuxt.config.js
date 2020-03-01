@@ -5,6 +5,9 @@ export default {
   */
   head: {
     titleTemplate: '%s – Moderne: Unleash the full potential of your creative team',
+    htmlAttrs: {
+      lang: 'en',
+    },
     meta: [
       {charset: 'utf-8'},
       {name: 'viewport', content: 'width=device-width, initial-scale=1'},
