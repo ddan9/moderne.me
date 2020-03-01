@@ -50,6 +50,7 @@
         &--params {
           color: #484543;
           max-width: 850px;
+          margin: 0 0 2px;
 
           span {
             color: #118391;
@@ -189,6 +190,33 @@
     }
 
     &__params {
+      position: relative;
+      &-title {
+        font-family: $mabry;
+        font-size: 20px;
+        color: #AB9182;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        margin: 0 0 20px;
+        transition: all 500ms ease-in-out;
+
+        &--after {
+          position: absolute;
+          top: 0;
+          left: 0;
+          opacity: 0;
+        }
+
+        &--hide {
+          opacity: 0!important;
+          pointer-events: none;
+        }
+
+        &--show {
+          opacity: 1!important;
+        }
+      }
+
       &-items {
         display: grid;
         grid-template-columns: 1fr 420px 262px;
@@ -205,26 +233,80 @@
           line-height: 28px;
           letter-spacing: 0;
           margin: 0 0 2px;
+          transition: all 500ms ease-in-out;
         }
 
         &:nth-child(1) {
           color: #FF83A1;
+
+          .cols__params-item-current {
+            background: #FD91AB;
+          }
         }
 
         &:nth-child(2) {
           color: #FF937E;
+
+          .cols__params-item-current {
+            background: #FDA391;
+          }
         }
 
         &:nth-child(3) {
           color: #FFA541;
+
+          .cols__params-item-current {
+            background: #FFBC71;
+          }
         }
 
         &-value {
+          position: relative;
           background: #FFFFFF;
           border-radius: 2px;
           overflow: hidden;
           width: 100%;
           height: 9px;
+        }
+
+        &-current {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          border-radius: 2px;
+          transition: all 500ms ease-in-out;
+        }
+
+        &--done {
+          &:nth-child(1) {
+            .cols__params-item-title {
+              color: #4EB26A;
+            }
+            .cols__params-item-current {
+              background: #4EB26A;
+              width: 25%;
+            }
+          }
+          &:nth-child(2) {
+            .cols__params-item-title {
+              color: #4FAAB4;
+            }
+            .cols__params-item-current {
+              background: #4FAAB4;
+              width: 45%;
+            }
+          }
+          &:nth-child(3) {
+            .cols__params-item-title {
+              color: #749FD9;
+            }
+            .cols__params-item-current {
+              background: #749FD9;
+              width: 28%;
+            }
+          }
         }
       }
     }

@@ -41,7 +41,7 @@ export default {
   */
   plugins: [
     {src: '~plugins/ga.js', mode: 'client'},
-    // {src: '~plugins/lodash.js', ssr: false},
+    {src: '~plugins/vue-scrollmagic.js', ssr: false},
     {src: '~plugins/plyr'}
   ],
   /*
