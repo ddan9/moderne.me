@@ -119,6 +119,7 @@
       background: #ffffff;
       border-radius: 4px;
       overflow: hidden;
+      min-height: 350px;
 
       @include mobile {
         padding: vmin(14) vmin(14) vmin(32) vmin(16);
@@ -178,8 +179,10 @@
         display: flex;
         justify-content: space-between;
         align-items: baseline;
+        margin-top: auto;
 
         @include mobile {
+          margin-top: initial;
           flex-direction: column;
           align-items: center;
           justify-content: initial;
@@ -275,6 +278,13 @@
 
           &::before {
             content: '$';
+          }
+
+          &--contact {
+            font-family: $mabry;
+            font-size: 34px;
+            color: #B0ACB7;
+            letter-spacing: 0;
           }
         }
 

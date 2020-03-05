@@ -19,12 +19,12 @@
             span {{item.title}}
       .pricing-plans__item-meta
         .pricing-plans__item-price
-          .pricing-plans__item-price-value(v-if="priceType") {{ formatPrice(item.priceMouth) }}
-          .pricing-plans__item-price-value(v-else) {{ formatPrice(item.priceYear) }}
-          .pricing-plans__item-price-period per month
+          .pricing-plans__item-price-value(v-if="priceType && item.priceMouth !== 0") {{ formatPrice(item.priceMouth) }}
+          .pricing-plans__item-price-value--contact(v-else) Contact sales for pricing
+          .pricing-plans__item-price-period(v-if='item.priceMouth !== 0') per month, billed annually
         .pricing-plans__item-buttons
           nuxt-link.pricing-plans__item-button(:to="item.link")
-            | Get Access
+            | See details
             svg(viewbox='0 0 38 21' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink')
               g#Page-1(stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' stroke-linecap='round')
                 g#Moderne-Pricing(transform='translate(-1132.000000, -769.000000)' stroke='currentColor' stroke-width='3')
@@ -47,58 +47,55 @@ export default {
       priceType: true,
       plans: [
         {
-          title: 'Advertising Agency',
-          lead: 'The full power of our platform combines both AI-algorithms and our art-directors to find the best-in-class ideas and insights for your ads.',
+          title: 'For Agencies',
+          lead: 'Get the full power of our platform: unlimited access to our database and collaboration features for your creative team. Find, organize & share relevant best practices!',
           features: [
             {
-              title: 'Access to thousands of creative insights and ideas tailored to your marketing needs as well as the help of our human art-directors.'
+              title: 'Access to thousands of creative market and consumer insights, ideas, trends, and innovations.'
             },
             {
-              title: 'Unlimited active marketing campaigns.'
+              title: 'Unlimited industries, users and campaigns.'
             },
             {
-              title: 'Unlimited users'
+              title: 'Additional support by our analysts.'
             }
           ],
-          priceMouth: 1289,
+          priceMouth: 0,
           priceYear: 966,
           color: '#FF9C5F',
           link: '/solutions/for-agencies'
         },
         {
-          title: 'In-House Creative Team',
-          lead: 'Fit for in-house marketing teams in larger companies.',
+          title: 'For Brands',
+          lead: 'Use endliess source for inspiration and data from best practice and case studies on the most effective marketing, understand what\'s working in your category and build evidence for your ideas.',
           features: [
             {
-              title: 'Access to thousands of creative insights and ideas tailored to your marketing needs.'
+              title: 'Access to thousands of creative market and consumer insights, ideas, trends, and innovations.'
             },
             {
-              title: '5 active marketing campaigns at once.'
+              title: 'Unlimited industries, 5 users and  5 campaigns.'
             },
             {
-              title: 'Up to 20 users'
+              title: 'Industry-specific trend reports.'
             }
           ],
-          priceMouth: 789,
+          priceMouth: 689,
           priceYear: 590,
           color: '#6D63D4',
           link: '/solutions/for-brands'
         },
         {
-          title: 'Startup',
-          lead: 'Best for small and medium companies who run their marketing campaigns occasionally.',
+          title: 'For Startups',
+          lead: 'Stand out from your competitors with creative approach in your next marketing campaign. Get the world top market and consumer insights, ideas and trends.',
           features: [
             {
-              title: 'Access to hundreds of creative insights and ideas tailored to your marketing needs.'
+              title: 'Access to the best creative market and consumer insights, ideas, trends, and innovations from your industry.'
             },
             {
-              title: 'One active marketing campaign at once.'
-            },
-            {
-              title: 'Up to 5 users'
+              title: '1 industry, 1 user and 1 campaign.'
             }
           ],
-          priceMouth: 389,
+          priceMouth: 379,
           priceYear: 290,
           color: '#269D9B',
           link: '/solutions/for-startups'
