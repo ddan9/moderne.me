@@ -7,7 +7,7 @@
         img.features__item-image--2(:alt="item.title" v-if='index === 1' src="@/assets/images/illustrations/features-02.png" srcset="@/assets/images/illustrations/features-02@2x.png 2x")
         .features__item-content
           h2.features__item-title(v-html="item.title")
-            .features__item-text(v-html="item.text")
+          .features__item-text(v-html="item.text")
     .container(v-else-if="type === 'overview'")
       .features__item.features__item--overview(v-for="(item, index) in features.overviewItems" :key="index")
         //.features__item-image
