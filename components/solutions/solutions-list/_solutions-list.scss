@@ -1,0 +1,43 @@
+.solutions__list {
+  // Vars
+
+  // Support
+
+  // Module
+  & {
+    &-wrapper {
+      padding: 0 96px;
+    }
+
+    &-item {
+      display: block;
+      text-align: center;
+      border-bottom: 2px solid #fff;
+      text-decoration: none;
+
+      &:not(:last-child) {
+        margin: 0 0 90px;
+      }
+
+      &-title {
+        font-family: $mabry;
+        font-size: 72px;
+        line-height: 83px;
+        letter-spacing: 0;
+        margin: 0 0 13px;
+      }
+
+      &-lead {
+        font-size: 23px;
+        line-height: 32px;
+        color: #3E3C43;
+        letter-spacing: 0;
+        margin: 0 0 64px;
+      }
+    }
+  }
+
+  // Facets
+
+  // States
+}
