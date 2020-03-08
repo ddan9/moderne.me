@@ -1,0 +1,181 @@
+.solution-pricing {
+  // Vars
+
+  // Support
+
+  // Module
+  & {
+    &__title {
+      font-family: $mabry;
+      font-size: 56px;
+      color: #3E3C43;
+      letter-spacing: 0;
+      text-align: center;
+      line-height: 52px;
+      margin: 0 0 67px;
+    }
+
+    &__wrapper {
+      margin: 0 76px;
+    }
+
+    &__table {
+      font-size: 16px;
+      line-height: 23px;
+      color: #44464C;
+      letter-spacing: 0;
+
+      &--active {
+        &-1 {
+          .solution-pricing__table-row {
+            > div:nth-child(2) {
+              background: #ffffff;
+            }
+          }
+        }
+        &-2 {
+          .solution-pricing__table-row {
+            > div:nth-child(3) {
+              background: #ffffff;
+            }
+          }
+        }
+        &-3 {
+          .solution-pricing__table-row {
+            > div:nth-child(4) {
+              background: #ffffff;
+            }
+          }
+        }
+      }
+
+      &-row {
+        display: grid;
+        grid-template-columns: 236px repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 16px;
+        grid-row-gap: 0px;
+        border-bottom: 1px solid #CAAFA1;
+        padding: 0 67px 0 13px;
+
+        > div {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 23px 0;
+        }
+
+        > div:nth-child(1) {
+          text-align: right;
+          justify-content: flex-end;
+          padding: 23px 13px 23px 0;
+          color: #44464C;
+        }
+      }
+
+      &-header {
+        font-family: $mabry;
+        font-size: 24px;
+        color: #3E3C43;
+        letter-spacing: 0;
+        text-align: center;
+        padding: 0 67px 0 13px;
+
+        > div {
+          padding: 28px 0;
+          border-radius: 4px 4px 0 0;
+        }
+      }
+
+      &-bullet {
+        display: inline-block;
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        background: currentColor;
+      }
+
+      &-empty {
+        display: inline-block;
+        width: 23px;
+        height: 2px;
+        background: #44464C;
+        border-radius: 2px;
+      }
+
+      &-text {
+        color: #44464C;
+      }
+
+      &-prices {
+        padding: 0 67px 0 13px;
+        border-bottom: 0;
+
+        > div {
+          padding: 48px 0 38px;
+          flex-direction: column;
+        }
+      }
+
+      &-price {
+        &-value {
+          font-family: $mabry;
+          font-size: 33px;
+          line-height: 38px;
+          color: #3E3C43;
+          letter-spacing: 0;
+          text-align: center;
+        }
+
+        &-label {
+          font-family: $mabry;
+          font-size: 18px;
+          line-height: 21px;
+          color: #AF9D93;
+          letter-spacing: 0;
+          text-align: center;
+        }
+      }
+
+      &-buttons {
+        border-bottom: 0;
+
+        > div {
+          padding: 0 18px 18px;
+          border-radius: 0 0 4px 4px;
+        }
+      }
+
+      &-button {
+        border: 1px solid #AF9D93;
+        border-radius: 3px;
+        width: 100%;
+        height: 42px;
+        font-family: $mabry;
+        font-size: 18px;
+        letter-spacing: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        &-text {
+          color: #44464C;
+        }
+
+        &--active {
+          background: currentColor;
+          border-color: currentColor;
+
+          .solution-pricing__table-button-text {
+            color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+
+  // Facets
+
+  // States
+}
