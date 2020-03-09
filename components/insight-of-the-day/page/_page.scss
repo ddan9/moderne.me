@@ -5,7 +5,7 @@
 
   // Module
   & {
-    padding: 0 0 116px;
+    padding: 0 0 100px;
 
     @include mobile {
       padding: 0 0 vmin(45);
@@ -69,6 +69,16 @@
         padding: initial;
       }
 
+      h1 {
+        font-family: $mabry;
+        font-size: 48px;
+        color: #3E3C43;
+        letter-spacing: 0;
+        line-height: 58px;
+        margin: 50px 0 20px;
+        font-weight: 500;
+      }
+
       h2 {
         font-family: $mabry;
         font-size: 48px;
@@ -76,12 +86,23 @@
         color: #3E3C43;
         letter-spacing: 0;
         margin: 50px 0 20px;
+        font-weight: 500;
 
         @include mobile {
           font-size: vmin(32);
           line-height: vmin(40);
           margin: vmin(30) 0 vmin(10);
         }
+      }
+
+      h3 {
+        font-family: $mabry;
+        font-weight: 500;
+        font-size: 39px;
+        line-height: 58px;
+        color: #3E3C43;
+        letter-spacing: 0;
+        margin: 53px 0 40px;
       }
 
       p {

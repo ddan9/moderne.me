@@ -1,5 +1,5 @@
 <template lang="pug">
-.footer(:class='{"footer--light": path === "use-cases" || path === "pricing" || path === "solutions" || path === "/solutions/:uid", "footer--hide": path === "signin" || path === "signup" || path === "get-access" || path === "thank-you" || path === "register"}')
+.footer(:class='{"footer--light": path === "use-cases" || path === "pricing" || path === "solutions" || path === "solutions-uid", "footer--hide": path === "signin" || path === "signup" || path === "get-access" || path === "thank-you" || path === "register"}')
   .container
     .footer__wrapper
       .footer__col.footer__col--big

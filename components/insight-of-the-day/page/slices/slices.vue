@@ -7,7 +7,9 @@ section
       //TextSlice(:slice="slice")
       div(v-for="(item, index) in slice.items[0].text_content" :key="index")
         p(v-if="item.type === 'paragraph'" v-html="item.text")
+        h1(v-else-if="item.type === 'heading1'" v-html="item.text")
         h2(v-else-if="item.type === 'heading2'" v-html="item.text")
+        h3(v-else-if="item.type === 'heading3'" v-html="item.text")
         //div.video(v-else-if="item.type === 'embed'" v-html="item.oembed.html")
         div.video(v-else-if="item.type === 'embed'")
           vue-plyr
@@ -16,15 +18,21 @@ section
           //| {{ this._.capitalize('FRED') }}
           //| {{ _.trimStart('https://www.youtube.com/watch?v=1111', 'https://www.youtube.com/watch?v=') }}
           //iframe(v-if="item.oembed.provider_name === 'YouTube'" width="754" height="425" :src="'https://www.youtube.com/embed/'+_.trimStart(item.oembed.embed_url, 'https://www.youtube.com/watch?v=')+'?feature=oembed'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+    template(v-else-if="slice.slice_type === 'ideas_based_on_the_insight'")
+      IdeasBased(
+        :ideas="slice.items"
+      )
 </template>
 
 <script>
 // Imports for all slices
+import IdeasBased from './types/ideasBased'
 const TextSlice = () => import('@/components/insight-of-the-day/page/slices/types/textSlice.vue')
 export default {
   props: ['slices'],
   name: 'slices-block',
   components: {
+    IdeasBased,
     TextSlice
   }
 }

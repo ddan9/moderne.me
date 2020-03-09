@@ -28,11 +28,19 @@
         .nav__mobile(v-show="menuMobileActive")
           .nav__mobile-items(@click="menuMobileActive = !menuMobileActive")
             nuxt-link.nav__mobile-item(to="/") Home
-            nuxt-link.nav__mobile-item(v-for='(item, index) in menu' :key="index" :to="item.link") {{item.title}}
+            .nav__mobile-item(v-for='(item, index) in menu' :key="index")
+              nuxt-link(:to="item.link") {{item.title}}
+              .nav__mobile-item-inner(v-if="item.items")
+                nuxt-link.nav__mobile-item(v-for='innerItem in item.items' :to="innerItem.link")
+                  | {{innerItem.title}}
             nuxt-link.nav__mobile-item(to="/signin" v-if='path === "signup"') Sign In
             nuxt-link.nav__mobile-item(to="/get-access" v-else) Get Access
       .nav__menu
-        nuxt-link.nav__menu-item(v-for='(item, index) in menu' :key="index" :to="item.link") {{item.title}}
+        div(v-for='(item, index) in menu' :key="index")
+          nuxt-link.nav__menu-item(:to="item.link") {{item.title}}
+          .nav__menu-item-inner(v-if="item.items")
+            nuxt-link.nav__menu-item(v-for='innerItem in item.items' :to="innerItem.link")
+              | {{innerItem.title}}
       nuxt-link.nav__signup(to="/signin" v-if='path === "get-access"') Sign In
       nuxt-link.nav__signup(to="/get-access" v-else) Get Access
 </template>
@@ -53,23 +61,32 @@ export default {
           title: 'Overview',
           link: '/overview'
         },
-        // {
-        //   title: 'Solutions',
-        //   link: '/solutions',
-        //   items: [
-        //     {
-        //       title: ''
-        //     }
-        //   ]
-        // },
+        {
+          title: 'Solutions',
+          link: '/solutions',
+          items: [
+            {
+              title: 'for Agencies',
+              link: '/solutions/for-agencies'
+            },
+            {
+              title: 'for Brands',
+              link: '/solutions/for-brands'
+            },
+            {
+              title: 'for Startups',
+              link: '/solutions/for-startups'
+            }
+          ]
+        },
         {
           title: 'Pricing',
           link: '/pricing'
         },
-        // {
-        //   title: 'Insight of the Day',
-        //   link: '/insight-of-the-day'
-        // },
+        {
+          title: 'Insight of the Day',
+          link: '/insight-of-the-day'
+        },
         // {
         //   title: 'Our story',
         //   link: '/our-story'

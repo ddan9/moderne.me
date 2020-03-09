@@ -4,7 +4,6 @@
       :page="document"
       :items="all.results"
     )
-    section-form
     section-more
     section-cta
 </template>

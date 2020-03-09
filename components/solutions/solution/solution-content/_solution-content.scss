@@ -5,6 +5,63 @@
 
   // Module
   & {
+    &__item {
+      #line {
+        &__3-cards {
+          margin: 0 0 112px 16px;
+        }
+        &__inputs {
+          margin: 0 42px 102px 0;
+        }
+        &__moodboard {
+          margin: 0 0 186px -95px;
+        }
+        &__today {
+          margin: 0 -8px 160px 0;
+        }
+        &__lions {
+          margin: 0 0 174px -42px;
+        }
+        &__favorite {
+          margin: 0 -35px 194px 0;
+        }
+        &__export {
+          margin: 0 0 136px -33px;
+        }
+      }
+
+      &-line {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &--reverse {
+          flex-direction: row-reverse;
+        }
+
+        &-content {
+          width: 560px;
+        }
+
+        &-title {
+          font-family: $mabry;
+          font-size: 56px;
+          color: #3E3C43;
+          letter-spacing: 0;
+          line-height: 52px;
+          margin: 0 0 17px;
+        }
+
+        &-lead {
+          font-size: 20px;
+          line-height: 28px;
+          color: #5C5551;
+          letter-spacing: 0;
+          position: relative;
+        }
+      }
+    }
+
     &__example {
       margin: 0 0 104px;
 
@@ -69,12 +126,26 @@
       }
 
       &-ideas {
+        position: relative;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 1fr;
         grid-column-gap: 24px;
         grid-row-gap: 0px;
         align-items: flex-end;
+        padding: 0 0 93px;
+        margin: 0 0 104px;
+
+        &::after {
+          content: '';
+          position: absolute;
+          left: 50%;
+          bottom: 0;
+          transform: translateX(-50%);
+          width: 968px;
+          height: 2px;
+          background: #fff;
+        }
       }
 
       &-idea {
@@ -98,6 +169,7 @@
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+        margin: 0 0 23px;
       }
 
       &-card {
@@ -109,7 +181,7 @@
         width: 325px;
         height: 100px;
         padding: 7px 11px 9px 12px;
-        
+
         &:nth-child(2)::after {
           content: '';
           width: 100%;
@@ -123,6 +195,16 @@
           grid-template-rows: 1fr;
           grid-column-gap: 10px;
           grid-row-gap: 0px;
+          align-content: center;
+        }
+
+        &--empty {
+          width: 100%;
+          height: 0;
+          padding: 0;
+          margin: 0;
+          opacity: 0;
+          pointer-events: none;
         }
 
         &-content {
@@ -160,6 +242,14 @@
           color: #FFFFFF;
           letter-spacing: 0;
 
+          &--idea {
+            background: #2887E7;
+          }
+
+          &--trend {
+            background: #A478D3;
+          }
+
           &-icon {
             margin: 0 6px 0 0;
           }
@@ -179,7 +269,9 @@
           width: 78px;
           height: 78px;
           border-radius: 50%;
-          background: #5A5760;
+          background-color: #5A5760;
+          background-position: center;
+          background-size: cover;
         }
       }
     }

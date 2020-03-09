@@ -5,7 +5,7 @@
 
   // Module
   & {
-    margin: 146px 0 0;
+    margin: 0 0 14px;
 
     @include mobile {
       margin: vmin(45) 0 vmin(-22);
@@ -30,11 +30,11 @@
 
     &__cards {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(3, 120px);
-      grid-column-gap: 28px;
-      grid-row-gap: 30px;
-      padding: 0 100px;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 100px);
+      grid-column-gap: 24px;
+      grid-row-gap: 24px;
+      padding: 0 68px;
 
       @include mobile {
         grid-template-columns: 1fr;
@@ -44,20 +44,25 @@
     }
 
     &__card {
+      position: relative;
       background: #FFFFFF;
       border-radius: 4px;
+      box-sizing: border-box;
+      padding: 7px 11px 9px 12px;
 
       @include mobile {
         border-radius: vmin(8);
       }
 
-      &:nth-child(3),
-      &:nth-child(4) {
+      &:nth-child(4),
+      &:nth-child(5),
+      &:nth-child(6) {
         opacity: .7;
       }
 
-      &:nth-child(5),
-      &:nth-child(6) {
+      &:nth-child(7),
+      &:nth-child(8),
+      &:nth-child(9) {
         opacity: .4;
       }
 
@@ -67,6 +72,90 @@
         @include mobile {
           display: none;
         }
+      }
+
+      &--double {
+        display: grid;
+        grid-template-columns: 1fr 78px;
+        grid-template-rows: 1fr;
+        grid-column-gap: 10px;
+        grid-row-gap: 0px;
+      }
+
+      &--empty {
+        width: 100%;
+        height: 0;
+        padding: 0;
+        margin: 0;
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      &-content {
+        display: flex;
+        flex-direction: column;
+      }
+
+      &-title {
+        font-size: 16px;
+        line-height: 20px;
+        color: #2B2D33;
+        letter-spacing: 0;
+      }
+
+      &-label {
+        font-size: 13px;
+        line-height: 20px;
+        color: #9396A1;
+        letter-spacing: 0;
+        margin: auto 0 0;
+      }
+
+      &-type {
+        position: absolute;
+        right: 15px;
+        bottom: 10px;
+        height: 20px;
+        background: #21BD98;
+        border-radius: 2px;
+        padding: 0 5px;
+        display: flex;
+        align-items: center;
+        font-family: $mabry;
+        font-size: 13px;
+        color: #FFFFFF;
+        letter-spacing: 0;
+
+        &--idea {
+          background: #2887E7;
+        }
+
+        &--trend {
+          background: #A478D3;
+        }
+
+        &-icon {
+          margin: 0 6px 0 0;
+        }
+      }
+
+      &-image {
+        position: relative;
+
+        .insight-more__card-type {
+          right: 50%;
+          transform: translateX(50%);
+          bottom: -1px;
+        }
+      }
+
+      &-photo {
+        width: 78px;
+        height: 78px;
+        border-radius: 50%;
+        background-color: #5A5760;
+        background-position: center;
+        background-size: cover;
       }
     }
   }
