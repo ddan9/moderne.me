@@ -200,6 +200,12 @@
         margin: 0 0 20px;
         transition: all 500ms ease-in-out;
 
+        @include mobile {
+          font-size: vmin(20);
+          letter-spacing: vmin(4);
+          margin: 0 0 vmin(20);
+        }
+
         &--after {
           position: absolute;
           top: 0;
@@ -223,6 +229,12 @@
         grid-template-rows: 1fr;
         grid-column-gap: 32px;
         grid-row-gap: 0px;
+
+        @include mobile {
+          grid-template-columns: 1fr;
+          grid-template-rows: 1fr;
+          grid-row-gap: vmin(24);
+        }
       }
 
       &-item {
@@ -234,6 +246,13 @@
           letter-spacing: 0;
           margin: 0 0 2px;
           transition: all 500ms ease-in-out;
+
+          @include mobile {
+            font-size: vmin(18);
+            line-height: vmin(21);
+            margin: 0 0 vmin(9);
+            font-weight: 500;
+          }
         }
 
         &:nth-child(1) {

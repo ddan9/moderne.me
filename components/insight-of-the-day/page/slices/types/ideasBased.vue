@@ -6,7 +6,7 @@
         :style="`background-image: url(${idea.idea_image.url})`"
       )
       .ideas-based__item-content
-        span {{idea.idea_title}}&nbsp;
+        b {{idea.idea_title}}&nbsp;
         | {{idea.idea_text[0].text}}
 </template>
 
@@ -44,11 +44,6 @@ export default {
       line-height: 32px;
       color: #080809;
       letter-spacing: 0;
-      span {
-        font-weight: bold;
-        font-size: 21px;
-        line-height: 32px;
-      }
     }
   }
 }

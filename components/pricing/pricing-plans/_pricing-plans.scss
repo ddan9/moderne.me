@@ -375,6 +375,10 @@
             font-size: vmin(16);
             line-height: vmin(22);
           }
+
+          a {
+            color: currentColor;
+          }
         }
       }
     }

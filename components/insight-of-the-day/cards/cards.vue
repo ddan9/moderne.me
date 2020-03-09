@@ -8,7 +8,7 @@
           :key="card.id"
           :to="'/insight-of-the-day/'+card.uid"
         )
-          .insight-cards__item-image(:style="{ backgroundImage: 'url(' + card.data.image.url + ')' }")
+          .insight-cards__item-image(:style="{ backgroundImage: 'url(' + card.data.image.thumb.url + ')' }")
             .insight-cards__item-date {{ $moment(card.data.date).format("MMM D") }}
             .insight-cards__item-label {{ card.data.label }}
           .insight-cards__item-title {{ card.data.title }}

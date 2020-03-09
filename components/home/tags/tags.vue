@@ -37,12 +37,12 @@ export default {
       ],
       tagsBig: [
         {
-          title: 'Creative ideas.',
+          title: 'Ideas, Cases, References',
           text: 'Get the best in class examples of advertising ideas in minutes to boost your creativity.'
         },
         {
-          title: 'Creative insights.',
-          text: 'Use hundreds of highly tailored creative insights to produce mind-blowing marketing ideas.'
+          title: 'Insights, Trends, Innovations',
+          text: 'Use tons of highly tailored creative insights to produce mind-blowing marketing ideas.'
         }
       ]
     }

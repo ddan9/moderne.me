@@ -35,7 +35,7 @@
     .pricing-plans__faq-items
       .pricing-plans__faq-item(v-for="(item, index) in faq" :key="index")
         .pricing-plans__faq-item-title {{item.title}}
-        .pricing-plans__faq-item-text {{item.text}}
+        .pricing-plans__faq-item-text(v-html="item.text")
 </template>
 
 <script>
@@ -104,23 +104,23 @@ export default {
       faq: [
         {
           title: 'How can I pay?',
-          text: 'You’ll be able to set up credit card payments. Get in touch with our team if you’d prefer to be billed using a different payment method.'
+          text: 'You’ll be able to set up credit card payments. <a href="mailto:mila@moderne.st">Get in touch</a> with our team if you’d prefer to be billed using a different payment method.'
         },
         {
-          title: 'How will I be billed?',
-          text: 'If you’ve picked monthly billing, you will be billed each month. If you’ve selected annual billing, you will pay your yearly amount upfront.'
+          title: 'Can I subscribe to Moderne on monthly basis?',
+          text: 'No, Moderne is available as an annual subscription only.'
         },
         {
-          title: 'What if I want to cancel?',
-          text: 'If you have your reasons for cancellation, you may cancel at any time by going to your account page and subscriptions section.'
+          title: 'What is included in my annual subscription?',
+          text: 'Your annual subscription gives you full online access to Moderne platform including 40,000+ of market and consumer insights, case studies, trends and ideas. Also we provide monthly reports on your primary industries.'
         },
         {
-          title: 'Who is behind Moderne?',
-          text: 'Moderne is built by a team of independent art directors and copywriters who worked in the world\'s largest advertising agencies and have been recognized with many international advertising awards, including Cannes Lions.'
+          title: 'Can I share my login details with someone?',
+          text: 'Your personal profile details cannot be shared.'
         },
         {
           title: 'Have any other questions?',
-          text: 'Contact us via support@moderne.st'
+          text: 'Contact us via <a href="mailto:support@moderne.st">support@moderne.st</a>'
         }
       ]
     }
