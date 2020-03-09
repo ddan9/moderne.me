@@ -19,8 +19,8 @@ export default {
 </script>
 
 <style lang="scss">
-  html {
-    font-family: $helvetica, Arial, sans-serif;
+  html, body {
+    font-family: $helvetica;
     font-size: 16px;
     word-spacing: 1px;
     -ms-text-size-adjust: 100%;
