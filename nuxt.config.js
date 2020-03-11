@@ -69,7 +69,7 @@ export default {
     '@nuxtjs/prismic'
   ],
   prismic: {
-    endpoint: 'https://modernefeed.cdn.prismic.io/api/v2',
+    endpoint: 'https://moderne.cdn.prismic.io/api/v2',
     linkResolver: '@/plugins/link-resolver',
     htmlSerializer: '@/plugins/html-serializer',
   },

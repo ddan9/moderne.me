@@ -28,15 +28,26 @@
                 span
                   | I agree to receive Moderne news and updates.
           button.form__button Get Started Now
-        .form__inputs(v-if='type === "signin"')
-          input.form__input(
-            v-for="(item, index) in signInInputs"
-            :key="index"
-            :type="item.type"
-            :id="item.id"
-            :placeholder="item.placeholder"
+        form.form__inputs(v-if='type === "signin"' @submit.prevent="postLogin")
+          //input.form__input(
+          //  v-for="(item, index) in signInInputs"
+          //  :key="index"
+          //  :type="item.type"
+          //  :id="item.id"
+          //  :placeholder="item.placeholder"
+          //)
+          span.form__error(v-if="login.error !== null") {{ login.error }}
+          input.form__input#email(
+            type="email"
+            placeholder="Work Email"
+            v-model="login.email"
           )
-          button.form__button Sign In
+          input.form__input#password(
+            type="password"
+            placeholder="Password"
+            v-model="login.password"
+          )
+          button.form__button(type="submit") Sign In
           nuxt-link.form__reset(to="#") Forgot Password?
         form#mc-embedded-subscribe-form.validate.form__inputs(v-if='type === "getaccess"' action='https://moderne.us3.list-manage.com/subscribe/post?u=82e7a91b930da0b541f0ae17d&id=5efba2eadb' method='post' name='mc-embedded-subscribe-form' target='_blank' novalidate='')
           input.form__input(
@@ -72,6 +83,11 @@ export default {
   },
   data () {
     return {
+      login: {
+        email: null,
+        password: null,
+        error: null
+      },
       signUpInputs: [
         {
           type: 'text',
@@ -116,6 +132,30 @@ export default {
           required: true
         }
       ]
+    }
+  },
+  methods: {
+    postLogin () {
+      this.$axios.$post('http://helps.pp.ua/api/login', {
+        email: this.login.email,
+        password: this.login.password
+      }).then((response) => {
+        console.log(response)
+        if (response.message) {
+          this.login.error = response.message
+        } else {
+          this.$axios.setToken(response.data._token, 'Bearer')
+          this.login.email = null
+          this.login.password = null
+          this.login.error = null
+          this.getUsers()
+        }
+      })
+    },
+    getUsers () {
+      this.$axios.$post('http://helps.pp.ua/api/user').then((response) => {
+        console.log(response)
+      })
     }
   }
 }
