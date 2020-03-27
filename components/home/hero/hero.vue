@@ -20,7 +20,7 @@ export default {
     return {
       hero: {
         title: 'Unleash the full potential of your creative team',
-        lead: 'Moderne provides tons of highly tailored creative ad ideas and insights and offers a digital workspace to make brainstorms more effective for creative minds'
+        lead: 'Moderne provides highly tailored ad ideas and insights, offering a digital workspace for more effective brainstorming for creative minds'
       }
     }
   }

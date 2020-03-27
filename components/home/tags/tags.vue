@@ -38,7 +38,7 @@ export default {
       tagsBig: [
         {
           title: 'Ideas, Cases, References',
-          text: 'Get the best in class examples of advertising ideas in minutes to boost your creativity.'
+          text: 'Get the best examples of advertising ideas in minutes to boost your creativity.'
         },
         {
           title: 'Insights, Trends, Innovations',

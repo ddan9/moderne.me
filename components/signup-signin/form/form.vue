@@ -140,11 +140,14 @@ export default {
         email: this.login.email,
         password: this.login.password
       }).then((response) => {
-        console.log(response)
+        // console.log(response)
         if (response.message) {
           this.login.error = response.message
         } else {
-          this.$axios.setToken(response.data._token, 'Bearer')
+          const token = response.data._token
+          this.$axios.setToken(token, 'Bearer')
+          this.$cookies.set('moderne-token', `Bearer ${token}`)
+          console.log(token)
           this.login.email = null
           this.login.password = null
           this.login.error = null
@@ -153,7 +156,7 @@ export default {
       })
     },
     getUsers () {
-      this.$axios.$post('http://helps.pp.ua/api/user').then((response) => {
+      this.$axios.$get('http://helps.pp.ua/api/user').then((response) => {
         console.log(response)
       })
     }

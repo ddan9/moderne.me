@@ -57,7 +57,7 @@ export default {
               title: 'Unlimited industries, users and campaigns.'
             },
             {
-              title: 'Additional support by our analysts.'
+              title: 'Additional support from our analysts.'
             }
           ],
           priceMouth: 0,
@@ -67,13 +67,13 @@ export default {
         },
         {
           title: 'For Brands',
-          lead: 'Use endliess source for inspiration and data from best practice and case studies on the most effective marketing, understand what\'s working in your category and build evidence for your ideas.',
+          lead: 'Use endless sources of inspiration and data from best practices and case studies on the most effective marketing, understand what\'s working in your category and build evidence for your ideas.',
           features: [
             {
-              title: 'Access to thousands of creative market and consumer insights, ideas, trends, and innovations.'
+              title: 'Access to thousands of creative market and consumer insights, ideas, trends and innovations.'
             },
             {
-              title: 'Unlimited industries, 5 users and  5 campaigns.'
+              title: 'Unlimited industries, 5 users and 5 campaigns.'
             },
             {
               title: 'Industry-specific trend reports.'
@@ -86,10 +86,10 @@ export default {
         },
         {
           title: 'For Startups',
-          lead: 'Stand out from your competitors with creative approach in your next marketing campaign. Get the world top market and consumer insights, ideas and trends.',
+          lead: 'Stand out from your competitors with a creative approach in your next marketing campaign. Get the world’s top market and consumer insights, ideas and trends.',
           features: [
             {
-              title: 'Access to the best creative market and consumer insights, ideas, trends, and innovations from your industry.'
+              title: 'Access to the best creative market and consumer insights, ideas, trends and innovations from your industry.'
             },
             {
               title: '1 industry, 1 user and 1 campaign.'
@@ -104,7 +104,7 @@ export default {
       faq: [
         {
           title: 'How can I pay?',
-          text: 'You’ll be able to set up credit card payments. <a href="mailto:mila@moderne.st">Get in touch</a> with our team if you’d prefer to be billed using a different payment method.'
+          text: 'You can set up regular credit card payments. <a href="mailto:mila@moderne.st">Get in touch</a> with our team if you’d prefer to be billed using a different payment method.'
         },
         {
           title: 'Can I subscribe to Moderne on monthly basis?',
@@ -112,10 +112,10 @@ export default {
         },
         {
           title: 'What is included in my annual subscription?',
-          text: 'Your annual subscription gives you full online access to Moderne platform including 40,000+ of market and consumer insights, case studies, trends and ideas. Also we provide monthly reports on your primary industries.'
+          text: 'Your annual subscription gives you full online access to the  Moderne platform including 40,000+ market and consumer insights, case studies, trends and ideas. We also provide monthly reports on your primary industries'
         },
         {
-          title: 'Can I share my login details with someone?',
+          title: 'Can I share my login details with someone else?',
           text: 'Your personal profile details cannot be shared.'
         },
         {

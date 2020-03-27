@@ -33,25 +33,25 @@ export default {
         items: [
           {
             title: 'Thousands of insights, trends and ideas',
-            text: 'Moderne collects thousands of trends, innovative ideas, and advertising campaigns from all over the world and extracts consumer, market, and inspiration insights and then provides them based on your goals&objectives, target audience, and data.'
+            text: 'Moderne collects thousands of trends, innovative ideas and advertising campaigns from all over the world and extracts consumer, market and inspiration insights and then selects them based on your goals & objectives, target audience and data.'
           },
           {
-            title: 'Run brainstorms like never before',
-            text: 'Keep all your team’s progress in one place: import creative briefs, discuss ideas, make notes, collect mood boards, praise the best ideas. Moderne helps every member of the team so everyone would be heard.'
+            title: 'Brainstorm like never before',
+            text: 'Keep all your team’s progress in one place: import creative briefs, discuss ideas, make notes, collect mood boards and develop the best ideas. Moderne helps every member of the team so every voice is heard.'
           }
         ],
         overviewItems: [
           {
-            title: 'Get tons of insights, ideas&nbsp;and references',
-            text: 'Moderne collects thousands of trends, innovative ideas, and advertising campaigns from all over the world and extracts consumer, market, and inspiration insights and then provides them based on your goals&objectives, target audience, and data.'
+            title: 'Get lots of insights, ideas and references',
+            text: 'Moderne collects thousands of trends, innovative ideas and advertising campaigns from all over the world and extracts consumer, market and inspiration insights and then provides them based on your goals & objectives, target audience and data.'
           },
           {
-            title: 'Run creative brainstorm sessions smoother',
-            text: 'Keep all your team’s progress in one place: import creative briefs, discuss ideas, make notes, collect mood boards, praise the best ideas. Moderne helps every member of the team so everyone would be heard.'
+            title: 'Run smoother and more creative brainstorming sessions',
+            text: 'Keep all of your team’s progress in one place: import creative briefs, discuss ideas, make notes, collect mood boards and praise the best ideas. Moderne helps every member of the team so every voice is heard.'
           },
           {
-            title: 'Export your ideas beautifully',
-            text: 'You can convert all the work you have done with Moderne (or just some part of it) into a beautiful deck to present slides to your client or boss.'
+            title: 'Export your ideas effortlessly',
+            text: 'You can convert all the work you have done with Moderne (or just part of it) into a beautiful collection to present to your client or boss.'
           }
         ]
       }

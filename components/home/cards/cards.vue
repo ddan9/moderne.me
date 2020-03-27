@@ -34,7 +34,7 @@ export default {
           color: 'green',
           label: 'Brainstorms',
           title: 'Present better.',
-          text: 'Turn your great ideas into clean and beautiful presentation decks.'
+          text: 'Turn your great ideas into clean and beautiful presentations.'
         }
       ]
     }

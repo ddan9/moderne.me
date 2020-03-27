@@ -275,25 +275,25 @@ export default {
               alias: '3-cards',
               reverse: false,
               title: 'Save hours or even days of research time',
-              text: 'Stop Googling! Get tons of highly tailored, market and consumer insights, advertising ideas, hottest trends, and innovations. Connect your creative ideas to emerging consumer needs and wants.'
+              text: 'Stop Googling! Get access to lots of highly tailored market and consumer insights, advertising ideas, trends and innovations. Connect your creative ideas to emerging consumer needs and wants.'
             },
             {
               type: 'line',
               alias: 'inputs',
               reverse: true,
               title: 'Set the key goals of your next campaign',
-              text: 'Set the details of your creative brief: target audience info, goals&objectives, tone of voice, media channels, etc. to relevant data.'
+              text: 'Set the details of your creative brief: target audience info, goals & objectives, tone of voice, media channels, etc. to relevant data.'
             },
             {
               type: 'line',
               alias: 'lions',
               reverse: false,
               title: 'Feed your creative mind',
-              text: 'Sell in your ideas using evidence from award-winning advertising effectiveness case studies. Find your next brilliant idea! Impress you clients. Win new ones!'
+              text: 'Enhance your ideas using evidence from award-winning advertising effectiveness case studies. Find your next brilliant idea with ease! Impress your clients and win new ones!'
             },
             {
               type: 'example',
-              intro: 'A nonprofit organization launches a campaign on International Students\' Day to raise awareness of a teenager\'s career aspirations.',
+              intro: 'A non-profit organization launches a campaign on International Students\' Day to raise awareness of a teenager\'s career aspirations.',
               cards: [
                 {
                   type: 'Insight',
@@ -341,22 +341,22 @@ export default {
               ideas: [
                 'Ask teenagers about new occupations and change their descriptions on Wikipedia according to the actual teenager\'s understanding of each profession.',
                 '"The smartest school Bus": the first-ever school bus that knows everything! During the bus ride, kids can do virtual tours to different offices around the world and ask any questions about future occupations.',
-                'Connect kids from different cities or countries who are seating at the same bus seats. Use any popular messenger on mobile devices.'
+                'Connect kids from different cities or countries who are sitting in the same bus seats. Use any popular messenger on mobile devices.'
               ]
             },
             {
               type: 'line',
               alias: 'favorite',
               reverse: true,
-              title: 'All your creative briefs in one place',
+              title: 'All of your creative briefs in one place',
               text: 'Manage and update all your marketing briefs easily to make sure that your creative team is on track.'
             },
             {
               type: 'line',
               alias: 'export',
               reverse: false,
-              title: 'Instant export of your assets',
-              text: 'Prepare countless pitches and presentations? Export all the insights, references, trends you saved or ideas you created to PDF or PPT easily.'
+              title: 'Instantly export your assets',
+              text: 'Do you need to prepare countless pitches and presentations? Export all the insights, references and trends you have saved or ideas you have created to PDF or PPT easily.'
             }
           ],
           pricing: {

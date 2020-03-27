@@ -56,27 +56,27 @@ export default {
   data () {
     return {
       cols: {
-        title: 'Moderne helps creative teams  to&nbsp;<span>save&nbsp;hours or even days</span> on research  and collaborate <span>up to 3x faster</span>',
+        title: 'Moderne helps creative teams  to <span>save hours or even days</span> on research and allows them to collaborate <span>up to 3x faster</span>',
         titleBottom: '<span>For creative teams</span> The all-in-one toolkit for creative troops and solo forces. Create and collaborate with ideas in a new and powerful way.',
-        titleParams: 'Moderne helps creative teams  to&nbsp;<span>save&nbsp;hours or even days</span> on researching and collaborate <span>up to 3x faster</span>',
+        titleParams: 'Moderne helps creative teams <span>save hours or even days</span> researching and collaborate <span>up to 3x faster</span>',
         items: [
           {
-            title: 'Deliver better creative ideas.',
-            text: 'Use tons of ready-to-use consumer and market insights, creative ideas and trends highly tailored to your needs.'
+            title: 'Deliver more creative ideas.',
+            text: 'Make use of all of our creative ideas, trends and consumer and market insights, highly tailored to your specific needs.'
           },
           {
             title: 'Run creative brainstorms smoother.',
-            text: 'Get a space for your creative team to share ideas and insights, organize mood boards and discussions.'
+            text: 'Build a space for your creative team to share ideas and insights, as well as to organize mood boards and discussions.'
           },
           {
             title: 'Present your ideas beautifully.',
-            text: 'Turn all the assets of your next advertising campaign into a beautiful deck to present the ideas to your executives or clients.'
+            text: 'Turn your next advertising campaign into a beautiful collection of ideas to present to your executives or clients.'
           }
         ],
         items2: [
           {
             title: 'Built by creative people.',
-            text: 'Moderne is a product of a team of art-directors, copywriters and developers who passionate about creativity.'
+            text: 'Moderne is the product of a team of art-directors, copywriters and developers who are passionate about creativity.'
           },
           {
             title: 'Trusted by industry’s experts.',
@@ -84,7 +84,7 @@ export default {
           },
           {
             title: 'Money-back Guarantee.',
-            text: 'We are confident in the benefits of our product for creative teams, so we offer a 100% money-back guarantee.'
+            text: 'We are confident that your team will benefit from our creative ideas, so we offer a 100% money-back guarantee.'
           }
         ]
       }

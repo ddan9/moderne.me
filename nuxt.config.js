@@ -60,13 +60,16 @@ export default {
   */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios',
+    ['@nuxtjs/axios', {
+      credentials: true
+    }],
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
     '@nuxtjs/style-resources',
     '@nuxtjs/svg',
     // Doc: https://prismic-nuxt.js.org/docs/getting-started
-    '@nuxtjs/prismic'
+    '@nuxtjs/prismic',
+    'cookie-universal-nuxt'
   ],
   prismic: {
     endpoint: 'https://moderne.cdn.prismic.io/api/v2',
