@@ -56,8 +56,12 @@ export default {
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
-    '@nuxtjs/moment'
+    '@nuxtjs/moment',
+    '@hexdigital/nuxt-intercom'
   ],
+  intercom: {
+    appId: 'qwhyzkeb',
+  },
   /*
   ** Nuxt.js modules
   */
