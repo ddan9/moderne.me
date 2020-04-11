@@ -136,7 +136,7 @@ export default {
   },
   methods: {
     postLogin () {
-      this.$axios.$post('http://helps.pp.ua/api/login', {
+      this.$axios.$post('https://api.moderne.st/api/login', {
         email: this.login.email,
         password: this.login.password
       }).then((response) => {
@@ -158,7 +158,7 @@ export default {
       })
     },
     getUsers () {
-      this.$axios.$get('http://helps.pp.ua/api/user').then((response) => {
+      this.$axios.$get('https://api.moderne.st/api/user').then((response) => {
         console.log(response)
       })
     }
