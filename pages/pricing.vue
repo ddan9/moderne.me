@@ -18,8 +18,10 @@ export default {
     'section-hero': hero,
     'section-plans': plans
   },
-  head: {
-    title: 'Pricing'
+  head () {
+    return {
+      title: 'Pricing'
+    }
   }
 }
 </script>

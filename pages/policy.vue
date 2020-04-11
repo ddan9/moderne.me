@@ -1,11 +1,11 @@
 <template lang="pug">
-.policy
-  section-hero(
-    title="Privacy Policy"
-    lead="Our website and applications collect certain Personal Data from our Visitors and Users. To protect your personal data, Yousign has ensured that it is fully compliant with the European general data protection regulation (GDPR) which means that you can be sure that the collected data is processed in a responsible and secure manner.\n"
-  )
-  section-policy
-  section-cta
+  .policy
+    section-hero(
+      title="Privacy Policy"
+      lead="Our website and applications collect certain Personal Data from our Visitors and Users. To protect your personal data, Yousign has ensured that it is fully compliant with the European general data protection regulation (GDPR) which means that you can be sure that the collected data is processed in a responsible and secure manner.\n"
+    )
+    section-policy
+    section-cta
 </template>
 
 <script>
@@ -19,20 +19,22 @@ export default {
     'section-policy': policyContent,
     'section-cta': cta
   },
-  head: {
-    title: 'Privacy Policy'
+  head () {
+    return {
+      title: 'Privacy Policy'
+    }
   }
 }
 </script>
 
 <style lang="scss">
-.policy {
-  background-color: #F3EAE5;
-  padding: 246px 0 0;
-  box-sizing: border-box;
+  .policy {
+    background-color: #F3EAE5;
+    padding: 246px 0 0;
+    box-sizing: border-box;
 
-  @include mobile {
-    padding: vmin(100) 0 0;
+    @include mobile {
+      padding: vmin(100) 0 0;
+    }
   }
-}
 </style>

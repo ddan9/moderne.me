@@ -14,8 +14,10 @@ export default {
   components: {
     'section-getAccess': getAccess
   },
-  head: {
-    title: 'Get Early Access'
+  head () {
+    return {
+      title: 'Get Early Access'
+    }
   }
 }
 </script>

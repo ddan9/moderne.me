@@ -14,8 +14,10 @@ export default {
   components: {
     'section-signup': signUpForm
   },
-  head: {
-    title: 'Sign Up'
+  head () {
+    return {
+      title: 'Sign Up'
+    }
   }
 }
 </script>

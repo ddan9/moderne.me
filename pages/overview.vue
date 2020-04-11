@@ -22,8 +22,10 @@ export default {
     'section-cols': cols,
     'section-cta': cta
   },
-  head: {
-    title: 'Overview'
+  head () {
+    return {
+      title: 'Overview'
+    }
   }
 }
 </script>

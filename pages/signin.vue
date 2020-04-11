@@ -14,8 +14,10 @@ export default {
   components: {
     'section-signin': signInForm
   },
-  head: {
-    title: 'Sign In'
+  head () {
+    return {
+      title: 'Sign In'
+    }
   }
 }
 </script>

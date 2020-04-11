@@ -30,8 +30,10 @@ export default {
     'section-cards': cards,
     'section-cta': cta
   },
-  head: {
-    title: 'Home'
+  head () {
+    return {
+      title: 'Home'
+    }
   }
 }
 </script>

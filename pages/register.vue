@@ -13,8 +13,10 @@ export default {
     'section-header': registerHeader,
     'section-forms': registerForms
   },
-  head: {
-    title: 'Sign Up'
+  head () {
+    return {
+      title: 'Sign Up'
+    }
   },
   data () {
     return {

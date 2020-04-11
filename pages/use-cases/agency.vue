@@ -44,7 +44,7 @@
 </template>
 
 <script>
-import heroTitle from '~/components/ui/hero/hero'
+import heroTitle from '@/components/ui/hero/hero'
 import hero from '@/components/use-cases/case/hero/hero'
 import quote from '@/components/ui/quote/quote'
 import cta from '@/components/home/cta/cta'

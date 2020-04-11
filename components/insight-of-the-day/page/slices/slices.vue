@@ -7,13 +7,22 @@ section
       //TextSlice(:slice="slice")
       div(v-for="(item, index) in slice.items[0].text_content" :key="index")
         p(v-if="item.type === 'paragraph'" v-html="item.text")
+        //prismic-rich-text(v-if="item.type === 'paragraph'" :field="item.text")
+        //TextSlice(v-if="item.type === 'paragraph'" :slice="item")
         h1(v-else-if="item.type === 'heading1'" v-html="item.text")
         h2(v-else-if="item.type === 'heading2'" v-html="item.text")
         h3(v-else-if="item.type === 'heading3'" v-html="item.text")
+        img(v-else-if="item.type === 'image'" :src="item.url")
         //div.video(v-else-if="item.type === 'embed'" v-html="item.oembed.html")
         div.video(v-else-if="item.type === 'embed'")
           vue-plyr
-            div(data-plyr-provider="youtube" :data-plyr-embed-id="item.oembed.embed_url.slice(32)")
+            iframe(
+              v-if="item.oembed.provider_name === 'Vimeo'"
+              :src='item.oembed.embed_url'
+              allowfullscreen=''
+              allowtransparency=''
+              allow='autoplay')
+            //div(data-plyr-provider="youtube" :data-plyr-embed-id="item.oembed.embed_url.slice(32)")
           //| {{ item.oembed.embed_url }}
           //| {{ this._.capitalize('FRED') }}
           //| {{ _.trimStart('https://www.youtube.com/watch?v=1111', 'https://www.youtube.com/watch?v=') }}
@@ -43,7 +52,7 @@ export default {
     display: flex;
     justify-content: center;
 
-    > div {
+    > iframe {
       width: 754px;
       height: 425px;
 
@@ -52,5 +61,11 @@ export default {
         height: vmin(167);
       }
     }
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    margin: 35px 0;
   }
 </style>

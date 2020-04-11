@@ -153,7 +153,7 @@ export default {
           this.login.error = null
           this.getUsers()
           // window.location.replace('http://localhost:3000/dashboard')
-          window.location.replace("https://app.moderne.st")
+          window.location.replace('https://app.moderne.st')
         }
       })
     },

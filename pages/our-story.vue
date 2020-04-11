@@ -13,8 +13,10 @@ export default {
     'section-story': story,
     'section-cta': cta
   },
-  head: {
-    title: 'Our Story'
+  head () {
+    return {
+      title: 'Our Story'
+    }
   }
 }
 </script>

@@ -13,8 +13,10 @@ export default {
   components: {
     'section-thankYou': thankYou
   },
-  head: {
-    title: 'Thank you!'
+  head () {
+    return {
+      title: 'Thank you!'
+    }
   }
 }
 </script>
