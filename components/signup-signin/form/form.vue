@@ -152,13 +152,12 @@ export default {
           this.login.password = null
           this.login.error = null
           this.getUsers()
-          // window.location.replace('http://localhost:3000/dashboard')
-          window.location.replace('https://app.moderne.st')
+          window.location.replace(process.env.dashboard)
         }
       })
     },
     getUsers () {
-      this.$axios.$get('https://api.moderne.st/api/user').then((response) => {
+      this.$axios.$get(`${process.env.api}/api/user`).then((response) => {
         console.log(response)
       })
     }

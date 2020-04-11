@@ -71,7 +71,7 @@ export default {
       credentials: true
     }],
     // Doc: https://github.com/nuxt-community/dotenv-module
-    '@nuxtjs/dotenv',
+    // '@nuxtjs/dotenv',
     '@nuxtjs/style-resources',
     '@nuxtjs/svg',
     // Doc: https://prismic-nuxt.js.org/docs/getting-started
@@ -103,5 +103,16 @@ export default {
     */
     extend(config, ctx) {
     }
+  },
+  env: {
+    test: 12,
+    api:
+      process.env.NODE_ENV === 'dev'
+        ? 'http://helps.pp.ua'
+        : 'https://api.moderne.st',
+    dashboard:
+      process.env.NODE_ENV === 'dev'
+        ? 'http://localhost:5000'
+        : 'https://app.moderne.st'
   }
 }
