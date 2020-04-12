@@ -9,7 +9,7 @@
     top: 32px;
     left: 0;
     width: 100vw;
-    z-index: 999;
+    z-index: 9999999999999;
     transition: opacity 150ms ease;
 
     @include mobile {
@@ -251,6 +251,7 @@
       height: 100vh;
       background: #FFB283;
       padding: vmin(77) vmin(39);
+      overflow-y: scroll;
 
       &-items {
         display: flex;
