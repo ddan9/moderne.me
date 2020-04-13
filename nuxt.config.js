@@ -4,7 +4,7 @@ export default {
   ** Headers of the page
   */
   server: {
-    port: 4000
+    port: 7777
   },
   head: {
     titleTemplate: '%s – Moderne: Unleash the full potential of your creative team',
