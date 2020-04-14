@@ -46,9 +46,10 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    {src: '~plugins/ga.js', mode: 'client'},
+    {src: '~plugins/ga.js', ssr: false},
+    {src: '~plugins/lodash.js', ssr: false},
     {src: '~plugins/vue-scrollmagic.js', ssr: false},
-    {src: '~plugins/plyr'}
+    {src: '~plugins/plyr', ssr: false}
   ],
   /*
   ** Nuxt.js dev-modules
@@ -75,14 +76,14 @@ export default {
     '@nuxtjs/style-resources',
     '@nuxtjs/svg',
     // Doc: https://prismic-nuxt.js.org/docs/getting-started
-    '@nuxtjs/prismic',
+    // '@nuxtjs/prismic',
     'cookie-universal-nuxt'
   ],
-  prismic: {
-    endpoint: 'https://moderne.cdn.prismic.io/api/v2',
-    linkResolver: '@/plugins/link-resolver',
-    htmlSerializer: '@/plugins/html-serializer',
-  },
+  // prismic: {
+  //   endpoint: 'https://moderne.cdn.prismic.io/api/v2',
+  //   linkResolver: '@/plugins/link-resolver',
+  //   htmlSerializer: '@/plugins/html-serializer',
+  // },
   styleResources: {
     scss: [
       './assets/scss/*.scss',
