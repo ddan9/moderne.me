@@ -38,12 +38,13 @@ section
 import IdeasBased from './types/ideasBased'
 const TextSlice = () => import('@/components/insight-of-the-day/page/slices/types/textSlice.vue')
 export default {
-  props: ['slices'],
-  name: 'slices-block',
+  name: 'SlicesBlock',
   components: {
     IdeasBased,
     TextSlice
-  }
+  },
+  // eslint-disable-next-line
+  props: ['slices']
 }
 </script>
 

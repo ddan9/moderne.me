@@ -147,7 +147,6 @@ export default {
           const token = response.data._token
           this.$axios.setToken(token, 'Bearer')
           this.$cookies.set('moderne-token', `Bearer ${token}`)
-          console.log(token)
           this.login.email = null
           this.login.password = null
           this.login.error = null
@@ -158,7 +157,6 @@ export default {
     },
     getUsers () {
       this.$axios.$get(`${process.env.api}/api/user`).then((response) => {
-        console.log(response)
       })
     }
   }

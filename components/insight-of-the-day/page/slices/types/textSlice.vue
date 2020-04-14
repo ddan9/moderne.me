@@ -1,13 +1,14 @@
 <template>
-  <div class='post-part single container'>
-    <prismic-rich-text class="textslice" :field="slice.text"/>
+  <div class="post-part single container">
+    <prismic-rich-text :field="slice.text" class="textslice" />
   </div>
 </template>
 
 <script>
 export default {
-  props: ['slice'],
-  name: 'text-slice'
+  name: 'TextSlice',
+  // eslint-disable-next-line
+  props: ['slice']
 }
 </script>
 

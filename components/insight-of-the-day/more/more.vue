@@ -32,8 +32,6 @@
 import iconType from '@/assets/images/icons/icon-cards.svg?inline'
 
 export default {
-  props: {
-  },
   components: {
     iconType
   },

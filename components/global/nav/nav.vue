@@ -31,7 +31,7 @@
             .nav__mobile-item(v-for='(item, index) in menu' :key="index")
               nuxt-link(:to="item.link") {{item.title}}
               .nav__mobile-item-inner(v-if="item.items")
-                nuxt-link.nav__mobile-item(v-for='innerItem in item.items' :to="innerItem.link")
+                nuxt-link.nav__mobile-item(v-for='(innerItem, i) in item.items' :key="i" :to="innerItem.link")
                   | {{innerItem.title}}
             nuxt-link.nav__mobile-item(to="/signin" v-if='path === "signup"') Sign In
             nuxt-link.nav__mobile-item(to="/get-access" v-else) Get Access
@@ -39,7 +39,7 @@
         div(v-for='(item, index) in menu' :key="index")
           nuxt-link.nav__menu-item(:to="item.link") {{item.title}}
           .nav__menu-item-inner(v-if="item.items")
-            nuxt-link.nav__menu-item(v-for='innerItem in item.items' :to="innerItem.link")
+            nuxt-link.nav__menu-item(v-for='(innerItem, i) in item.items' :key="i" :to="innerItem.link")
               | {{innerItem.title}}
       nuxt-link.nav__signup(to="/signin" v-if='path === "get-access"') Sign In
       nuxt-link.nav__signup(to="/get-access" v-else) Get Access

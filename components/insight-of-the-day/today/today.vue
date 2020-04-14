@@ -20,6 +20,7 @@ export default {
   components: {
     readMore
   },
+  // eslint-disable-next-line
   props: ['insight']
 }
 </script>

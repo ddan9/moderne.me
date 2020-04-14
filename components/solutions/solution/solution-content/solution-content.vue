@@ -64,7 +64,9 @@
 <script>
 import iconType from '@/assets/images/icons/icon-cards.svg?inline'
 export default {
+  // eslint-disable-next-line
   props: ['data'],
+  // eslint-disable-next-line
   components: {
     iconType
   }

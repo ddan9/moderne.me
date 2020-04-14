@@ -30,13 +30,16 @@ export default {
   },
   props: {
     insights: {
-      type: Array
+      type: Array,
+      default: null
     },
     nextPage: {
-      type: String
+      type: String,
+      default: null
     },
     prevPage: {
-      type: String
+      type: String,
+      default: null
     }
   },
   methods: {

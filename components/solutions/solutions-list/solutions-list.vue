@@ -3,6 +3,7 @@
   .solutions__list-wrapper
     nuxt-link.solutions__list-item(
         v-for="(item, index) in solutions"
+        :key="index"
         :to="item.url"
       )
       .solutions__list-item-title(

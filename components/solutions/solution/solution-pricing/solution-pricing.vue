@@ -132,6 +132,7 @@
 
 <script>
 export default {
+  // eslint-disable-next-line
   props: ['data']
 }
 </script>
