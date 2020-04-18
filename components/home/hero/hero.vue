@@ -5,7 +5,7 @@
       .hero__lead {{hero.lead}}
       button-ui.hero__button(text="Get Started" link="/get-access" bgColor="#FF7E85" textColor="#FFFFFF")
       .hero__illustration
-        img(:alt="hero.title" src="@/assets/images/illustrations/hero-monkey.png" srcset="@/assets/images/illustrations/hero-monkey@2x.png 2x")
+        img(:alt="hero.title" src="~assets/images/illustrations/hero-monkey.png" srcset="~assets/images/illustrations/hero-monkey@2x.png 2x")
 </template>
 
 <script>
