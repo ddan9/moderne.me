@@ -58,7 +58,7 @@ export default {
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
     '@nuxtjs/moment',
-    '@hexdigital/nuxt-intercom'
+    '@hexdigital/nuxt-intercom',
   ],
   intercom: {
     appId: 'qwhyzkeb',
@@ -77,7 +77,13 @@ export default {
     '@nuxtjs/svg',
     // Doc: https://prismic-nuxt.js.org/docs/getting-started
     '@nuxtjs/prismic',
-    'cookie-universal-nuxt'
+    'cookie-universal-nuxt',
+    [
+      "nuxt-imagemin",
+      {
+        optipng: { optimizationLevel: 5 }
+      }
+    ]
   ],
   prismic: {
     endpoint: 'https://moderne.cdn.prismic.io/api/v2',
