@@ -3,9 +3,9 @@ export default {
   /*
   ** Headers of the page
   */
-  server: {
-    port: 4000
-  },
+  // server: {
+  //   port: 4000
+  // },
   head: {
     titleTemplate: '%s – Moderne: Unleash the full potential of your creative team',
     htmlAttrs: {
