@@ -24,15 +24,15 @@
             .cols__params-item-current
     .cols__3cols
       .cols__3cols-item(v-for="(item, index) in cols.items" :key="index" v-if='type === "top"')
-        img.cols__3cols-image.cols__3cols-image--0(:alt="item.title" v-if="index === 0" src="@/assets/images/illustrations/icon-cols-0.png" srcset="@/assets/images/illustrations/icon-cols-0@2x.png 2x")
-        img.cols__3cols-image.cols__3cols-image--1(:alt="item.title" v-if="index === 1" src="@/assets/images/illustrations/icon-cols-1.png" srcset="@/assets/images/illustrations/icon-cols-1@2x.png 2x")
-        img.cols__3cols-image.cols__3cols-image--2(:alt="item.title" v-if="index === 2" src="@/assets/images/illustrations/icon-cols-2.png" srcset="@/assets/images/illustrations/icon-cols-2@2x.png 2x")
+        img.cols__3cols-image.cols__3cols-image--0(:alt="item.title" v-if="index === 0" src="images/illustrations/icon-cols-0.png" srcset="images/illustrations/icon-cols-0@2x.png 2x")
+        img.cols__3cols-image.cols__3cols-image--1(:alt="item.title" v-if="index === 1" src="images/illustrations/icon-cols-1.png" srcset="images/illustrations/icon-cols-1@2x.png 2x")
+        img.cols__3cols-image.cols__3cols-image--2(:alt="item.title" v-if="index === 2" src="images/illustrations/icon-cols-2.png" srcset="images/illustrations/icon-cols-2@2x.png 2x")
         .cols__3cols-title {{item.title}}
         .cols__3cols-text {{item.text}}
       .cols__3cols-item(v-for="(item, index) in cols.items2" :key="index" v-if='type === "bottom"')
-        img.cols__3cols-image.cols__3cols-image--0-1(:alt="item.title" v-if="index === 0" src="@/assets/images/illustrations/icon-cols-0-1.png" srcset="@/assets/images/illustrations/icon-cols-0-1@2x.png 2x")
-        img.cols__3cols-image.cols__3cols-image--1-1(:alt="item.title" v-if="index === 1" src="@/assets/images/illustrations/icon-cols-1-1.png" srcset="@/assets/images/illustrations/icon-cols-1-1@2x.png 2x")
-        img.cols__3cols-image.cols__3cols-image--2-1(:alt="item.title" v-if="index === 2" src="@/assets/images/illustrations/icon-cols-2-1.png" srcset="@/assets/images/illustrations/icon-cols-2-1@2x.png 2x")
+        img.cols__3cols-image.cols__3cols-image--0-1(:alt="item.title" v-if="index === 0" src="images/illustrations/icon-cols-0-1.png" srcset="images/illustrations/icon-cols-0-1@2x.png 2x")
+        img.cols__3cols-image.cols__3cols-image--1-1(:alt="item.title" v-if="index === 1" src="images/illustrations/icon-cols-1-1.png" srcset="images/illustrations/icon-cols-1-1@2x.png 2x")
+        img.cols__3cols-image.cols__3cols-image--2-1(:alt="item.title" v-if="index === 2" src="images/illustrations/icon-cols-2-1.png" srcset="images/illustrations/icon-cols-2-1@2x.png 2x")
         .cols__3cols-title {{item.title}}
         .cols__3cols-text {{item.text}}
 </template>

@@ -3,7 +3,7 @@
     .container
       .overview__wrapper
         .overview__img
-          img(src="@/assets/images/illustrations/overview-head.png" srcset="@/assets/images/illustrations/overview-head@2x.png 2x")
+          img(src="images/illustrations/overview-head.png" srcset="images/illustrations/overview-head@2x.png 2x")
         h1.overview__title Moderne Overview
         .overview__lead
           | Moderne is&nbsp;a&nbsp;digital workspace for creative teams.&nbsp;

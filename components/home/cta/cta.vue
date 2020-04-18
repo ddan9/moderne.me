@@ -16,7 +16,7 @@
         .cta__form-group
           input.cta__form-input(type="email" placeholder="Your business email" v-model="emailUser")
           button.cta__form-button(type='submit') Get Access
-      img.cta__illustration(alt="We prepare the path to support your creative journey" src="@/assets/images/illustrations/cta-monkey.png" srcset="@/assets/images/illustrations/cta-monkey@2x.png 2x")
+      img.cta__illustration(alt="We prepare the path to support your creative journey" src="images/illustrations/cta-monkey.png" srcset="images/illustrations/cta-monkey@2x.png 2x")
 </template>
 
 <script>

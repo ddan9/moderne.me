@@ -9,7 +9,7 @@
       | yearly
       span (25%&nbsp;off)
   .pricing-plans__items
-    img.pricing-plans__illustration(src="@/assets/images/illustrations/pricing-head.png" srcset="@/assets/images/illustrations/pricing-head@2x.png 2x")
+    img.pricing-plans__illustration(src="images/illustrations/pricing-head.png" srcset="images/illustrations/pricing-head@2x.png 2x")
     .pricing-plans__item(v-for="(item, index) in plans" :key="index" :style="`color: ${item.color}`")
       .pricing-plans__item-title {{item.title}}
       .pricing-plans__item-content

@@ -1,7 +1,7 @@
 <template lang="pug">
 .container
   .screenshot
-    img(src="@/assets/images/illustrations/workspace.png" srcset="@/assets/images/illustrations/workspace@2x.png 2x")
+    img(src="images/illustrations/workspace.png" srcset="images/illustrations/workspace@2x.png 2x")
 </template>
 
 <script>

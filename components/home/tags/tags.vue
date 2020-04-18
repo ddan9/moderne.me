@@ -5,7 +5,7 @@
       .tags__mini-items
         .tags__mini-item(v-for="(item, index) in tagsMini" :key="index") {{item.title}}
       .tags__illustration
-        img.tags__illustration-face(alt="Where the magic happens" src="@/assets/images/illustrations/tags-face.png" srcset="@/assets/images/illustrations/tags-face@2x.png 2x")
+        img.tags__illustration-face(alt="Where the magic happens" src="images/illustrations/tags-face.png" srcset="images/illustrations/tags-face@2x.png 2x")
         .tags__illustration-text Where the magic happens
       .tags__big-items
         .tags__big-item(v-for="(item, index) in tagsBig" :key="index")

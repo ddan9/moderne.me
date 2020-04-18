@@ -3,14 +3,14 @@
   .container
     .story__wrapper
       .story__img
-        img(src="@/assets/images/illustrations/ourstory-monkey.png" srcset="@/assets/images/illustrations/ourstory-monkey@2x.png 2x")
+        img(src="images/illustrations/ourstory-monkey.png" srcset="images/illustrations/ourstory-monkey@2x.png 2x")
       h1.story__title The story behind the&nbsp;project
       .story__lead “Curiosity about life in all of its aspects, I think, is still the secret of great creative people.” — Leo Burnett said once.
       .story__text.story__text--1
         p Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare. Phasellus at semper turpis. Nunc eu tellus tortor. Etiam at condimentum nisl, vitae sagittis orci. Donec id dignissim nunc. Donec elit ante, eleifend a dolor et, venenatis facilisis dolor. In feugiat orci odio, sed lacinia sem elementum quis. Aliquam consectetur, eros et vulputate euismod, nunc leo tempor lacus,.
       .story__images.story__images--1
         .story__images-item.story__images-item--1
-          img(src="@/assets/images/photos/story/story-1.jpg" srcset="@/assets/images/photos/story/story-1@2x.jpg 2x")
+          img(src="images/photos/story/story-1.jpg" srcset="images/photos/story/story-1@2x.jpg 2x")
       .story__text.story__text--2
         h2.story__title--h2 Vestibulum ru.
         p Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metus. Sed sollicitudin ipsum quis nunc sollicitudin ultrices. Donec euismod scelerisque ligula. Maecenas eu varius risus, eu aliquet arcu. Curabitur fermentum suscipit est, tincidunt mattis lorem luctus id. Donec eget massa a diam condimentum pretium. Aliquam erat.

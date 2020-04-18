@@ -10,7 +10,7 @@
         input.insight-form__input.required.email#mce-EMAIL(type="email" value="" name="EMAIL"  placeholder="Enter your email to subscribe!")
         button.insight-form__button(type='submit' value="Subscribe" name="subscribe" id="mc-embedded-subscribe") Subscribe
         .insight-form__illustration
-          img(src="@/assets/images/illustrations/insight-form.png" srcset="@/assets/images/illustrations/insight-form@2x.png 2x")
+          img(src="images/illustrations/insight-form.png" srcset="images/illustrations/insight-form@2x.png 2x")
       .insight-form__wrapper-bottom
         .insight-form__socials
           span.insight-form__socials-item--top or follow on&nbsp;

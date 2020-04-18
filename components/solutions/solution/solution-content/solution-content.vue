@@ -53,7 +53,7 @@
                   iconType.solution-content__example-card-type-icon
                   | {{ card.type }}
             .solution-content__example-arrows
-              img(src="@/assets/images/illustrations/example__arrows.png" srcset="@/assets/images/illustrations/example__arrows@2x.png 2x")
+              img(src="images/illustrations/example__arrows.png" srcset="images/illustrations/example__arrows@2x.png 2x")
             .solution-content__example-subtitle
               | …and find you next big idea!
             .solution-content__example-ideas
