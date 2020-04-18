@@ -120,7 +120,7 @@
           .solution-pricing__table-col
           .solution-pricing__table-col
             .solution-pricing__table-button(:class="{'solution-pricing__table-button--active': data.pricing.number === 1}")
-              nuxt-link.solution-pricing__table-button-text(to="#") Request a quote
+              nuxt-link.solution-pricing__table-button-text(to="/get-access") Request a quote
           .solution-pricing__table-col
             .solution-pricing__table-button(:class="{'solution-pricing__table-button--active': data.pricing.number === 2}")
               nuxt-link.solution-pricing__table-button-text(to="/get-access") Get Access
