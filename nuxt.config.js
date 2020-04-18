@@ -77,13 +77,7 @@ export default {
     '@nuxtjs/svg',
     // Doc: https://prismic-nuxt.js.org/docs/getting-started
     '@nuxtjs/prismic',
-    'cookie-universal-nuxt',
-    [
-      "nuxt-imagemin",
-      {
-        optipng: { optimizationLevel: 5 }
-      }
-    ]
+    'cookie-universal-nuxt'
   ],
   prismic: {
     endpoint: 'https://moderne.cdn.prismic.io/api/v2',
@@ -109,7 +103,7 @@ export default {
     ** You can extend webpack config here
     */
     extend(config) {
-      config.performance.maxAssetSize = 1000000;
+      // config.performance.maxAssetSize = 1000000;
     }
   },
   env: {
