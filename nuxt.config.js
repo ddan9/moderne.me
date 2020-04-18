@@ -40,6 +40,7 @@ export default {
   ** Global CSS
   */
   css: [
+    '~assets/css/fonts.css',
     'plyr/dist/plyr.css'
   ],
   /*
