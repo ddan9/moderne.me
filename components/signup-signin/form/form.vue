@@ -147,7 +147,7 @@ export default {
           const token = response.data._token
           this.$axios.setToken(token, 'Bearer')
           this.$cookies.set('moderne-token', token, {
-            domain: 'https://app.moderne.st'
+            domain: 'app.moderne.st'
           })
           setTimeout(() => {
             this.login.email = null
