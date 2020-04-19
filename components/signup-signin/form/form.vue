@@ -148,12 +148,14 @@ export default {
           this.$axios.setToken(token, 'Bearer')
           this.$cookies.set('moderne-token', `${token}`, {
             domain: 'app.moderne.st'
+          }).then(() => {
+            this.login.email = null
+            this.login.password = null
+            this.login.error = null
+            window.location.replace(process.env.dashboard)
           })
-          this.login.email = null
-          this.login.password = null
-          this.login.error = null
-          this.getUsers()
-          window.location.replace(process.env.dashboard)
+          // this.getUsers()
+          // window.location.replace(process.env.dashboard)
         }
       })
     },
