@@ -115,7 +115,7 @@ export default {
         : 'https://api.moderne.st',
     dashboard:
       process.env.NODE_ENV === 'dev'
-        ? 'http://localhost:5000'
+        ? 'http://localhost:3000'
         : 'https://app.moderne.st'
   }
 }
