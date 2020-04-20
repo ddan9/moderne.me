@@ -84,7 +84,7 @@ export default {
     endpoint: 'https://moderne.cdn.prismic.io/api/v2',
     linkResolver: '@/plugins/link-resolver',
     htmlSerializer: '@/plugins/html-serializer'
-    // preview: '/preview/'
+    // preview: '/insight-of-the-day/_uid'
   },
   styleResources: {
     scss: [
