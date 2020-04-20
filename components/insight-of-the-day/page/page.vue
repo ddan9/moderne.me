@@ -40,10 +40,10 @@ export default {
   },
   props: {
     page: {
-      type: Object
+      type: Array
     },
     items: {
-      type: Object
+      type: Array
     }
   },
   data () {
