@@ -7,6 +7,10 @@
   & {
     &-wrapper {
       padding: 0 96px;
+
+      @include mobile {
+        padding: 0;
+      }
     }
 
     &-item {
@@ -17,6 +21,10 @@
 
       &:not(:last-child) {
         margin: 0 0 90px;
+
+        @include mobile {
+          margin: 0 0 vmin(60);
+        }
       }
 
       &-title {
@@ -25,6 +33,12 @@
         line-height: 83px;
         letter-spacing: 0;
         margin: 0 0 13px;
+
+        @include mobile {
+          font-size: vmin(39);
+          line-height: vmin(39);
+          margin: 0 0 vmin(14);
+        }
       }
 
       &-lead {
@@ -33,6 +47,12 @@
         color: #3E3C43;
         letter-spacing: 0;
         margin: 0 0 64px;
+
+        @include mobile {
+          font-size: vmin(17);
+          line-height: vmin(22);
+          margin: 0 0 vmin(60);
+        }
       }
     }
   }

@@ -13,10 +13,22 @@
       text-align: center;
       line-height: 52px;
       margin: 0 0 67px;
+
+      @include mobile {
+        font-size: vmin(39);
+        line-height: vmin(39);
+        margin: 0 0 vmin(27);
+      }
     }
 
     &__wrapper {
       margin: 0 76px;
+
+      @include mobile {
+        margin: 0 vmin(-24);
+        padding: 0 vmin(24);
+        overflow-y: scroll;
+      }
     }
 
     &__table {
@@ -24,6 +36,12 @@
       line-height: 23px;
       color: #44464C;
       letter-spacing: 0;
+
+      @include mobile {
+        width: 955px;
+        padding-right: vmin(24);
+        //margin: 0 vmin(24);
+      }
 
       &--active {
         &-1 {

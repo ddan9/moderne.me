@@ -23,11 +23,11 @@
                 .solution-content__example-intro-text {{ content.intro }}
             .solution-content__example-title
               | Feed your inspiration with&nbsp;
-              span insights
-              | ,&nbsp;
-              span trends
-              | ,&nbsp;
-              span ideas
+              span  insights
+              | ,
+              span  trends
+              | ,
+              span  ideas
               |  from&nbsp;the 🐵 Moderne Platform…
             .solution-content__example-cards
               .solution-content__example-card(
