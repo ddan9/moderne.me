@@ -54,6 +54,8 @@ export default {
   },
   mounted () {
     this.getOther(this.items)
+    this.changeVideoSize()
+    window.addEventListener('resize', this.changeVideoSize)
   },
   methods: {
     getOther (el) {
@@ -61,6 +63,20 @@ export default {
       const found = _.findIndex(el, function (insight) { return insight.id === currentInsight })
       this.prevLink = found > 0 ? el[found - 1].uid : null
       this.nextLink = found < el.length - 1 ? el[found + 1].uid : null
+    },
+    changeVideoSize () {
+      const contentWidth = document.querySelector('.insight-page__content p:nth-child(1)').clientWidth
+      const videos = document.querySelectorAll('iframe')
+      videos.forEach((video) => {
+        const ratio = video.getAttribute('height') / video.getAttribute('width')
+        const width = contentWidth
+        const height = width * ratio
+        video.setAttribute('width', width)
+        video.setAttribute('height', height)
+      })
+      if (window.innerWidth > 1024) {
+
+      }
     }
   }
 }
