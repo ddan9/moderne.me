@@ -83,7 +83,8 @@ export default {
   prismic: {
     endpoint: 'https://moderne.cdn.prismic.io/api/v2',
     linkResolver: '@/plugins/link-resolver',
-    htmlSerializer: '@/plugins/html-serializer',
+    htmlSerializer: '@/plugins/html-serializer'
+    // preview: '/preview/'
   },
   styleResources: {
     scss: [
