@@ -1,6 +1,7 @@
 <template lang="pug">
   .insight-of-the-day__page
     section-page(
+      v-if="document"
       :page="document"
       :items="all.results"
     )

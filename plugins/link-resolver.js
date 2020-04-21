@@ -8,7 +8,7 @@ export default function (doc) {
   }
 
   if (doc.type === 'insight') {
-    return '/insight-of-the-day/' + doc.uid
+    return `/insight-of-the-day/${doc.uid}`
   }
 
   return '/not-found'
