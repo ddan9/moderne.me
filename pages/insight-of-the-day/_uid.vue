@@ -1,9 +1,8 @@
 <template lang="pug">
   .insight-of-the-day__page
     section-page(
-      v-if="ready"
       :page="document"
-      :items="all.results"
+      :items="all"
     )
     section-more
     section-cta
@@ -17,6 +16,24 @@ import insightMore from '@/components/insight-of-the-day/more/more'
 import cta from '@/components/home/cta/cta'
 
 export default {
+  async asyncData ({ $prismic, params, error }) {
+    try{
+      const insights = await $prismic.api.query(
+        $prismic.predicates.at("document.type", "insight"),
+        { orderings : '[my.insight.date desc]' }
+      )
+      // Query to get post content
+      const insight = await $prismic.api.getByUID('insight', params.uid)
+      // Returns data to be used in template
+      return {
+        all: insights.results,
+        document: insight,
+      }
+    } catch (e) {
+      // Returns error page
+      error({ statusCode: 404, message: 'Page not found' })
+    }
+  },
   components: {
     'section-form': insightForm,
     'section-page': insightPage,
@@ -27,7 +44,7 @@ export default {
     title: 'Insight of the Day'
   },
   mounted () {
-    this.ready = true
+    // this.ready = true
   },
   data () {
     return {
@@ -37,24 +54,6 @@ export default {
       nextPage: null,
       prevPage: null,
       ready: false
-    }
-  },
-  async asyncData({ $prismic, params, error }) {
-    try{
-      const insights = await $prismic.api.query(
-        $prismic.predicates.at("document.type", "insight"),
-        { orderings : '[my.insight.date desc]' }
-      )
-      // Query to get post content
-      const insight = await $prismic.api.getByUID('insight', params.uid)
-      // Returns data to be used in template
-      return {
-        all: insights,
-        document: insight,
-      }
-    } catch (e) {
-      // Returns error page
-      error({ statusCode: 404, message: 'Page not found' })
     }
   }
 }

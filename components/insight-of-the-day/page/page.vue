@@ -1,7 +1,7 @@
 <template lang="pug">
 .insight-page
   .container
-    .insight-page__wrapper
+    .insight-page__wrapper(v-if="page !== null")
       .insight-page__header
         .insight-page__header-label {{ page.data.label }}
         .insight-page__header-title {{ page.data.title }}
@@ -40,10 +40,12 @@ export default {
   },
   props: {
     page: {
-      type: Array
+      type: Array,
+      default: null
     },
     items: {
-      type: Array
+      type: Array,
+      default: null
     }
   },
   data () {
