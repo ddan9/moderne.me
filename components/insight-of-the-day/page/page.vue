@@ -40,7 +40,7 @@ export default {
   },
   props: {
     page: {
-      type: Array,
+      type: Object,
       default: null
     },
     items: {
