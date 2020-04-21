@@ -1,7 +1,7 @@
 <template lang="pug">
   .insight-of-the-day__page
     section-page(
-      v-if="document"
+      v-if="ready"
       :page="document"
       :items="all.results"
     )
@@ -26,13 +26,17 @@ export default {
   head: {
     title: 'Insight of the Day'
   },
+  mounted () {
+    this.ready = true
+  },
   data () {
     return {
       selectedPage: 1,
       today: null,
       cards: null,
       nextPage: null,
-      prevPage: null
+      prevPage: null,
+      ready: false
     }
   },
   async asyncData({ $prismic, params, error }) {
@@ -42,7 +46,7 @@ export default {
         { orderings : '[my.insight.date desc]' }
       )
       // Query to get post content
-      const insight = (await $prismic.api.getByUID('insight', params.uid))
+      const insight = await $prismic.api.getByUID('insight', params.uid)
       // Returns data to be used in template
       return {
         all: insights,
