@@ -5,7 +5,7 @@
       .insight-form__wrapper-top
         .insight-form__title {{ title }}
         .insight-form__lead
-          | Discover breakthrough trends, innovations and ideas before they become mainstream! A new insight every single day! 🐵
+          | Discover breakthrough trends, innovations, and ideas before they become mainstream! 🙉🙈🙊
       form.insight-form__wrapper-middle(action="https://moderne.us19.list-manage.com/subscribe/post?u=de0a821092605fb47015cd760&amp;id=020e67aea3" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate)
         input.insight-form__input.required.email#mce-EMAIL(type="email" value="" name="EMAIL"  placeholder="Enter your email to subscribe!")
         button.insight-form__button(type='submit' value="Subscribe" name="subscribe" id="mc-embedded-subscribe") Subscribe
