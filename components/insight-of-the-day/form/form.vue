@@ -24,7 +24,7 @@
             span.insight-form__socials-dot ,&nbsp;
           span.insight-form__socials-item
             iconInstagram.insight-form__socials-icon
-            a(href="#") Instagram
+            a(href="https://www.instagram.com/insights.by.moderne") Instagram
             span.insight-form__socials-dot ,&nbsp;
           span.insight-form__socials-item
             iconFacebook.insight-form__socials-icon
