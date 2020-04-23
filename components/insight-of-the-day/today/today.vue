@@ -2,12 +2,12 @@
 .insight-today
   .container
     .insight-today__wrapper
-      .insight-today__image
+      nuxt-link.insight-today__image(:to="'/insight-of-the-day/'+insight.uid")
         .insight-today__image-inner(:style="{ backgroundImage: 'url(' + insight.data.image.url + ')' }")
           .insight-today__image-label {{ insight.data.label }}
       .insight-today__meta
         .insight-today__label 🤘 Today’s Insight
-        .insight-today__title {{ insight.data.title }}
+        nuxt-link.insight-today__title(:to="'/insight-of-the-day/'+insight.uid") {{ insight.data.title }}
         .insight-today__lead {{ insight.data.lead }}
         nuxt-link.insight-today__button(:to="'/insight-of-the-day/'+insight.uid")
           | Read more

@@ -41,6 +41,7 @@
       background-color: #FFFFFF;
       border-radius: 4px;
       box-sizing: border-box;
+      text-decoration: none;
 
       @include mobile {
         padding: initial;
@@ -107,6 +108,7 @@
       color: #464241;
       letter-spacing: 0;
       margin: 0 0 15px;
+      text-decoration: none;
 
       @include mobile {
         font-size: vmin(17);
