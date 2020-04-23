@@ -47,7 +47,7 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    {src: '~plugins/ga.js', ssr: false},
+    // {src: '~plugins/ga.js', ssr: false},
     {src: '~plugins/lodash.js', ssr: false},
     {src: '~plugins/vue-scrollmagic.js', ssr: false},
     {src: '~plugins/plyr', ssr: false}
@@ -60,6 +60,9 @@ export default {
     '@nuxtjs/eslint-module',
     '@nuxtjs/moment',
     '@hexdigital/nuxt-intercom',
+    ['@nuxtjs/google-analytics', {
+      id: 'UA-135902175-1'
+    }]
   ],
   intercom: {
     appId: 'qwhyzkeb',
