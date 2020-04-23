@@ -146,9 +146,11 @@ export default {
         } else {
           const token = response.data._token
           this.$axios.setToken(token, 'Bearer')
-          this.$cookies.set('moderne-token', token, {
-            domain: 'app.moderne.st'
-          })
+          this.$cookies.set('moderne-token', token)
+          // if (process.env.NODE_ENV === 'dev') {
+          // } else {
+          //   this.$cookies.set('moderne-token', token, { domain: 'app.moderne.st' })
+          // }
           setTimeout(() => {
             this.login.email = null
             this.login.password = null

@@ -104,7 +104,7 @@ export default {
         },
         {
           title: 'Instagram',
-          link: '#'
+          link: 'https://www.instagram.com/insights.by.moderne/'
         }
       ],
       menu_4: [
