@@ -146,19 +146,15 @@ export default {
         } else {
           const token = response.data._token
           this.$axios.setToken(token, 'Bearer')
-          this.$cookies.set('moderne-token', token)
-          // if (process.env.NODE_ENV === 'dev') {
-          // } else {
-          //   this.$cookies.set('moderne-token', token, { domain: 'app.moderne.st' })
-          // }
-          this.login.email = null
-          this.login.password = null
-          this.login.error = null
-          window.location.replace(process.env.dashboard)
-          setTimeout(() => {
-          }, 1500)
-          // this.getUsers()
-          // window.location.replace(process.env.dashboard)
+          const setToken = async () => {
+            this.$cookies.set('moderne-token', token)
+          }
+          setToken().then(() => {
+            this.login.email = null
+            this.login.password = null
+            this.login.error = null
+            window.location.replace(process.env.dashboard)
+          })
         }
       })
     },
