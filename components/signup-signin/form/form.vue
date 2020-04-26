@@ -147,12 +147,15 @@ export default {
           const token = response.data._token
           this.$axios.setToken(token, 'Bearer')
           const setToken = async () => {
-            this.$cookies.set('moderne-token', token)
+            await this.$cookies.set('moderne-token', token, {
+              domain: process.env.domain
+            })
           }
           setToken().then(() => {
             this.login.email = null
             this.login.password = null
             this.login.error = null
+            // console.log(token)
             window.location.replace(process.env.dashboard)
           })
         }
