@@ -151,11 +151,11 @@ export default {
           // } else {
           //   this.$cookies.set('moderne-token', token, { domain: 'app.moderne.st' })
           // }
+          this.login.email = null
+          this.login.password = null
+          this.login.error = null
+          window.location.replace(process.env.dashboard)
           setTimeout(() => {
-            this.login.email = null
-            this.login.password = null
-            this.login.error = null
-            window.location.replace(process.env.dashboard)
           }, 1500)
           // this.getUsers()
           // window.location.replace(process.env.dashboard)
