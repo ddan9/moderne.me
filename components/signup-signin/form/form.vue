@@ -148,7 +148,7 @@ export default {
           this.$axios.setToken(token, 'Bearer')
           const setToken = async () => {
             await this.$cookies.set('moderne-token', token, {
-              domain: process.env.domain
+              domain: '.moderne.st'
             })
           }
           setToken().then(() => {
