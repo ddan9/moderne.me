@@ -1,3 +1,7 @@
+const Prismic = require('prismic-javascript')
+const apiEndpoint = 'https://moderne.cdn.prismic.io/api/v2'
+
+
 export default {
   mode: 'universal',
   /*
@@ -81,13 +85,30 @@ export default {
     '@nuxtjs/svg',
     // Doc: https://prismic-nuxt.js.org/docs/getting-started
     '@nuxtjs/prismic',
-    'cookie-universal-nuxt'
+    'cookie-universal-nuxt',
+    '@nuxtjs/sitemap'
   ],
   prismic: {
     endpoint: 'https://moderne.cdn.prismic.io/api/v2',
     linkResolver: '@/plugins/link-resolver',
     htmlSerializer: '@/plugins/html-serializer'
     // preview: '/insight-of-the-day/_uid'
+  },
+  sitemap: {
+    gzip: true,
+    exclude: [
+      '/preview',
+      '/use-cases',
+      '/use-cases/**',
+      '/thank-you',
+      '/register'
+    ],
+    routes: async () => {
+      const insights = await Prismic.getApi(apiEndpoint).then(function(api) {
+        return api.query('')
+      })
+      return insights.results.map((insight) => `/insight-of-the-day/${insight.uid}`)
+    }
   },
   styleResources: {
     scss: [

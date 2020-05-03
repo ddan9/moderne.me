@@ -28,6 +28,7 @@ export default {
       return {
         all: insights.results,
         document: insight,
+        title: insight.data.title
       }
     } catch (e) {
       // Returns error page
@@ -40,11 +41,10 @@ export default {
     'section-more': insightMore,
     'section-cta': cta
   },
-  head: {
-    title: 'Insight of the Day'
-  },
-  mounted () {
-    // this.ready = true
+  head () {
+    return {
+      title: this.title
+    }
   },
   data () {
     return {

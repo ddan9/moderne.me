@@ -63,7 +63,7 @@ export default {
       // Returns data to be used in template
       return {
         today: todayInsight.results[0],
-        cards: insights.results,
+        cards: insights.results.filter((item, i) => i !== 0),
         nextPage: insights.next_page,
         prevPage: insights.prev_page,
         selectedPage: insights.page

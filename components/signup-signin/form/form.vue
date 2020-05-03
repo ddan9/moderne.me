@@ -145,10 +145,12 @@ export default {
           this.login.error = response.message
         } else {
           const token = response.data._token
+          // const domain = process.env.NODE_ENV === 'dev' ? 'localhost' : '.moderne.st'
           this.$axios.setToken(token, 'Bearer')
           const setToken = async () => {
             await this.$cookies.set('moderne-token', token, {
-              domain: '.moderne.st'
+              // eslint-disable-next-line
+              // domain: domain
             })
           }
           setToken().then(() => {
