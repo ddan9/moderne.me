@@ -43,7 +43,9 @@ export default {
   },
   head () {
     return {
-      title: this.title
+      title: this.title,
+      __dangerouslyDisableSanitizers: ['script'],
+      script: [{ innerHTML: JSON.stringify(this.structuredData), type: 'application/ld+json' }]
     }
   },
   data () {
@@ -53,7 +55,33 @@ export default {
       cards: null,
       nextPage: null,
       prevPage: null,
-      ready: false
+      ready: false,
+      structuredData: {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://moderne.st/insight-of-the-day/recommendations-from-a-trusted-friend-you-havent-met"
+        },
+        "headline": this.title,
+        "description": "🤓 83% of people say they trust recommendations from friends – more than any other form of marketing.",
+        "image": "https://images.prismic.io/moderne/8649bbe8-f45e-4ec3-9338-0c9d56e2052a_Trusted_Friend_.jpg",
+        "author": {
+          "@type": "Organization",
+          "name": "Moderne"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Moderne",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "",
+            "width": "",
+            "height": ""
+          }
+        },
+        "datePublished": "2020-05-05"
+      }
     }
   }
 }
