@@ -25,10 +25,10 @@ export default {
       // Query to get post content
       const insight = await $prismic.api.getByUID('insight', params.uid)
       // Returns data to be used in template
+      console.log(insight)
       return {
         all: insights.results,
-        document: insight,
-        title: insight.data.title
+        document: insight
       }
     } catch (e) {
       // Returns error page
@@ -43,9 +43,34 @@ export default {
   },
   head () {
     return {
-      title: this.title,
+      title: this.document.data.title,
       __dangerouslyDisableSanitizers: ['script'],
-      script: [{ innerHTML: JSON.stringify(this.structuredData), type: 'application/ld+json' }]
+      script: [{ innerHTML: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": `https://moderne.st/insight-of-the-day/${this.document.uid}`
+          },
+          "headline": this.document.data.title,
+          "description": this.document.data.lead,
+          "image": this.document.data.image.url,
+          "author": {
+            "@type": "Organization",
+            "name": "Moderne"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Moderne",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "",
+              "width": "",
+              "height": ""
+            }
+          },
+          "datePublished": this.document.data.date
+        }), type: 'application/ld+json' }]
     }
   },
   data () {
@@ -55,33 +80,7 @@ export default {
       cards: null,
       nextPage: null,
       prevPage: null,
-      ready: false,
-      structuredData: {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "mainEntityOfPage": {
-          "@type": "WebPage",
-          "@id": "https://moderne.st/insight-of-the-day/recommendations-from-a-trusted-friend-you-havent-met"
-        },
-        "headline": this.title,
-        "description": "🤓 83% of people say they trust recommendations from friends – more than any other form of marketing.",
-        "image": "https://images.prismic.io/moderne/8649bbe8-f45e-4ec3-9338-0c9d56e2052a_Trusted_Friend_.jpg",
-        "author": {
-          "@type": "Organization",
-          "name": "Moderne"
-        },
-        "publisher": {
-          "@type": "Organization",
-          "name": "Moderne",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "",
-            "width": "",
-            "height": ""
-          }
-        },
-        "datePublished": "2020-05-05"
-      }
+      ready: false
     }
   }
 }
