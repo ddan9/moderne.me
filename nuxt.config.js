@@ -107,8 +107,31 @@ export default {
       const insights = await Prismic.getApi(apiEndpoint).then(function(api) {
         return api.query('')
       })
-      return insights.results.map((insight) => `/insight-of-the-day/${insight.uid}`)
+      const newList = await insights.results.map((insight) => `/insight-of-the-day/${insight.uid}`)
+      newList.push('/solutions/for-agencies')
+      newList.push('/solutions/for-brands')
+      newList.push('/solutions/for-startups')
+      return newList
     }
+    // sitemaps: [
+    //   {
+    //     path: '/solutions.xml',
+    //     routes: [
+    //       '/solutions/for-agencies',
+    //       '/solutions/for-brands',
+    //       '/solutions/for-startups'
+    //     ]
+    //   },
+    //   {
+    //     path: '/prismic.xml',
+    //     routes: async () => {
+    //       const insights = await Prismic.getApi(apiEndpoint).then(function(api) {
+    //         return api.query('')
+    //       })
+    //       return insights.results.map((insight) => `/insight-of-the-day/${insight.uid}`)
+    //     }
+    //   }
+    // ]
   },
   styleResources: {
     scss: [
