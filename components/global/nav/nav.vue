@@ -35,9 +35,9 @@
                   | {{innerItem.title}}
             nuxt-link.nav__mobile-item(to="/signin" v-if='path === "signup"') Sign In
             nuxt-link.nav__mobile-item(to="/get-access" v-else) Get Access
-      .nav__menu
+      .nav__menu(itemscope itemtype="http://schema.org/SiteNavigationElement")
         div(v-for='(item, index) in menu' :key="index")
-          nuxt-link.nav__menu-item(:to="item.link") {{item.title}}
+          nuxt-link.nav__menu-item(itemprop="url" :to="item.link") {{item.title}}
           .nav__menu-item-inner(v-if="item.items")
             nuxt-link.nav__menu-item(v-for='(innerItem, i) in item.items' :key="i" :to="innerItem.link")
               | {{innerItem.title}}
