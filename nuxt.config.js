@@ -160,7 +160,7 @@ export default {
     test: 12,
     api:
       process.env.NODE_ENV === 'dev'
-        ? 'http://helps.pp.ua'
+        ? 'http://localhost:1337'
         : 'https://api.moderne.st',
     dashboard:
       process.env.NODE_ENV === 'dev'

@@ -136,32 +136,56 @@ export default {
   },
   methods: {
     postLogin () {
-      this.$axios.$post(`${process.env.api}/api/login`, {
-        email: this.login.email,
+      this.$axios.$post(`${process.env.api}/auth/local`, {
+        identifier: this.login.email,
         password: this.login.password
       }).then((response) => {
-        // console.log(response)
-        if (response.message) {
-          this.login.error = response.message
-        } else {
-          const token = response.data._token
-          // const domain = process.env.NODE_ENV === 'dev' ? 'localhost' : '.moderne.st'
-          this.$axios.setToken(token, 'Bearer')
-          const setToken = async () => {
-            await this.$cookies.set('moderne-token', token, {
-              // eslint-disable-next-line
-              domain: '.moderne.st'
-            })
-          }
-          setToken().then(() => {
-            this.login.email = null
-            this.login.password = null
-            this.login.error = null
-            // console.log(token)
-            window.location.replace(process.env.dashboard)
+        // Handle success.
+        // console.log('Well done!')
+        // console.log('User profile', response.user)
+        // console.log('User token', response.jwt)
+        const token = response.jwt
+        this.$axios.setToken(token, 'Bearer')
+        const setToken = async () => {
+          await this.$cookies.set('moderne-token', token, {
+            // eslint-disable-next-line
+            // domain: '.moderne.st'
           })
         }
+        setToken().then(() => {
+          this.login.email = null
+          this.login.password = null
+          this.login.error = null
+          window.location.replace(process.env.dashboard)
+        })
       })
+        .catch((error) => {
+          // Handle error.
+          console.log('An error occurred:', error)
+        })
+      //   .then((response) => {
+      //   // console.log(response)
+      //   // if (response.message) {
+      //   //   this.login.error = response.message
+      //   // } else {
+      //   //   const token = response.data._token
+      //   //   // const domain = process.env.NODE_ENV === 'dev' ? 'localhost' : '.moderne.st'
+      //   //   this.$axios.setToken(token, 'Bearer')
+      //   //   const setToken = async () => {
+      //   //     await this.$cookies.set('moderne-token', token, {
+      //   //       // eslint-disable-next-line
+      //   //       // domain: '.moderne.st'
+      //   //     })
+      //   //   }
+      //   //   setToken().then(() => {
+      //   //     this.login.email = null
+      //   //     this.login.password = null
+      //   //     this.login.error = null
+      //   //     // console.log(token)
+      //   //     window.location.replace(process.env.dashboard)
+      //   //   })
+      //   // }
+      // })
     },
     getUsers () {
       this.$axios.$get(`${process.env.api}/api/user`).then((response) => {
