@@ -151,6 +151,7 @@ export default {
     /*
     ** You can extend webpack config here
     */
+    publicPath: '.nuxt/dist/client/',
     extend(config) {
       // config.performance.maxAssetSize = 1000000;
     }
