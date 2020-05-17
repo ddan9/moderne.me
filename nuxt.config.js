@@ -91,7 +91,8 @@ export default {
   prismic: {
     endpoint: 'https://moderne.cdn.prismic.io/api/v2',
     linkResolver: '@/plugins/link-resolver',
-    htmlSerializer: '@/plugins/html-serializer'
+    htmlSerializer: '@/plugins/html-serializer',
+    preview: '/preview/'
     // preview: '/insight-of-the-day/_uid'
   },
   sitemap: {
@@ -113,25 +114,6 @@ export default {
       newList.push('/solutions/for-startups')
       return newList
     }
-    // sitemaps: [
-    //   {
-    //     path: '/solutions.xml',
-    //     routes: [
-    //       '/solutions/for-agencies',
-    //       '/solutions/for-brands',
-    //       '/solutions/for-startups'
-    //     ]
-    //   },
-    //   {
-    //     path: '/prismic.xml',
-    //     routes: async () => {
-    //       const insights = await Prismic.getApi(apiEndpoint).then(function(api) {
-    //         return api.query('')
-    //       })
-    //       return insights.results.map((insight) => `/insight-of-the-day/${insight.uid}`)
-    //     }
-    //   }
-    // ]
   },
   styleResources: {
     scss: [
