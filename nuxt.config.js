@@ -29,11 +29,11 @@ export default {
     ],
     link: [
       {rel: 'icon', type: 'image/x-icon', href: 'https://moderne.st/favicon.ico'},
-      {rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png"},
+      {rel: "apple-touch-icon", sizes: "180x180", href: "https://moderne.st/apple-touch-icon.png"},
       {rel: "icon", type: "image/png", sizes: "32x32", href: "https://moderne.st/favicon-32x32.png"},
       {rel: "icon", type: "image/png", sizes: "16x16", href: "https://moderne.st/favicon-16x16.png"},
-      {rel: "manifest", href: "/site.webmanifest"},
-      {rel: "mask-icon", href: "/safari-pinned-tab.svg", color: "#5bbad5"}
+      {rel: "manifest", href: "https://moderne.st/site.webmanifest"},
+      {rel: "mask-icon", href: "https://moderne.st/safari-pinned-tab.svg", color: "#5bbad5"}
     ]
   },
   /*
