@@ -41,11 +41,15 @@
             type="email"
             placeholder="Work Email"
             v-model="login.email"
+            required
+            autocomplete="email"
           )
           input.form__input#password(
             type="password"
             placeholder="Password"
             v-model="login.password"
+            required
+            autocomplete="password"
           )
           button.form__button(type="submit") Sign In
           nuxt-link.form__reset(to="#") Forgot Password?
