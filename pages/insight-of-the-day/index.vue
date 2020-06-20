@@ -4,6 +4,7 @@
     //| Total pages: {{ totalPages }}
     //| Next page: {{ nextPage }}
     //| Prev page: {{ prevPage }}
+    //| {{ today }}
     //| {{ cards }}
     .scroll-target
     section-today(
@@ -55,15 +56,16 @@ export default {
         $prismic.predicates.at("document.type", "insight"),
         { orderings : '[my.insight.date desc]' }
       )
-      const insights = await $prismic.api.query(
+      const insights = await $prismic.api.query([
         $prismic.predicates.at("document.type", "insight"),
+        $prismic.predicates.not("document.id", todayInsight.results[0].id)],
         { orderings : '[my.insight.date desc]', pageSize : 9, page: 1 }
-      )
+        )
       // console.log(todayInsight.results[0])
       // Returns data to be used in template
       return {
         today: todayInsight.results[0],
-        cards: insights.results.filter((item, i) => i !== 0),
+        cards: insights.results,
         nextPage: insights.next_page,
         prevPage: insights.prev_page,
         selectedPage: insights.page

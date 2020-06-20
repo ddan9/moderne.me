@@ -7,7 +7,7 @@
       form.cta__form#mc-embedded-subscribe-form.validate(action='https://moderne.us3.list-manage.com/subscribe/post?u=82e7a91b930da0b541f0ae17d&id=5efba2eadb' method='post' name='mc-embedded-subscribe-form' target='_blank' novalidate='')
         label.cta__form-label(for="mce-EMAIL") Enter your email address to get early access to Moderne
         .cta__form-group
-          input#mce-EMAIL.required.email.cta__form-input(type='email' name='EMAIL' placeholder='Your business email' required)
+          input#mce-EMAIL.required.email.cta__form-input(type='email' name='EMAIL' placeholder='Subscribe for our weekly inspiration!' required)
           div(style='position: absolute; left: -5000px;' aria-hidden='true')
             input(type='text' name='b_82e7a91b930da0b541f0ae17d_5efba2eadb' tabindex='-1' value='')
           button.cta__form-button(type='submit') Get Access

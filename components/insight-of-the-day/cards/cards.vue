@@ -44,6 +44,7 @@ export default {
   },
   methods: {
     togglePage (el) {
+      console.log(el)
       this.$parent.getCards(el)
       // this.$parent.selectedPage += 1
       // console.log(this.$parent.selectedPage)
