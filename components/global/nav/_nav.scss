@@ -9,7 +9,7 @@
     top: 32px;
     left: 0;
     width: 100vw;
-    z-index: 9999999999999;
+    z-index: 999999999;
     transition: opacity 150ms ease;
 
     @include mobile {
@@ -48,6 +48,8 @@
 
     &__logo {
       font-size: 0;
+      z-index: 1;
+      position: relative;
 
       &-img {
         width: 129px;
