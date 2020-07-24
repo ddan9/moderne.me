@@ -4,7 +4,7 @@
     .form__wrapper
       .form__group
         .form__title {{title}}
-        .form__text(:class="{'form__text--signin': type === 'signin', 'form__text--getaccess': type === 'getaccess'}") {{text}}
+        .form__text(:class="{'form__text--signin': type === 'signin' || type === 'forgot' || type === 'forgotDone', 'form__text--getaccess': type === 'getaccess'}") {{text}}
         .form__inputs(v-if='type === "signup"')
           input.form__input(
             v-for="(item, index) in signUpInputs"
@@ -52,7 +52,20 @@
             autocomplete="password"
           )
           button.form__button(type="submit") Sign In
-          nuxt-link.form__reset(to="#") Forgot Password?
+          .form__reset(@click="type = 'forgot'") Forgot Password?
+        form.form__inputs(v-if='type === "forgot"' @submit.prevent="resetPass")
+          input.form__input(
+            type="email"
+            placeholder="Your Email"
+            v-model="login.email"
+            required
+            autocomplete="email"
+          )
+          button.form__button(type="submit") Send my password
+          .form__reset(@click="type = 'signin'") Go back
+        .form__inputs(v-if='type === "forgotDone"')
+          p Sent! Check your inbox
+          .form__reset(@click="type = 'signin'") Go back
         form#mc-embedded-subscribe-form.validate.form__inputs(v-if='type === "getaccess"' action='https://moderne.us3.list-manage.com/subscribe/post?u=82e7a91b930da0b541f0ae17d&id=5efba2eadb' method='post' name='mc-embedded-subscribe-form' target='_blank' novalidate='')
           input.form__input(
             v-for="(item, index) in getAccessInputs"
@@ -139,6 +152,15 @@ export default {
     }
   },
   methods: {
+    resetPass () {
+      this.$axios.$post(`${process.env.api}/auth/forgot-password`, {
+        email: this.login.email
+      }).then(() => {
+        this.type = 'forgetDone'
+      }).catch(() => {
+        this.type = 'forgetDone'
+      })
+    },
     postLogin () {
       this.$axios.$post(`${process.env.api}/auth/local`, {
         identifier: this.login.email,
@@ -153,7 +175,7 @@ export default {
         const setToken = async () => {
           await this.$cookies.set('moderne-token', token, {
             // eslint-disable-next-line
-            domain: '.moderne.st'
+            // domain: '.moderne.st'
           })
         }
         setToken().then(() => {
@@ -163,9 +185,9 @@ export default {
           window.location.replace(process.env.dashboard)
         })
       })
-        .catch((error) => {
+        .catch(() => {
           // Handle error.
-          console.log('An error occurred:', error)
+          // console.log('An error occurred:', error)
         })
       //   .then((response) => {
       //   // console.log(response)
