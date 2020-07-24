@@ -175,7 +175,7 @@ export default {
         const setToken = async () => {
           await this.$cookies.set('moderne-token', token, {
             // eslint-disable-next-line
-            // domain: '.moderne.st'
+            domain: '.moderne.st'
           })
         }
         setToken().then(() => {
