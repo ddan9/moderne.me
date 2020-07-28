@@ -61,11 +61,25 @@
             required
             autocomplete="email"
           )
-          button.form__button(type="submit") Send my password
+          button.form__button(type="submit") Reset my password
           .form__reset(@click="type = 'signin'") Go back
-        .form__inputs(v-if='type === "forgotDone"')
+        form.form__inputs(v-if='type === "reset"' @submit.prevent="changePass")
+          input.form__input(
+            type="password"
+            placeholder="New password"
+            v-model="login.newPass"
+            required
+          )
+          input.form__input(
+            type="password"
+            placeholder="New password again"
+            v-model="login.newPassRepeat"
+            required
+          )
+          button.form__button(type="submit") Change new password
+        form.form__inputs(v-if='type === "forgetDone"')
           p Sent! Check your inbox
-          .form__reset(@click="type = 'signin'") Go back
+          //.form__reset(@click="type = 'signin'") Go back
         form#mc-embedded-subscribe-form.validate.form__inputs(v-if='type === "getaccess"' action='https://moderne.us3.list-manage.com/subscribe/post?u=82e7a91b930da0b541f0ae17d&id=5efba2eadb' method='post' name='mc-embedded-subscribe-form' target='_blank' novalidate='')
           input.form__input(
             v-for="(item, index) in getAccessInputs"
@@ -84,6 +98,11 @@
 
 <script>
 export default {
+  created () {
+    if (this.$route.query.code) {
+      this.type = 'reset'
+    }
+  },
   props: {
     type: {
       type: String,
@@ -103,7 +122,9 @@ export default {
       login: {
         email: null,
         password: null,
-        error: null
+        error: null,
+        newPass: null,
+        newPassRepeat: null
       },
       signUpInputs: [
         {
@@ -152,11 +173,24 @@ export default {
     }
   },
   methods: {
+    changePass () {
+      this.$axios.$post(`${process.env.api}/auth/reset-password`, {
+        code: this.$route.query.code,
+        password: this.login.newPass,
+        passwordConfirmation: this.login.newPassRepeat
+      }).then(() => {
+        this.type = 'signin'
+      }).catch((err) => {
+        this.error = err.response
+      })
+    },
     resetPass () {
       this.$axios.$post(`${process.env.api}/auth/forgot-password`, {
         email: this.login.email
-      }).then(() => {
-        this.type = 'forgetDone'
+      }).then((res) => {
+        if (res.ok) {
+          this.type = 'forgetDone'
+        }
       }).catch(() => {
         this.type = 'forgetDone'
       })
@@ -175,7 +209,7 @@ export default {
         const setToken = async () => {
           await this.$cookies.set('moderne-token', token, {
             // eslint-disable-next-line
-            domain: '.moderne.st'
+            // domain: '.moderne.st'
           })
         }
         setToken().then(() => {
