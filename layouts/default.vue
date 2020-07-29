@@ -56,7 +56,8 @@ export default {
     font-family: $mabry, sans-serif;
   }
 
-  p {
+  p,
+  li {
     font-size: 21px;
     line-height: 32px;
     color: #080809;
@@ -74,6 +75,10 @@ export default {
         margin: 0 0 vmin(12);
       }
     }
+  }
+
+  ul {
+    margin-bottom: 32px;
   }
   .page-enter-active, .page-leave-active {
     transition: all .5s ease;

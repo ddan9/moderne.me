@@ -109,8 +109,8 @@ export default {
       ],
       menu_4: [
         {
-          title: 'About Us',
-          link: '/our-story'
+          title: 'Terms of Use',
+          link: '/terms'
         },
         // {
         //   title: 'Careers',
@@ -119,8 +119,8 @@ export default {
         //   // label: 3
         // },
         {
-          title: 'Legal',
-          link: '#'
+          title: 'Privacy Policy',
+          link: 'privacy'
         }
       ]
     }
