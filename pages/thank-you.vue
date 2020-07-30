@@ -2,7 +2,7 @@
   .thank-you
     section-thankYou(
       title="Thank you!"
-      text="We will reach you as soon as Moderne is onboarding its early customers. Stay tuned!"
+      text="We will reach you soon!"
     )
 </template>
 
