@@ -42,7 +42,7 @@
             nuxt-link.nav__menu-item(v-for='(innerItem, i) in item.items' :key="i" :to="innerItem.link")
               | {{innerItem.title}}
       nuxt-link.nav__signup(to="/signin" v-if='path === "get-access"') Sign In
-      nuxt-link.nav__signup(to="/get-access" v-else) Get Access
+      nuxt-link.nav__signup(to="/get-access" v-else) Get a Demo
 </template>
 
 <script>

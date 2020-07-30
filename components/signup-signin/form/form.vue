@@ -72,7 +72,7 @@
           )
           input.form__input(
             type="password"
-            placeholder="New password again"
+            placeholder="Repeat password"
             v-model="login.newPassRepeat"
             required
           )
@@ -92,7 +92,7 @@
           )
           div(style='position: absolute; left: -5000px;' aria-hidden='true')
             input(type='text' name='b_82e7a91b930da0b541f0ae17d_5efba2eadb' tabindex='-1' value='')
-          button.form__button(type='submit') Get Early Access
+          button.form__button(type='submit') Request a demo
       img.form__image(src="images/illustrations/login-head.png" srcset="images/illustrations/login-head@2x.png 2x")
 </template>
 
@@ -209,7 +209,7 @@ export default {
         const setToken = async () => {
           await this.$cookies.set('moderne-token', token, {
             // eslint-disable-next-line
-            domain: '.moderne.st'
+            // domain: '.moderne.st'
           })
         }
         setToken().then(() => {

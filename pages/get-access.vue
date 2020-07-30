@@ -1,8 +1,8 @@
 <template lang="pug">
   .get-access
     section-getAccess(
-      title="Get Access"
-      text="Request early access today to get a secret special offer for our first customers."
+      title="Get a Demo"
+      text="Request a demo today to try our platform 🐵"
       type="getaccess"
     )
 </template>
@@ -16,7 +16,7 @@ export default {
   },
   head () {
     return {
-      title: 'Get Early Access'
+      title: 'Get a Demo'
     }
   }
 }
