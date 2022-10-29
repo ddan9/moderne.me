@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 30 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="Insight-of-the-Day" transform="translate(-1150.000000, -787.000000)" fill="currentColor" stroke="currentColor" stroke-width="2.30999994">
+            <g id="Group-7" transform="translate(1026.000000, 779.000000)">
+                <g id="icon-readMore" transform="translate(125.354997, 10.010000)">
+                    <line x1="3.01980663e-14" y1="7.31499982" x2="25.7949994" y2="6.92999983" id="Line"></line>
+                    <line x1="19.6349995" y1="0" x2="26.1799994" y2="6.54499984" id="Line-Copy"></line>
+                    <line x1="19.6349995" y1="6.92999983" x2="26.1799994" y2="13.4749997" id="Line-Copy-2" transform="translate(23.099999, 10.395000) scale(-1, 1) translate(-23.099999, -10.395000) "></line>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
