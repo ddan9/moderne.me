@@ -7,6 +7,10 @@ export default {
   /*
   ** Headers of the page
   */
+  target: 'static',
+  router: {
+    base: '/moderne.re/'
+  },
   server: {
     port: 4000
   },
