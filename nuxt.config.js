@@ -13,7 +13,7 @@ export default {
   */
   target: 'static',
   router: {
-    base: '/moderne.re/'
+    base: '/'
   },
   sitemap: {
     hostname: process.env.SITEMAP_HOSTNAME,
