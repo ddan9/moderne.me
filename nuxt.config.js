@@ -1,6 +1,10 @@
 const Prismic = require('prismic-javascript')
 const apiEndpoint = 'https://moderne.cdn.prismic.io/api/v2'
 
+const config = {
+  // Changes the website's base to work on Github pages
+  routerBase: process.env.NODE_ENV == 'gh_pages' ? '/moderne.re/' : '/'
+};
 
 export default {
   mode: 'universal',
@@ -10,6 +14,9 @@ export default {
   target: 'static',
   router: {
     base: '/moderne.re/'
+  },
+  sitemap: {
+    hostname: process.env.SITEMAP_HOSTNAME,
   },
   server: {
     port: 4000
